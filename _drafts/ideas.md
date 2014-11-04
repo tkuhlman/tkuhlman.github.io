@@ -5,4 +5,6 @@
     - I want version 1.8 so I can only push up roles which are more generalized and more likely useful for others.
   - Advanced Ansible - Creating Ansible modules and more complicated deploys
     - Address my lack of experience from my 11/2 post.
-- Docker, how I actually use it.
+- Docker
+  - How I actually use it.
+  - Ansible + docker how I both build and deploy with Ansible.
