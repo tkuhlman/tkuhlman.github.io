@@ -1,7 +1,7 @@
 # Site settings
 title: Background Process
 description: > # this means to ignore newlines until "baseurl:"
-  Output from my mental background processes.
+  Background process output.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://backgroundprocess.com" # the base hostname & protocol for your site
 google_analytics_key: UA-56102734-1
