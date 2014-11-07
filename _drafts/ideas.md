@@ -1,5 +1,6 @@
 # Potential Ideas
 - See ~/bin/docker-tips and make that into a blog post
+- Brief post on my ansible-utils git repo.
 - Ansible
   - Ansible Galaxy
     - It prepending with username reflects that most often people will need to tweak the role for their needs.
