@@ -1,5 +1,4 @@
 # Potential Ideas
-- See ~/bin/docker-tips and make that into a blog post
 - Ansible
   - Ansible Galaxy
     - It prepending with username reflects that most often people will need to tweak the role for their needs.
@@ -9,3 +8,5 @@
 - Docker
   - How I actually use it.
   - Ansible + docker how I both build and deploy with Ansible.
+- systemd versus upstart
+- See ~/bin/docker-tips and make that into a blog post
