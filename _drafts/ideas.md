@@ -8,5 +8,8 @@
 - Docker
   - How I actually use it.
   - Ansible + docker how I both build and deploy with Ansible.
+- The next big challenge is the management of large amounts of containers.
+  - Lots of contenders are entering this space perhaps do a review and comparison of them.
+  - kubernetes, flocker, even things like apache mesos and to some extent juju fit into this.
 - systemd versus upstart
 - See ~/bin/docker-tips and make that into a blog post
