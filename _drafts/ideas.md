@@ -1,11 +1,13 @@
 # Potential Ideas
 - Ansible
-  - Advanced Ansible - Creating Ansible modules
+  - Creating Ansible modules
+  - Adavance Ansible
     - Also address my lack of experience from my 11/2 post, and mention I have now done more complicated deploys
-  - Advanced Ansible - rolling deploys, wait_for and assert
-  - Ansible Galaxy
-    - It prepending with username reflects that most often people will need to tweak the role for their needs.
-    - I want version 1.8 so I can only push up roles which are more generalized and more likely useful for others.
+    - Address the need to use flush_handlers in order to get a consistent experience when using handlers and a play with multiple roles dies.
+    - rolling deploys, wait_for and assert
+    - Ansible Galaxy
+      - It prepending with username reflects that most often people will need to tweak the role for their needs.
+      - I want version 1.8 so I can only push up roles which are more generalized and more likely useful for others.
 - Docker
   - How I actually use it.
   - Ansible + docker how I both build and deploy with Ansible.
