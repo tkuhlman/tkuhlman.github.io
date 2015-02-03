@@ -11,14 +11,17 @@ be productive. The more a manager enables this the better they perceive their ma
 
 The nature of management, or any other discipline primarily concerning people, is such that you can't define exactly what that means for most situations.
 I believe this is a large part of the reason that a few managers are horribly bad, a small proportion great, but most find themselves somewhere in
-the middle. What can be clearly laid out are some general principles that enable engineers to get work done. 
+the middle. What can be clearly laid out are some general principles that enable engineers to get work done. Depending on the organization some of these
+may fall to other roles than the direct manager but someone needs to get them done and the manager should at least make sure they are being achieved.
 
 Within the team
     - Engaging engineers on appropriate planning but not stifling them with it.
     - Fostering a collaborative environment.
     - rewarding achievement.
+    - In those cases were needed dealing with employees who are dragging down the rest of the team.
 
 Within the organization
     - Removing organizational road blocks to progress.
     - Being an a voice and ear to the rest of the organization and appropriately sharing with the team.
     - Being a catalyst and enabler for cross-team collaboration.
+    - Representing the team in organizational planning.
