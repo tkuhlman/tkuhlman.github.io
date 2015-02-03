@@ -15,12 +15,7 @@
 - See ~/bin/docker-tips and make that into a blog post
 
 ## Non-technical ideas - these I suspect will live as drafts for a long time.
-- An engineers perspective on the value of good management.
-  - Enabling the engineers to work.
-    - Engaging engineers on appropriate planning but not stifling them with it.
-    - Removing organizational road blocks to progress.
-    - Fostering a collaborative environment.
-    - Being an a voice and ear to the rest of the organization and appropriately sharing with the team.
+- An engineers perspective on the value of good management. - See draft I started
 - Architects who don't know details are impediments to progress rather than enablers.
 - The importance of running the service you work on.
   - It proves the product.
