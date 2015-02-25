@@ -13,9 +13,9 @@
   - kubernetes, flocker, even things like apache mesos and to some extent juju fit into this.
 - Something golang related.
 - See ~/bin/docker-tips and make that into a blog post
+- Markdown - use with github and readthedocs
 
-## Non-technical ideas - these I suspect will live as drafts for a long time.
-- An engineers perspective on the value of good management. - See draft I started
+## Non-technical ideas
 - Architects who don't know details are impediments to progress rather than enablers.
 - The importance of running the service you work on.
   - It proves the product.
