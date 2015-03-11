@@ -6,13 +6,14 @@
 - git
   - workflow, lots of repos versus few, git subtree versus git submodules
 - Docker
-  - How I actually use it.
   - Ansible + docker how I both build and deploy with Ansible.
+    - Annoyances with docker, include that the service startups fail with the newer init replacements so my roles have to be modified.
+  - The ~/bin/docker-tips and ~/bin/docker-cleanup should be mentioned. Really just the mess it can become to manage many containers. Ansible
+    really helps out here so mention that.
 - The next big challenge is the management of large amounts of containers.
   - Lots of contenders are entering this space perhaps do a review and comparison of them.
   - kubernetes, flocker, even things like apache mesos and to some extent juju fit into this.
 - Something golang related.
-- See ~/bin/docker-tips and make that into a blog post
 - Markdown - use with github and readthedocs
 
 ## Non-technical ideas
