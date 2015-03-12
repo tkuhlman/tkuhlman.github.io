@@ -8,6 +8,8 @@
 - Docker
   - Ansible + docker how I both build and deploy with Ansible.
     - Annoyances with docker, include that the service startups fail with the newer init replacements so my roles have to be modified.
+    - The building of the container is split from the running so I find myself having to change roles so some things only happen when on startup. Not that
+      this is unique to containers but has annoyed me.
   - The ~/bin/docker-tips and ~/bin/docker-cleanup should be mentioned. Really just the mess it can become to manage many containers. Ansible
     really helps out here so mention that.
 - The next big challenge is the management of large amounts of containers.
