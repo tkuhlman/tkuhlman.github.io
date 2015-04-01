@@ -6,6 +6,7 @@
 - git
   - workflow, lots of repos versus few, git subtree versus git submodules
 - Docker
+  - Talk about the Monasca demo, kitematic, in general hiding implementation details.
   - Ansible + docker how I both build and deploy with Ansible.
     - Annoyances with docker, include that the service startups fail with the newer init replacements so my roles have to be modified.
     - The building of the container is split from the running so I find myself having to change roles so some things only happen when on startup. Not that
@@ -13,6 +14,7 @@
   - Image deployment, why it works for Docker and why the industry moved away from it years ago for servers.
   - The ~/bin/docker-tips and ~/bin/docker-cleanup should be mentioned. Really just the mess it can become to manage many containers. Ansible
     really helps out here so mention that.
+    - The arg '-d' to daemonize a running container is essential as foreground docker containers are a pain.
   - the docker orchestration toolkit, machine, swarm and compose.
 - The next big challenge is the management of large amounts of containers.
   - Lots of contenders are entering this space perhaps do a review and comparison of them.
@@ -35,4 +37,5 @@
   - A team is best with one set of goals but multiple sets of expertise. Ie make product X is the goal, the skills include back end code, ops, ui,
     testing, etc.
   - When breaking down team tasks epics should be vertical slices crossing across components not focused on a component. A focus on a component
-    tends to me tunnel vision, missing the big picture, etc.
+    tends to me tunnel vision, missing the big picture, etc. Vertical slices promote cross-pollination of skills, better collaboration, allow
+    decentralizing the day to day management tasks.
