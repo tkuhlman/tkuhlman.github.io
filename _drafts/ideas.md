@@ -1,4 +1,6 @@
 # Potential Ideas
+- Delivering consistent code quality
+  - Something I am exploring but am not an expert at.
 - Documentation driven development
 - Balancing collaboration and engineering. Steering toward synergy without going to far either direction.
 - Building packages. Various ways of doing debs, python packages, etc.
@@ -25,6 +27,7 @@
 - Architects who don't know details are impediments to progress rather than enablers.
 - The importance of Velocity in the software industry.
   - Faster to market, faster to fix issues, faster to respond to customers with new features.
+  - One key thing you can't sacrifice quality for speed. The speed should be a way to attain quality faster as you recognize nothing goes perfect.
 - The importance of running the service you work on.
   - It proves the product.
   - It bring fast feedback loops that help you to improve the product, as you get immediate clarity on bugs, needed features and annoyances.
