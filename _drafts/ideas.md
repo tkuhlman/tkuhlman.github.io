@@ -1,8 +1,7 @@
 # Potential Ideas
 - Documentation driven development
 - Balancing collaboration and engineering. Steering toward synergy without going to far either direction.
-- Vagrant love.
-- Building packages. Various ways of doing debs, pythong packages, etc.
+- Building packages. Various ways of doing debs, python packages, etc.
 - git
   - workflow, lots of repos versus few, git subtree versus git submodules
 - Docker
@@ -24,6 +23,8 @@
 
 ## Non-technical ideas
 - Architects who don't know details are impediments to progress rather than enablers.
+- The importance of Velocity in the software industry.
+  - Faster to market, faster to fix issues, faster to respond to customers with new features.
 - The importance of running the service you work on.
   - It proves the product.
   - It bring fast feedback loops that help you to improve the product, as you get immediate clarity on bugs, needed features and annoyances.
