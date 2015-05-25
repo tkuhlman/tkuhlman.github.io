@@ -1,4 +1,13 @@
 # Potential Ideas
+- Switch to Hugo? If I do talk about why.
+  * Should I make the move there are tradeoffs
+    - with hugo I need to just publish content to my pages git, so I need another repo for my source, Hugo has an explanation on how to nicely set this
+    up with subrepos, specifically in the 'Hosting Personal/Organization Pages' section here, http://gohugo.io/tutorials/github-pages-blog/
+    - A guide to moving is at http://gohugo.io/tutorials/migrate-from-jekyll/
+  - I like static generated sites, simple, effective and secure. I love github pages gets the job done easily and well.
+  - I'm learning Go so Hugo has a bit of appeal even though I may not contribute. It is available in brew which I love and simple to get going.
+  - I want disqus, rss, tags and love working in markdown and with yaml. All of it possible with Jekyll but some much easier with Hugo.
+   - I like the clean directory structure of Hugo.
 - Delivering consistent code quality
   - Something I am exploring but am not an expert at.
 - Documentation driven development
