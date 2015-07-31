@@ -8,6 +8,9 @@
   - I'm learning Go so Hugo has a bit of appeal even though I may not contribute. It is available in brew which I love and simple to get going.
   - I want disqus, rss, tags and love working in markdown and with yaml. All of it possible with Jekyll but some much easier with Hugo.
    - I like the clean directory structure of Hugo.
+- Talk about the immutable infrastruce CI environment I built for Monasca.
+  - Make sure to pull from much of my philosophy on this found in the Readme for the monasca/ci repo.
+  - Talk about velocity of code commits and help the CI environment needs to preserve this.
 - Delivering consistent code quality
   - Something I am exploring but am not an expert at.
 - Documentation driven development
@@ -33,6 +36,7 @@
 - Markdown - use with github and readthedocs
 
 ## Non-technical ideas
+- The importance of Fast Feedback and running your own product.
 - Architects who don't know details are impediments to progress rather than enablers.
 - The importance of Velocity in the software industry.
   - Faster to market, faster to fix issues, faster to respond to customers with new features.
