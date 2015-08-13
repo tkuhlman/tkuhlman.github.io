@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Initial impressions of systemd - Background Process</title>
+	<meta name="author" content="map[name:Tim Kuhlman email:tim@backgroundprocess.com]">
+
+	
+	
+	<meta name="description" content="">
+	
+
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://backgroundprocess.com/systems/systemd/">
+	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
+	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-56102734-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	
+	<script src="http://backgroundprocess.com//js/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('tim@backgroundprocess.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+	
+</div>
+
+<nav id="main-nav"><ul class="main">
+    <li><a href="http://backgroundprocess.com//">Blog</a></li>
+    <li><a href="http://backgroundprocess.com//about/">About</a></li>
+    <li><a href="http://backgroundprocess.com//tags/">Tags</a></li>
+</ul>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="github" href='https://github.com/tkuhlman' title="GitHub">GitHub</a>
+		
+		
+		
+		
+			<a class="linkedin" href='http://www.linkedin.com/in/timkuhlman' title="LinkedIn">LinkedIn</a>
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+			<a class="rss" href='http://feeds.feedburner.com/BackgroundProcess' title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>
+			</div>
+		</div>
+		<div class="mid-col">
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+					<div itemscope itemtype="http://schema.org/Blog">
+					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">Initial impressions of systemd</h1>
+		<div class="date"><time datetime='Fri, Nov 28, 2014' data-updated="true" itemprop="datePublished">Fri, Nov 28, 2014</time>
+</div>
+	<div class="entry-content" itemprop="articleBody"><p>A few years ago I was happy to see the movement away from the complicated and fragile system V style init scripts. This is something
+that both Upstart and systemd accomplish well. Additionally the ability to start up services in parallel with more advanced ordering is quite useful.
+Though in many ways I can work with either system I am glad that the Linux community is converging on just one option, I think this standardization
+is a large benefit for the community as a whole.</p>
+
+<p>I am switching from Upstart to systemd as the distros I use do so and given that I have mostly worked with Debian based systems lately my experience with
+systemd is still rather basic but there are two things that I like about it compared to Upstart.</p>
+
+<ul>
+<li>The single command for everything, systemctl. Having one command makes it easier to explore the full functionality of systemd and also
+makes it so much easier to remember what tool to use for any particular daemon. The last few lines of logs on status is a nice feature also.</li>
+<li>The &lsquo;After=&rsquo; option in systemd service files. In particular as pointed out in this <a href="http://0pointer.de/blog/projects/systemd-for-admins-3.html">blog post</a>
+this option only affects ordering if both services are going to be started. This is especially helpful for my systems as often in our dev
+environment we stack all the services on one machine and so the startup order is important. On our full test and production clusters services are spread
+on different machines and the start up order is out of the hands of systemd. It is nice in both cases to use the same service definition and just have
+it work appropriately.</li>
+</ul>
+
+<p>There are numerous other features of systemd which I am just beginning to discover in my usage. For instance I was excited to discover the simplicity of turning
+on a serial console. I perhaps will find time explore the control group integration and some other security features such as private /tmp soon. I definitely need
+to further investigate journald and how it can be useful as a core part of the systems I use. The great news here is that the man pages and the related documentation
+around systemd is excellent. Simply exploring the documentation links on the projects <a href="http://www.freedesktop.org/wiki/Software/systemd/">main page</a> have provided
+me with a quick start and more in depth material than I have time to explore.</p>
+</div>
+</article>
+					
+						<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size=''></a>
+	
+	
+	</div>
+	
+  	<script type="text/javascript" src='http://s7.addthis.com/js/250/addthis_widget.js#pubid='></script>
+  	
+</div>
+
+					
+					
+					<section id="comment">
+					    <h1 class="title">Comments</h1>
+					    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+					</section>
+					
+					
+
+<script type="text/javascript">
+    
+    var disqus_shortname = 'backgroundprocess';
+
+    
+    
+
+    
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+    
+</script>
+
+
+				    </div>
+				</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2015
+
+    Tim Kuhlman
+
+Design based on <a href="https://github.com/cxfksword/greyshade">greyshade</a>
+<script src="http://backgroundprocess.com//js/slash.js"></script>
+<script src="http://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script>
+</footer>
+		</div>
+	</div>
+	
+</body>
+</html>

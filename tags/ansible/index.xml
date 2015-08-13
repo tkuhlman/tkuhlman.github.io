@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Ansible on Background Process </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://backgroundprocess.com/tags/ansible/</link>
+    <language>en-us</language>
+    <author>Tim Kuhlman</author>
+    
+    <updated>Tue, 06 Jan 2015 21:43:31 -0600</updated>
+    
+    <item>
+      <title>Ansible Modules</title>
+      <link>http://backgroundprocess.com/code/ansible-modules/</link>
+      <pubDate>Tue, 06 Jan 2015 21:43:31 -0600</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/code/ansible-modules/</guid>
+      <description>
+
+&lt;p&gt;Ansible is relatively simple in relation to other configuration management frameworks. This makes it easier to approach and accomplish real work with, especially
+for those who don&amp;rsquo;t work in it full time, however there are times when more functionality is needed. Ansible&amp;rsquo;s answer for most of these situations is to
+write a module.&lt;/p&gt;
+
+&lt;p&gt;I have written a couple of &lt;a href=&#34;https://github.com/hpcloud-mon/ansible-module-monasca&#34;&gt;modules for Monasca&lt;/a&gt; and doing so was easy, particularly if you know Python.&lt;/p&gt;
+
+&lt;h2 id=&#34;common-python-functions:452a8813491776755aef8af7303e4551&#34;&gt;Common Python Functions&lt;/h2&gt;
+
+&lt;p&gt;Though you can write modules in any language there are various functions available for Python that simplify the process.&lt;/p&gt;
+
+&lt;p&gt;The documentation for &lt;a href=&#34;http://docs.ansible.com/developing_modules.html&#34;&gt;writing Ansible modules&lt;/a&gt; is a bit light on some details particularly on using the
+Python common functions. The docs mostly encourage you to check out code examples, my initial reaction to this was dread that things were going to get difficult.
+Happily I found most of the examples were straight forward and so it was simple enough for someone already familiar with Python.&lt;/p&gt;
+
+&lt;p&gt;The common functions make the writing of the modules in Python a simple coding task. Looking back at the modules I have written more lines are dedicated to the documentation
+of the module than to the code itself. Among the code a large chunk is dealing with defining the various optional values that can be passed in. I point
+this out only to highlight that the common libraries make the code and the logic itself quite simple and even naturally steer toward documentation
+driven development.&lt;/p&gt;
+
+&lt;h2 id=&#34;modules-for-idempotency:452a8813491776755aef8af7303e4551&#34;&gt;Modules for Idempotency&lt;/h2&gt;
+
+&lt;p&gt;As I have &lt;a href=&#34;infrastructure/2014/11/02/ansible-config-management-simplified.html&#34;&gt;written previously&lt;/a&gt; loops and conditionals are cumbersome in Ansible. In my
+usage I particularly felt this at times I tried to accomplish a task lacking a module and retain idempotency. Looping through a list to check the status and
+then conditionally performing operations based on the result is possible in raw Ansible but is more straight forward, flexible and cleaner to implement in a
+module.&lt;/p&gt;
+
+&lt;p&gt;In Ansible a module is the fundamental mechanism used to accomplish idempotent operations. The ease of implementing idempotency in a module
+verses in Ansible directly has more than anything else motivated me to add to my todo list a few modules I would like to write.&lt;/p&gt;
+
+&lt;h2 id=&#34;shared-code-among-modules:452a8813491776755aef8af7303e4551&#34;&gt;Shared code among modules&lt;/h2&gt;
+
+&lt;p&gt;The one major complaint I have with the modules I have written is that it is difficult to have code shared between modules. Importing python libraries is straight forward
+as well as including code from the Ansible base but code shared between Ansible modules is not possible.&lt;/p&gt;
+
+&lt;p&gt;The reason it doesn&amp;rsquo;t work is because Ansible does not execute the module locally but rather copies it to
+a remote host. Additionally Ansible is trying to do this with as few operations as possible to keep it performant. Ansible would have to either parse the module
+or copy the entire library directory on each run for a shared file to be available.&lt;/p&gt;
+
+&lt;p&gt;Though I understand the reasons behind this
+behaviour since Ansible handles including libraries from the Ansible core and any included python libraries in the system path are available I found myself expecting
+to be able to define my own shared python files. After spending a bit of time looking for a way to have a shared python file shipped with my Ansible modules, I
+choose to just copy the shared code to both Ansible modules. That is far from ideal but the amount of shared code was relatively small so the alternative of packing
+it into a library to be installed on the remote machine would be more trouble.&lt;/p&gt;
+
+&lt;p&gt;Ultimately I have no solution for this so will live with it as a minor annoyance for now.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Advanced Ansible</title>
+      <link>http://backgroundprocess.com/infrastructure/advanced-ansible/</link>
+      <pubDate>Thu, 18 Dec 2014 22:01:37 -0600</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/infrastructure/advanced-ansible/</guid>
+      <description>&lt;p&gt;It would be an mistake to call me an Ansible expert but I am now an experienced Ansible user and it is time to expand on my earlier &lt;a href=&#34;http://backgroundprocess.com/tags/#Ansible&#34;&gt;Ansible posts&lt;/a&gt;.
+I have now been using Ansible on a regular basis for awhile and have used it with vagrant based vms, docker containers, as well as across small clusters of machines.
+I have also written a couple of Ansible modules and will likely write another one or two soon. Writing modules is a topic that I will address in
+another post.&lt;/p&gt;
+
+&lt;p&gt;As I use Ansible in various environments I continue to enjoy the simplicity of its model. I find it easy to run against a wide variety of deployment
+models by taking existing playbooks and tweaking them slightly or combining them in new ways. This flexibility has been key for my use cases lately as I can
+work on making my roles and modules robust and then easily use them for small installs, clusters, one or os or another and anything else needed.&lt;/p&gt;
+
+&lt;p&gt;I have found that rolling deploys with deployment verification is much easier in Ansible then with many other configuration management tools I have previously used.
+Targeting a subset of hosts is as simple as setting the correct serial value in the playbook or even targeting groups of hosts over multiple subsequent runs. Next
+you just need to add in deployment verification. For most of the services I have setup that is as simple as a &lt;a href=&#34;http://docs.ansible.com/wait_for_module.html&#34;&gt;wait_for&lt;/a&gt;
+task, though for some the &lt;a href=&#34;http://docs.ansible.com/assert_module.html&#34;&gt;assert&lt;/a&gt; module is a better option. Either option is easy to implement.&lt;/p&gt;
+
+&lt;p&gt;One aspect of Ansible that needs some work is its ability to finishing running triggered handlers on failure. I have encountered many situations where we are running
+a play with multiple roles and earlier roles register handlers which never run because a later role fails and handlers have not yet been flushed. In the case of a
+restarted service this is quite annoying especially as the next run won&amp;rsquo;t trigger handlers and if I put both the handler and a service start task in some instances
+the service will restart twice. There is a work around, basically first flush handlers then define the service task with a state of started. This works well but
+it is a bit annoying that I have to remember to explicitly flush handlers for every role.&lt;/p&gt;
+
+&lt;p&gt;I have hope that the running of queued handlers is something that will be fixed because I am happy to see improvements in Ansible with 1.8 that directly affect my
+work. The most notable changes for me were actually in the Ansible Galaxy command. The ability to specify a role requirements file in yaml and point at git repos directly
+as well as optionally specify tags is essential. Though I like what is happening with the Ansible Galaxy public site it just isn&amp;rsquo;t always possible to push things up there and
+often while waiting for a pull request to be approved it is nice to point to my updated version without making a new entry in galaxy.
+I am also tired of seeing tkuhlman prepended to the beginning of my roles in the various playbooks. Though account based differentiation is a good feature for
+Galaxy that encourages sharing of tweaks to existing roles I really only want to be aware of it on download, the new format accomplishes exactly that.&lt;/p&gt;
+
+&lt;p&gt;Besides continued work with writing modules there are some other aspects of Ansible I still would like to explore. Wider use of assert and lookups as well as
+pipelining come to mind. Also, I have not yet had the opportunity to use Ansible across a large cluster of nodes. I have worked with large clusters before and likely
+will again fairly soon, I look forward to the learning that will come from running Ansible in such an environment.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible Utilities</title>
+      <link>http://backgroundprocess.com/infrastructure/quick-ansible/</link>
+      <pubDate>Fri, 07 Nov 2014 19:27:21 -0600</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/infrastructure/quick-ansible/</guid>
+      <description>&lt;p&gt;In the last few weeks I have been immersed in &lt;a href=&#34;http://www.ansible.com&#34;&gt;Ansible&lt;/a&gt;. I have been using Ansible with &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;Vagrant&lt;/a&gt;,
+with &lt;a href=&#34;https://github.com/hpcloud-mon/monasca-docker&#34;&gt;Docker&lt;/a&gt; and in a test environment on bare metal. Those are all topics I may explore in more depth later but
+what really is conspicuous today is the way I can build simple utilities with Ansible.&lt;/p&gt;
+
+&lt;p&gt;My collection of Ansible &lt;a href=&#34;https://github.com/tkuhlman/ansible-utils&#34;&gt;scripts&lt;/a&gt; which aren&amp;rsquo;t part of a larger set of playbooks is still quite small but I feel it
+is but the tip of the iceberg. In the last few years I have built a fair collection of &lt;a href=&#34;http://www.fabfile.org/en/latest/&#34;&gt;Fabric&lt;/a&gt; scripts for
+various common tasks. These have been highly useful and I am will continue to use Fabric especially for tasks needing the more complicated logic and control structures
+possible using the full power of Python. Ansible also has a future in my tool set, in particular for tasks where modules exist.&lt;/p&gt;
+
+&lt;p&gt;With Ansible there are a couple of advantages which make it useful for the small orchestration tasks. It uses the same inventory already setup for configuration
+management, making it quite easy to target to the right boxes. The organization structures within Ansible make it is easy to mix and match tasks. Additionally it is a tool
+already being used so there is no new learning curve for my colleagues. The biggest advantage is the functionality encapsulated in pre-built modules,
+in particular the idempotency these bring.&lt;/p&gt;
+
+&lt;p&gt;Take as an example my first little &lt;a href=&#34;https://github.com/tkuhlman/ansible-utils/blob/master/setup_user.yml&#34;&gt;utility&lt;/a&gt;, I was already immersed in Ansible so no
+mental context switch was needed and I was able to write it quickly. It is simple and quickly written but immediately saved me some time. I could have fairly
+easily written this is Fabric also but it would have taken me much longer if I wanted to make an equivalent Fabric script idempotent. In my first run idempotency
+isn&amp;rsquo;t needed but it gives peace of mind because there is no danger if I accidentally run it twice. This will be especially helpful a month or two from now when
+I have forgotten where I ran it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible - Configuration Management Simplifed</title>
+      <link>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</link>
+      <pubDate>Sun, 02 Nov 2014 21:00:22 -0600</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</guid>
+      <description>&lt;p&gt;In the last couple of weeks I have been converting &lt;a href=&#34;https://wiki.openstack.org/wiki/Monasca&#34;&gt;Monasca&lt;/a&gt; from &lt;a href=&#34;https://www.getchef.com/&#34;&gt;Chef&lt;/a&gt;
+to &lt;a href=&#34;http://www.ansible.com/&#34;&gt;Ansible&lt;/a&gt;.
+This has begun with the &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;monasca-vagrant&lt;/a&gt; development environment. Having worked with
+Chef for the last 3 years as I learn Ansible I inevitably evaluate it in comparision to Chef.&lt;/p&gt;
+
+&lt;p&gt;The core quality of Ansible compared to Chef is Simplicity. Ansible attempts to solve many of the same problems as Chef but with an
+approach that seems born of real world experience and eliminates many theoretically superior design paradigms for practical alternatives.&lt;/p&gt;
+
+&lt;p&gt;The most readily apparent simplification between Chef and Ansible is the lack of both an agent and a server in the Ansible model.
+Many simplifications flow from this fundamental design decision, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Extremely simple startup. There is no need to install a server or agents or even learn the depths of the tools paradigm before starting. In
+practice this is fairly important as few start with overhauling the entire configuration management of a service as I did but rather
+start with a single aspect and incrementally grow their coverage.&lt;/li&gt;
+&lt;li&gt;Encryption of data becomes much simpler as there is no need to take a shared secret and distribute to
+the agent on each box. Additionally unlike Chef there is no need to modify the recipes to use encrypted data, the decrypted data
+is just treated as normal variables during an Ansible run&lt;/li&gt;
+&lt;li&gt;With all runs potentially starting on a workstation Ansible is easily enabled for orchestration tasks as well as configuration management.
+Fundamentally there is little difference between the work done by Ansible to enable each use case. This allows tool simplification, no need for an additional
+orchestration layer.&lt;/li&gt;
+&lt;li&gt;Related to the enabling of orchestration tasks the simplicity of running plays via Ansible means it is easy to activate Ansible
+within larger scripts. I for example use a deployment script based on &lt;a href=&#34;http://www.fabfile.org/en/latest/&#34;&gt;Fabric&lt;/a&gt; which interacts with
+git as well as some in house tools as it deploys. The script already relies on an ssh key for the git aspects and so adding in the
+triggering of an Ansible run is extremely easy. When using chef with the script the proper triggering of a run is much more
+complicated as I not only have to upload to the server I also have to navigate an entirely separate authentication system. Ansible covers
+many of the same use case as fabric so I could probably rewrite much if not all of the script in Ansible but I don&amp;rsquo;t need to,
+and can choose to do so or not later. This ability to be a self contained layer that is easy to interact with a key feature of a truly
+useful model that should not be understated.&lt;/li&gt;
+&lt;li&gt;SSH authentication management is required for Ansible and a at first glance seems to be a disadvantage but in all environments
+I have worked with it was already happening. Given that the end result of avoiding the need for another authentication/authorization
+system is an advantage for this simplified model.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ansible&amp;rsquo;s lack of an agent or server is perhaps a factor in why regular unattended runs of Ansible are not built into the system.
+If you want these to happen you must add additional
+scripting around Ansible, via a cron job or a more sophisticated tool such as &lt;a href=&#34;http://www.ansible.com/tower&#34;&gt;Ansible Tower&lt;/a&gt;. This
+is in contrast to Chef where unattended runs are trivial to enable and take advantage of. It is also a
+great example of a theoretical deficiency on the side of Ansible which in practical terms isn&amp;rsquo;t. In all the infrastructures I have
+worked with the professionalism of administrators has been sufficient that I can&amp;rsquo;t recall an instance where the unattended chef runs were
+actually useful. Perhaps I am fortunate regarding the people I have worked with but regardless requiring unattended Ansible runs to use
+another layer of abstraction is not much of a negative. Layers of abstraction are fundamental to computing and when used well they simplify
+the solution rather than complicate it, I believe this is such a case.&lt;/p&gt;
+
+&lt;p&gt;As one who has used Chef for years to deploy various software one of the biggest areas where Ansible&amp;rsquo;s simplicity shines is the variables.
+In Ansible there are variables with a just
+&lt;a href=&#34;http://docs.ansible.com/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable&#34;&gt;5 layers of precedence&lt;/a&gt;
+there is no merging of dictionaries or lists across those layers. In contrast in Chef there are attributes as well as data bags, two distinct types.
+For each type the scope can vary with data bags being across the entire chef server and attributes either having an environment, node or run scope.
+Additionally there are multiple types of attributes and during a run there is a list of
+&lt;a href=&#34;https://docs.getchef.com/chef_overview_attributes.html#attribute-precedence&#34;&gt;15 levels of precedence&lt;/a&gt;. Lastly as the attributes for a run are built
+they merge in certain ways for the final product. The Ansible variables have in my experience been quite sufficient to get the job done and are
+a welcome relief from the headache of Chef attributes, data bags and encrypted data bags.&lt;/p&gt;
+
+&lt;p&gt;Ansible is simpler in that it uses a yaml configuration for plays rather than Chef&amp;rsquo;s extensions to ruby with a fully capable ruby interpreter
+running. Though this perhaps makes it easier to approach Ansible for a non-programmer this is one instance where perhaps simplicity isn&amp;rsquo;t an advantage.
+Chef has far more capability in its cookbooks, a large advantage in some situations, however there is no need to use the ruby aspects of Chef if they are not needed,
+so many situations are kept simpler. In Ansible loops and conditionals are a bit cumbersome and more complicated combinations are either downright atrocious
+or best done utilizing multiple runs. In short the lack of code like control structures makes the implementation more complicated. On
+the plus side multiple runs in Ansible are much easier to accomplish and even multiple plays can sometimes be sufficient. There is also a big catch in my argument,
+I have yet to investigate creating modules in Ansible, if they are sufficiently quick to implement and powerful then perhaps yaml plus modules will just be
+a way of enforcing clear code structure.&lt;/p&gt;
+
+&lt;p&gt;My conclusion after converting &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;monasca-vagrant&lt;/a&gt; is that the simplicity of Ansible reflects the type of
+trade offs that favor practical usage rather than theoretically superior design. In general Ansible is easier to start a configuration management project
+with and quicker to finish, with the result being easier for others to understand. This will make it more accessible for others on my team with
+limited time to dedicate to configuration management tasks as well as allow my work to progress more quickly. Further we should be able to consolidate
+our orchestration scripts around Ansible, simplifying the knowledge needed to run our toolset.
+I have yet to use Ansible for more complicated fully HA deploys, orchestration, nor have I created a Ansible module to extend the capabilities. If in my exploration
+of these more advanced topics I am able to retain the simplicity for common installations and continue to find a practical usefulness in the design
+decisions, then Ansible will truly be a joy to use and the most useful tool in the field.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

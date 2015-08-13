@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Systems on Background Process </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://backgroundprocess.com/systems/</link>
+    <language>en-us</language>
+    <author>Tim Kuhlman</author>
+    
+    <updated>Fri, 28 Nov 2014 10:46:35 -0600</updated>
+    
+    <item>
+      <title>Initial impressions of systemd</title>
+      <link>http://backgroundprocess.com/systems/systemd/</link>
+      <pubDate>Fri, 28 Nov 2014 10:46:35 -0600</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/systems/systemd/</guid>
+      <description>&lt;p&gt;A few years ago I was happy to see the movement away from the complicated and fragile system V style init scripts. This is something
+that both Upstart and systemd accomplish well. Additionally the ability to start up services in parallel with more advanced ordering is quite useful.
+Though in many ways I can work with either system I am glad that the Linux community is converging on just one option, I think this standardization
+is a large benefit for the community as a whole.&lt;/p&gt;
+
+&lt;p&gt;I am switching from Upstart to systemd as the distros I use do so and given that I have mostly worked with Debian based systems lately my experience with
+systemd is still rather basic but there are two things that I like about it compared to Upstart.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The single command for everything, systemctl. Having one command makes it easier to explore the full functionality of systemd and also
+makes it so much easier to remember what tool to use for any particular daemon. The last few lines of logs on status is a nice feature also.&lt;/li&gt;
+&lt;li&gt;The &amp;lsquo;After=&amp;rsquo; option in systemd service files. In particular as pointed out in this &lt;a href=&#34;http://0pointer.de/blog/projects/systemd-for-admins-3.html&#34;&gt;blog post&lt;/a&gt;
+this option only affects ordering if both services are going to be started. This is especially helpful for my systems as often in our dev
+environment we stack all the services on one machine and so the startup order is important. On our full test and production clusters services are spread
+on different machines and the start up order is out of the hands of systemd. It is nice in both cases to use the same service definition and just have
+it work appropriately.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are numerous other features of systemd which I am just beginning to discover in my usage. For instance I was excited to discover the simplicity of turning
+on a serial console. I perhaps will find time explore the control group integration and some other security features such as private /tmp soon. I definitely need
+to further investigate journald and how it can be useful as a core part of the systems I use. The great news here is that the man pages and the related documentation
+around systemd is excellent. Simply exploring the documentation links on the projects &lt;a href=&#34;http://www.freedesktop.org/wiki/Software/systemd/&#34;&gt;main page&lt;/a&gt; have provided
+me with a quick start and more in depth material than I have time to explore.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

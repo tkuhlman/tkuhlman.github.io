@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Advanced Ansible - Background Process</title>
+	<meta name="author" content="map[name:Tim Kuhlman email:tim@backgroundprocess.com]">
+
+	
+	
+	<meta name="description" content="">
+	
+
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://backgroundprocess.com/infrastructure/advanced-ansible/">
+	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
+	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-56102734-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	
+	<script src="http://backgroundprocess.com//js/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('tim@backgroundprocess.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+	
+</div>
+
+<nav id="main-nav"><ul class="main">
+    <li><a href="http://backgroundprocess.com//">Blog</a></li>
+    <li><a href="http://backgroundprocess.com//about/">About</a></li>
+    <li><a href="http://backgroundprocess.com//tags/">Tags</a></li>
+</ul>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="github" href='https://github.com/tkuhlman' title="GitHub">GitHub</a>
+		
+		
+		
+		
+			<a class="linkedin" href='http://www.linkedin.com/in/timkuhlman' title="LinkedIn">LinkedIn</a>
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+			<a class="rss" href='http://feeds.feedburner.com/BackgroundProcess' title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>
+			</div>
+		</div>
+		<div class="mid-col">
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+					<div itemscope itemtype="http://schema.org/Blog">
+					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">Advanced Ansible</h1>
+		<div class="date"><time datetime='Thu, Dec 18, 2014' data-updated="true" itemprop="datePublished">Thu, Dec 18, 2014</time>
+</div>
+	<div class="entry-content" itemprop="articleBody"><p>It would be an mistake to call me an Ansible expert but I am now an experienced Ansible user and it is time to expand on my earlier <a href="/tags/#Ansible">Ansible posts</a>.
+I have now been using Ansible on a regular basis for awhile and have used it with vagrant based vms, docker containers, as well as across small clusters of machines.
+I have also written a couple of Ansible modules and will likely write another one or two soon. Writing modules is a topic that I will address in
+another post.</p>
+
+<p>As I use Ansible in various environments I continue to enjoy the simplicity of its model. I find it easy to run against a wide variety of deployment
+models by taking existing playbooks and tweaking them slightly or combining them in new ways. This flexibility has been key for my use cases lately as I can
+work on making my roles and modules robust and then easily use them for small installs, clusters, one or os or another and anything else needed.</p>
+
+<p>I have found that rolling deploys with deployment verification is much easier in Ansible then with many other configuration management tools I have previously used.
+Targeting a subset of hosts is as simple as setting the correct serial value in the playbook or even targeting groups of hosts over multiple subsequent runs. Next
+you just need to add in deployment verification. For most of the services I have setup that is as simple as a <a href="http://docs.ansible.com/wait_for_module.html">wait_for</a>
+task, though for some the <a href="http://docs.ansible.com/assert_module.html">assert</a> module is a better option. Either option is easy to implement.</p>
+
+<p>One aspect of Ansible that needs some work is its ability to finishing running triggered handlers on failure. I have encountered many situations where we are running
+a play with multiple roles and earlier roles register handlers which never run because a later role fails and handlers have not yet been flushed. In the case of a
+restarted service this is quite annoying especially as the next run won&rsquo;t trigger handlers and if I put both the handler and a service start task in some instances
+the service will restart twice. There is a work around, basically first flush handlers then define the service task with a state of started. This works well but
+it is a bit annoying that I have to remember to explicitly flush handlers for every role.</p>
+
+<p>I have hope that the running of queued handlers is something that will be fixed because I am happy to see improvements in Ansible with 1.8 that directly affect my
+work. The most notable changes for me were actually in the Ansible Galaxy command. The ability to specify a role requirements file in yaml and point at git repos directly
+as well as optionally specify tags is essential. Though I like what is happening with the Ansible Galaxy public site it just isn&rsquo;t always possible to push things up there and
+often while waiting for a pull request to be approved it is nice to point to my updated version without making a new entry in galaxy.
+I am also tired of seeing tkuhlman prepended to the beginning of my roles in the various playbooks. Though account based differentiation is a good feature for
+Galaxy that encourages sharing of tweaks to existing roles I really only want to be aware of it on download, the new format accomplishes exactly that.</p>
+
+<p>Besides continued work with writing modules there are some other aspects of Ansible I still would like to explore. Wider use of assert and lookups as well as
+pipelining come to mind. Also, I have not yet had the opportunity to use Ansible across a large cluster of nodes. I have worked with large clusters before and likely
+will again fairly soon, I look forward to the learning that will come from running Ansible in such an environment.</p>
+</div>
+</article>
+					
+						<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size=''></a>
+	
+	
+	</div>
+	
+  	<script type="text/javascript" src='http://s7.addthis.com/js/250/addthis_widget.js#pubid='></script>
+  	
+</div>
+
+					
+					
+					<section id="comment">
+					    <h1 class="title">Comments</h1>
+					    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+					</section>
+					
+					
+
+<script type="text/javascript">
+    
+    var disqus_shortname = 'backgroundprocess';
+
+    
+    
+
+    
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+    
+</script>
+
+
+				    </div>
+				</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2015
+
+    Tim Kuhlman
+
+Design based on <a href="https://github.com/cxfksword/greyshade">greyshade</a>
+<script src="http://backgroundprocess.com//js/slash.js"></script>
+<script src="http://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script>
+</footer>
+		</div>
+	</div>
+	
+</body>
+</html>

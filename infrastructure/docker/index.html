@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Docker, what use it? - Background Process</title>
+	<meta name="author" content="map[name:Tim Kuhlman email:tim@backgroundprocess.com]">
+
+	
+	
+	<meta name="description" content="">
+	
+
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://backgroundprocess.com/infrastructure/docker/">
+	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
+	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-56102734-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	
+	<script src="http://backgroundprocess.com//js/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('tim@backgroundprocess.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+	
+</div>
+
+<nav id="main-nav"><ul class="main">
+    <li><a href="http://backgroundprocess.com//">Blog</a></li>
+    <li><a href="http://backgroundprocess.com//about/">About</a></li>
+    <li><a href="http://backgroundprocess.com//tags/">Tags</a></li>
+</ul>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="github" href='https://github.com/tkuhlman' title="GitHub">GitHub</a>
+		
+		
+		
+		
+			<a class="linkedin" href='http://www.linkedin.com/in/timkuhlman' title="LinkedIn">LinkedIn</a>
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+			<a class="rss" href='http://feeds.feedburner.com/BackgroundProcess' title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>
+			</div>
+		</div>
+		<div class="mid-col">
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+					<div itemscope itemtype="http://schema.org/Blog">
+					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">Docker, what use it?</h1>
+		<div class="date"><time datetime='Wed, Mar 11, 2015' data-updated="true" itemprop="datePublished">Wed, Mar 11, 2015</time>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+
+<p>Anyone in the industry who hasn&rsquo;t yet read multiple blog posts on <a href="https://www.docker.com/">Docker</a> is living under a rock. There is a lot of hype about Docker
+and its potential. I also revel in the long term vision for containers and their potential impact on the industry. However until I have an awesome
+infrastructure where I can deploy images into production my practical mindset drives me to cut through the hype and ask what
+use is Docker for my work today?</p>
+
+<p>As I have explored Docker here are the uses for it that I have encountered that bring practical value to my day to day work.</p>
+
+<h2 id="development-environments:69e60651f42783a7df723575c4088b5b">Development Environments</h2>
+
+<p>When it comes to starting up a quick environment to test out something you may or may not keep around, VMs are an undisputed improvement over bare metal and
+containers are step above VMs. It is so quick and seamless to get a dedicated container for whatever the current need is I find myself doing more and more
+work this way.</p>
+
+<p>I heavily use <a href="https://github.com/stackforge/monasca-vagrant">Vagrant</a> for my team&rsquo;s primary development environment. Vagrant is an awesome tool that I could
+write many dedicated posts about. Why not Docker? There are a number of reasons we still Vagrant for development over Docker including that it is still
+better able to replicate a real deploy of our software as well as simple momentum.</p>
+
+<p>Beyond the momentum of existing solutions, the biggest problem with Docker for complex dev environments today is that many tools are built assuming a
+different environment. Some tools want to setup a firewall or change sysctl settings and so end up having some difficulties with containers.
+Despite these annoyances, as tools for containers improve I expect more and more the balance tipping in favor of Docker.
+The quick startup, lighter resource utilization, easy versioning and other advantages of Docker containers are quite compelling especially for all new environments.</p>
+
+<h2 id="testing:69e60651f42783a7df723575c4088b5b">Testing</h2>
+
+<p>The easy versioning and quick startup of containers make them ideal for testing. This is a key part of the primary vision of Docker, an image built
+by development can be easily tested. Even with no production environment ready for Docker, containers have been useful for testing in a few scenarios
+I have encountered.</p>
+
+<h3 id="integration-tests:69e60651f42783a7df723575c4088b5b">Integration Tests</h3>
+
+<p>It seems you always have more scenarios to test then available resources to test them on. Containers allow you to easily switch between different
+configurations and software versions or to even have multiple running at one time. This is obtainable
+using VMs also but it is much quicker to build, run and switch scenarios with containers.</p>
+
+<p>One of my team members went further and integrated some pre-built containers into the standard tests run during the build. Better than trying to mock out
+the entire database and various REST API services used by the code, he was able to run them in Docker containers with a known set of data. Not only is this easier
+to setup then mocking out these interfaces it results in much more realistic tests.</p>
+
+<h3 id="load-testing:69e60651f42783a7df723575c4088b5b">Load testing</h3>
+
+<p>When you want to run many clients but only have a few machines to do so for many applications your options are quite limited.
+You can spin up bunches of machines with your favorite cloud provider, you can write a load test tool that simulates clients or attempt to mangle code, configuration
+and startup scripts such that many client instances run. Quicker and easier than all of those options is to just start up a few hundred clients each running in a
+new Docker container.</p>
+
+<h2 id="demos:69e60651f42783a7df723575c4088b5b">Demos</h2>
+
+<p>The last practical use for Docker that comes to mind is one I am actively working on, a demo environment. A single command to start, a single download and you
+have a complex system up and running that anyone can explore. VMs can fulfill this need also but Docker images are smaller and quicker to run as well as simpler to build
+and update. This means the key quality of a demo, barrier to entry, is lower.</p>
+</div>
+</article>
+					
+						<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size=''></a>
+	
+	
+	</div>
+	
+  	<script type="text/javascript" src='http://s7.addthis.com/js/250/addthis_widget.js#pubid='></script>
+  	
+</div>
+
+					
+					
+					<section id="comment">
+					    <h1 class="title">Comments</h1>
+					    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+					</section>
+					
+					
+
+<script type="text/javascript">
+    
+    var disqus_shortname = 'backgroundprocess';
+
+    
+    
+
+    
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+    
+</script>
+
+
+				    </div>
+				</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2015
+
+    Tim Kuhlman
+
+Design based on <a href="https://github.com/cxfksword/greyshade">greyshade</a>
+<script src="http://backgroundprocess.com//js/slash.js"></script>
+<script src="http://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script>
+</footer>
+		</div>
+	</div>
+	
+</body>
+</html>

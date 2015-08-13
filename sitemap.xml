@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://backgroundprocess.com/</loc>
+    <lastmod>2015-05-19T21:56:28-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://backgroundprocess.com/infrastructure/vagrant/</loc>
+    <lastmod>2015-05-19T21:56:28-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://backgroundprocess.com/infrastructure/docker/</loc>
+    <lastmod>2015-03-11T21:36:35-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://backgroundprocess.com/people/managements_role/</loc>
+    <lastmod>2015-02-23T21:41:01-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://backgroundprocess.com/code/ansible-modules/</loc>
+    <lastmod>2015-01-06T21:43:31-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://backgroundprocess.com/infrastructure/advanced-ansible/</loc>
+    <lastmod>2014-12-18T22:01:37-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://backgroundprocess.com/systems/systemd/</loc>
+    <lastmod>2014-11-28T10:46:35-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://backgroundprocess.com/infrastructure/quick-ansible/</loc>
+    <lastmod>2014-11-07T19:27:21-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</loc>
+    <lastmod>2014-11-02T21:00:22-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://backgroundprocess.com/learning/time-to-blog/</loc>
+    <lastmod>2014-10-28T22:17:36-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://backgroundprocess.com/about/</loc>
+  </url>
+  
+</urlset>

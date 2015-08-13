@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title> on Background Process </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://backgroundprocess.com/</link>
+    <language>en-us</language>
+    <author>Tim Kuhlman</author>
+    
+    <updated>Tue, 19 May 2015 21:56:28 MDT</updated>
+    
+    <item>
+      <title>Vagrant Love</title>
+      <link>http://backgroundprocess.com/infrastructure/vagrant/</link>
+      <pubDate>Tue, 19 May 2015 21:56:28 MDT</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/infrastructure/vagrant/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://www.vagrantup.com/&#34;&gt;Vagrant&lt;/a&gt; is awesome!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Given its much deserved popularity this won&amp;rsquo;t surprise many. This isn&amp;rsquo;t even new, I&amp;rsquo;ve used it daily for quite awhile.
+Recently while discussing use cases where Vagrant was an awesome fit I found myself wondering just why is it such a great tool?&lt;/p&gt;
+
+&lt;p&gt;The best tools are those that reflect a deep understanding of the use cases and paradigms they are made for. Vagrant is actually
+quite simple, roughly it just ties together some pre-built vms with the appropriate providers and configuration management tool. The key is that it does so
+cleanly without adding baggage to the process.&lt;/p&gt;
+
+&lt;p&gt;Another aspect that is important is that Vagrant chooses sane defaults but still allows configurability. The sane defaults combined with the clean design mean
+that more often than not Vagrant makes building vm based environments far easier than any other way. This is probably what I love most about Vagrant, I can turn
+around a clustered dev environment in under 5 minutes and even share it with my team with no extra work. This is orders of magnitude faster than other solutions.&lt;/p&gt;
+
+&lt;p&gt;Building Vagrant based environments that fast takes good docs and familiarity with Vagrant. Vagrant has &lt;a href=&#34;https://docs.vagrantup.com/v2/&#34;&gt;great simple and clear docs&lt;/a&gt;
+and the familiarity largely comes because Vagrant is versatile. The configurability of Vagrant allows it to have quite a bit of depth for those less than standard use cases.
+This in turn means you come to know the tool and appreciate its simplicity and ease, which in turn makes it easier to use. All of this ultimately culminates in you
+writing a blog post about Vagrant love.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Docker, what use it?</title>
+      <link>http://backgroundprocess.com/infrastructure/docker/</link>
+      <pubDate>Wed, 11 Mar 2015 21:36:35 MDT</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/infrastructure/docker/</guid>
+      <description>
+
+&lt;p&gt;Anyone in the industry who hasn&amp;rsquo;t yet read multiple blog posts on &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; is living under a rock. There is a lot of hype about Docker
+and its potential. I also revel in the long term vision for containers and their potential impact on the industry. However until I have an awesome
+infrastructure where I can deploy images into production my practical mindset drives me to cut through the hype and ask what
+use is Docker for my work today?&lt;/p&gt;
+
+&lt;p&gt;As I have explored Docker here are the uses for it that I have encountered that bring practical value to my day to day work.&lt;/p&gt;
+
+&lt;h2 id=&#34;development-environments:69e60651f42783a7df723575c4088b5b&#34;&gt;Development Environments&lt;/h2&gt;
+
+&lt;p&gt;When it comes to starting up a quick environment to test out something you may or may not keep around, VMs are an undisputed improvement over bare metal and
+containers are step above VMs. It is so quick and seamless to get a dedicated container for whatever the current need is I find myself doing more and more
+work this way.&lt;/p&gt;
+
+&lt;p&gt;I heavily use &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;Vagrant&lt;/a&gt; for my team&amp;rsquo;s primary development environment. Vagrant is an awesome tool that I could
+write many dedicated posts about. Why not Docker? There are a number of reasons we still Vagrant for development over Docker including that it is still
+better able to replicate a real deploy of our software as well as simple momentum.&lt;/p&gt;
+
+&lt;p&gt;Beyond the momentum of existing solutions, the biggest problem with Docker for complex dev environments today is that many tools are built assuming a
+different environment. Some tools want to setup a firewall or change sysctl settings and so end up having some difficulties with containers.
+Despite these annoyances, as tools for containers improve I expect more and more the balance tipping in favor of Docker.
+The quick startup, lighter resource utilization, easy versioning and other advantages of Docker containers are quite compelling especially for all new environments.&lt;/p&gt;
+
+&lt;h2 id=&#34;testing:69e60651f42783a7df723575c4088b5b&#34;&gt;Testing&lt;/h2&gt;
+
+&lt;p&gt;The easy versioning and quick startup of containers make them ideal for testing. This is a key part of the primary vision of Docker, an image built
+by development can be easily tested. Even with no production environment ready for Docker, containers have been useful for testing in a few scenarios
+I have encountered.&lt;/p&gt;
+
+&lt;h3 id=&#34;integration-tests:69e60651f42783a7df723575c4088b5b&#34;&gt;Integration Tests&lt;/h3&gt;
+
+&lt;p&gt;It seems you always have more scenarios to test then available resources to test them on. Containers allow you to easily switch between different
+configurations and software versions or to even have multiple running at one time. This is obtainable
+using VMs also but it is much quicker to build, run and switch scenarios with containers.&lt;/p&gt;
+
+&lt;p&gt;One of my team members went further and integrated some pre-built containers into the standard tests run during the build. Better than trying to mock out
+the entire database and various REST API services used by the code, he was able to run them in Docker containers with a known set of data. Not only is this easier
+to setup then mocking out these interfaces it results in much more realistic tests.&lt;/p&gt;
+
+&lt;h3 id=&#34;load-testing:69e60651f42783a7df723575c4088b5b&#34;&gt;Load testing&lt;/h3&gt;
+
+&lt;p&gt;When you want to run many clients but only have a few machines to do so for many applications your options are quite limited.
+You can spin up bunches of machines with your favorite cloud provider, you can write a load test tool that simulates clients or attempt to mangle code, configuration
+and startup scripts such that many client instances run. Quicker and easier than all of those options is to just start up a few hundred clients each running in a
+new Docker container.&lt;/p&gt;
+
+&lt;h2 id=&#34;demos:69e60651f42783a7df723575c4088b5b&#34;&gt;Demos&lt;/h2&gt;
+
+&lt;p&gt;The last practical use for Docker that comes to mind is one I am actively working on, a demo environment. A single command to start, a single download and you
+have a complex system up and running that anyone can explore. VMs can fulfill this need also but Docker images are smaller and quicker to run as well as simpler to build
+and update. This means the key quality of a demo, barrier to entry, is lower.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An Engineer&#39;s Perspective on the Value of Management</title>
+      <link>http://backgroundprocess.com/people/managements_role/</link>
+      <pubDate>Mon, 23 Feb 2015 21:41:01 -0600</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/people/managements_role/</guid>
+      <description>
+
+&lt;h2 id=&#34;the-managers-goal-enable-team-productivity:b6314b790005f3a25a81b5da65ef1f09&#34;&gt;The Managers Goal - Enable Team Productivity&lt;/h2&gt;
+
+&lt;p&gt;I am not management expert and it is beyond my expertise to layout the value of management for an organization. On the other hand I am engineer on
+a software engineering team and I do have some clear ideas on what I want from management and what I believe most of my peers also would like. It all boils
+down to this, an engineering manager should enable his team to get work done.&lt;/p&gt;
+
+&lt;p&gt;For most engineers a large part of their motivation is the desire to be productive. The more a manager enables this the better everything works. Not only
+does more work get done, engineers are more satisfied and they have a better perception of and relationship with their manager.&lt;/p&gt;
+
+&lt;h2 id=&#34;management-responsibilities:b6314b790005f3a25a81b5da65ef1f09&#34;&gt;Management Responsibilities&lt;/h2&gt;
+
+&lt;p&gt;The nature of management, or any other discipline primarily concerning people, is such that you can&amp;rsquo;t define exactly what that means for most situations.
+I believe this is a large part of the reason that a few managers are horribly bad, a small proportion great, but most find themselves somewhere in
+the middle. Though I am sure I am missing some key points here are a few things that I believe are the responsibility of a manager. Depending on the
+organization some of these may fall to other roles but someone needs to get them done and the manager should at least make sure they are being achieved.&lt;/p&gt;
+
+&lt;h3 id=&#34;within-the-team:b6314b790005f3a25a81b5da65ef1f09&#34;&gt;Within the Team&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Engaging engineers in appropriate planning, but not stifling them with it.&lt;/li&gt;
+&lt;li&gt;Fostering a collaborative environment.&lt;/li&gt;
+&lt;li&gt;Rewarding achievement.&lt;/li&gt;
+&lt;li&gt;Where needed dealing with employees who are holding back the rest of the team.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;within-the-organization:b6314b790005f3a25a81b5da65ef1f09&#34;&gt;Within the Organization&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Removing organizational road blocks to progress.&lt;/li&gt;
+&lt;li&gt;Being an a voice representing the team to the rest of the organization.&lt;/li&gt;
+&lt;li&gt;Listening to the orgnaization and appropriately sharing themes and key details with the team.&lt;/li&gt;
+&lt;li&gt;Being a catalyst and enabler for cross-team collaboration.&lt;/li&gt;
+&lt;li&gt;Representing the team in organizational planning.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible Modules</title>
+      <link>http://backgroundprocess.com/code/ansible-modules/</link>
+      <pubDate>Tue, 06 Jan 2015 21:43:31 -0600</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/code/ansible-modules/</guid>
+      <description>
+
+&lt;p&gt;Ansible is relatively simple in relation to other configuration management frameworks. This makes it easier to approach and accomplish real work with, especially
+for those who don&amp;rsquo;t work in it full time, however there are times when more functionality is needed. Ansible&amp;rsquo;s answer for most of these situations is to
+write a module.&lt;/p&gt;
+
+&lt;p&gt;I have written a couple of &lt;a href=&#34;https://github.com/hpcloud-mon/ansible-module-monasca&#34;&gt;modules for Monasca&lt;/a&gt; and doing so was easy, particularly if you know Python.&lt;/p&gt;
+
+&lt;h2 id=&#34;common-python-functions:452a8813491776755aef8af7303e4551&#34;&gt;Common Python Functions&lt;/h2&gt;
+
+&lt;p&gt;Though you can write modules in any language there are various functions available for Python that simplify the process.&lt;/p&gt;
+
+&lt;p&gt;The documentation for &lt;a href=&#34;http://docs.ansible.com/developing_modules.html&#34;&gt;writing Ansible modules&lt;/a&gt; is a bit light on some details particularly on using the
+Python common functions. The docs mostly encourage you to check out code examples, my initial reaction to this was dread that things were going to get difficult.
+Happily I found most of the examples were straight forward and so it was simple enough for someone already familiar with Python.&lt;/p&gt;
+
+&lt;p&gt;The common functions make the writing of the modules in Python a simple coding task. Looking back at the modules I have written more lines are dedicated to the documentation
+of the module than to the code itself. Among the code a large chunk is dealing with defining the various optional values that can be passed in. I point
+this out only to highlight that the common libraries make the code and the logic itself quite simple and even naturally steer toward documentation
+driven development.&lt;/p&gt;
+
+&lt;h2 id=&#34;modules-for-idempotency:452a8813491776755aef8af7303e4551&#34;&gt;Modules for Idempotency&lt;/h2&gt;
+
+&lt;p&gt;As I have &lt;a href=&#34;infrastructure/2014/11/02/ansible-config-management-simplified.html&#34;&gt;written previously&lt;/a&gt; loops and conditionals are cumbersome in Ansible. In my
+usage I particularly felt this at times I tried to accomplish a task lacking a module and retain idempotency. Looping through a list to check the status and
+then conditionally performing operations based on the result is possible in raw Ansible but is more straight forward, flexible and cleaner to implement in a
+module.&lt;/p&gt;
+
+&lt;p&gt;In Ansible a module is the fundamental mechanism used to accomplish idempotent operations. The ease of implementing idempotency in a module
+verses in Ansible directly has more than anything else motivated me to add to my todo list a few modules I would like to write.&lt;/p&gt;
+
+&lt;h2 id=&#34;shared-code-among-modules:452a8813491776755aef8af7303e4551&#34;&gt;Shared code among modules&lt;/h2&gt;
+
+&lt;p&gt;The one major complaint I have with the modules I have written is that it is difficult to have code shared between modules. Importing python libraries is straight forward
+as well as including code from the Ansible base but code shared between Ansible modules is not possible.&lt;/p&gt;
+
+&lt;p&gt;The reason it doesn&amp;rsquo;t work is because Ansible does not execute the module locally but rather copies it to
+a remote host. Additionally Ansible is trying to do this with as few operations as possible to keep it performant. Ansible would have to either parse the module
+or copy the entire library directory on each run for a shared file to be available.&lt;/p&gt;
+
+&lt;p&gt;Though I understand the reasons behind this
+behaviour since Ansible handles including libraries from the Ansible core and any included python libraries in the system path are available I found myself expecting
+to be able to define my own shared python files. After spending a bit of time looking for a way to have a shared python file shipped with my Ansible modules, I
+choose to just copy the shared code to both Ansible modules. That is far from ideal but the amount of shared code was relatively small so the alternative of packing
+it into a library to be installed on the remote machine would be more trouble.&lt;/p&gt;
+
+&lt;p&gt;Ultimately I have no solution for this so will live with it as a minor annoyance for now.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Advanced Ansible</title>
+      <link>http://backgroundprocess.com/infrastructure/advanced-ansible/</link>
+      <pubDate>Thu, 18 Dec 2014 22:01:37 -0600</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/infrastructure/advanced-ansible/</guid>
+      <description>&lt;p&gt;It would be an mistake to call me an Ansible expert but I am now an experienced Ansible user and it is time to expand on my earlier &lt;a href=&#34;http://backgroundprocess.com/tags/#Ansible&#34;&gt;Ansible posts&lt;/a&gt;.
+I have now been using Ansible on a regular basis for awhile and have used it with vagrant based vms, docker containers, as well as across small clusters of machines.
+I have also written a couple of Ansible modules and will likely write another one or two soon. Writing modules is a topic that I will address in
+another post.&lt;/p&gt;
+
+&lt;p&gt;As I use Ansible in various environments I continue to enjoy the simplicity of its model. I find it easy to run against a wide variety of deployment
+models by taking existing playbooks and tweaking them slightly or combining them in new ways. This flexibility has been key for my use cases lately as I can
+work on making my roles and modules robust and then easily use them for small installs, clusters, one or os or another and anything else needed.&lt;/p&gt;
+
+&lt;p&gt;I have found that rolling deploys with deployment verification is much easier in Ansible then with many other configuration management tools I have previously used.
+Targeting a subset of hosts is as simple as setting the correct serial value in the playbook or even targeting groups of hosts over multiple subsequent runs. Next
+you just need to add in deployment verification. For most of the services I have setup that is as simple as a &lt;a href=&#34;http://docs.ansible.com/wait_for_module.html&#34;&gt;wait_for&lt;/a&gt;
+task, though for some the &lt;a href=&#34;http://docs.ansible.com/assert_module.html&#34;&gt;assert&lt;/a&gt; module is a better option. Either option is easy to implement.&lt;/p&gt;
+
+&lt;p&gt;One aspect of Ansible that needs some work is its ability to finishing running triggered handlers on failure. I have encountered many situations where we are running
+a play with multiple roles and earlier roles register handlers which never run because a later role fails and handlers have not yet been flushed. In the case of a
+restarted service this is quite annoying especially as the next run won&amp;rsquo;t trigger handlers and if I put both the handler and a service start task in some instances
+the service will restart twice. There is a work around, basically first flush handlers then define the service task with a state of started. This works well but
+it is a bit annoying that I have to remember to explicitly flush handlers for every role.&lt;/p&gt;
+
+&lt;p&gt;I have hope that the running of queued handlers is something that will be fixed because I am happy to see improvements in Ansible with 1.8 that directly affect my
+work. The most notable changes for me were actually in the Ansible Galaxy command. The ability to specify a role requirements file in yaml and point at git repos directly
+as well as optionally specify tags is essential. Though I like what is happening with the Ansible Galaxy public site it just isn&amp;rsquo;t always possible to push things up there and
+often while waiting for a pull request to be approved it is nice to point to my updated version without making a new entry in galaxy.
+I am also tired of seeing tkuhlman prepended to the beginning of my roles in the various playbooks. Though account based differentiation is a good feature for
+Galaxy that encourages sharing of tweaks to existing roles I really only want to be aware of it on download, the new format accomplishes exactly that.&lt;/p&gt;
+
+&lt;p&gt;Besides continued work with writing modules there are some other aspects of Ansible I still would like to explore. Wider use of assert and lookups as well as
+pipelining come to mind. Also, I have not yet had the opportunity to use Ansible across a large cluster of nodes. I have worked with large clusters before and likely
+will again fairly soon, I look forward to the learning that will come from running Ansible in such an environment.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Initial impressions of systemd</title>
+      <link>http://backgroundprocess.com/systems/systemd/</link>
+      <pubDate>Fri, 28 Nov 2014 10:46:35 -0600</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/systems/systemd/</guid>
+      <description>&lt;p&gt;A few years ago I was happy to see the movement away from the complicated and fragile system V style init scripts. This is something
+that both Upstart and systemd accomplish well. Additionally the ability to start up services in parallel with more advanced ordering is quite useful.
+Though in many ways I can work with either system I am glad that the Linux community is converging on just one option, I think this standardization
+is a large benefit for the community as a whole.&lt;/p&gt;
+
+&lt;p&gt;I am switching from Upstart to systemd as the distros I use do so and given that I have mostly worked with Debian based systems lately my experience with
+systemd is still rather basic but there are two things that I like about it compared to Upstart.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The single command for everything, systemctl. Having one command makes it easier to explore the full functionality of systemd and also
+makes it so much easier to remember what tool to use for any particular daemon. The last few lines of logs on status is a nice feature also.&lt;/li&gt;
+&lt;li&gt;The &amp;lsquo;After=&amp;rsquo; option in systemd service files. In particular as pointed out in this &lt;a href=&#34;http://0pointer.de/blog/projects/systemd-for-admins-3.html&#34;&gt;blog post&lt;/a&gt;
+this option only affects ordering if both services are going to be started. This is especially helpful for my systems as often in our dev
+environment we stack all the services on one machine and so the startup order is important. On our full test and production clusters services are spread
+on different machines and the start up order is out of the hands of systemd. It is nice in both cases to use the same service definition and just have
+it work appropriately.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are numerous other features of systemd which I am just beginning to discover in my usage. For instance I was excited to discover the simplicity of turning
+on a serial console. I perhaps will find time explore the control group integration and some other security features such as private /tmp soon. I definitely need
+to further investigate journald and how it can be useful as a core part of the systems I use. The great news here is that the man pages and the related documentation
+around systemd is excellent. Simply exploring the documentation links on the projects &lt;a href=&#34;http://www.freedesktop.org/wiki/Software/systemd/&#34;&gt;main page&lt;/a&gt; have provided
+me with a quick start and more in depth material than I have time to explore.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible Utilities</title>
+      <link>http://backgroundprocess.com/infrastructure/quick-ansible/</link>
+      <pubDate>Fri, 07 Nov 2014 19:27:21 -0600</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/infrastructure/quick-ansible/</guid>
+      <description>&lt;p&gt;In the last few weeks I have been immersed in &lt;a href=&#34;http://www.ansible.com&#34;&gt;Ansible&lt;/a&gt;. I have been using Ansible with &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;Vagrant&lt;/a&gt;,
+with &lt;a href=&#34;https://github.com/hpcloud-mon/monasca-docker&#34;&gt;Docker&lt;/a&gt; and in a test environment on bare metal. Those are all topics I may explore in more depth later but
+what really is conspicuous today is the way I can build simple utilities with Ansible.&lt;/p&gt;
+
+&lt;p&gt;My collection of Ansible &lt;a href=&#34;https://github.com/tkuhlman/ansible-utils&#34;&gt;scripts&lt;/a&gt; which aren&amp;rsquo;t part of a larger set of playbooks is still quite small but I feel it
+is but the tip of the iceberg. In the last few years I have built a fair collection of &lt;a href=&#34;http://www.fabfile.org/en/latest/&#34;&gt;Fabric&lt;/a&gt; scripts for
+various common tasks. These have been highly useful and I am will continue to use Fabric especially for tasks needing the more complicated logic and control structures
+possible using the full power of Python. Ansible also has a future in my tool set, in particular for tasks where modules exist.&lt;/p&gt;
+
+&lt;p&gt;With Ansible there are a couple of advantages which make it useful for the small orchestration tasks. It uses the same inventory already setup for configuration
+management, making it quite easy to target to the right boxes. The organization structures within Ansible make it is easy to mix and match tasks. Additionally it is a tool
+already being used so there is no new learning curve for my colleagues. The biggest advantage is the functionality encapsulated in pre-built modules,
+in particular the idempotency these bring.&lt;/p&gt;
+
+&lt;p&gt;Take as an example my first little &lt;a href=&#34;https://github.com/tkuhlman/ansible-utils/blob/master/setup_user.yml&#34;&gt;utility&lt;/a&gt;, I was already immersed in Ansible so no
+mental context switch was needed and I was able to write it quickly. It is simple and quickly written but immediately saved me some time. I could have fairly
+easily written this is Fabric also but it would have taken me much longer if I wanted to make an equivalent Fabric script idempotent. In my first run idempotency
+isn&amp;rsquo;t needed but it gives peace of mind because there is no danger if I accidentally run it twice. This will be especially helpful a month or two from now when
+I have forgotten where I ran it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible - Configuration Management Simplifed</title>
+      <link>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</link>
+      <pubDate>Sun, 02 Nov 2014 21:00:22 -0600</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</guid>
+      <description>&lt;p&gt;In the last couple of weeks I have been converting &lt;a href=&#34;https://wiki.openstack.org/wiki/Monasca&#34;&gt;Monasca&lt;/a&gt; from &lt;a href=&#34;https://www.getchef.com/&#34;&gt;Chef&lt;/a&gt;
+to &lt;a href=&#34;http://www.ansible.com/&#34;&gt;Ansible&lt;/a&gt;.
+This has begun with the &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;monasca-vagrant&lt;/a&gt; development environment. Having worked with
+Chef for the last 3 years as I learn Ansible I inevitably evaluate it in comparision to Chef.&lt;/p&gt;
+
+&lt;p&gt;The core quality of Ansible compared to Chef is Simplicity. Ansible attempts to solve many of the same problems as Chef but with an
+approach that seems born of real world experience and eliminates many theoretically superior design paradigms for practical alternatives.&lt;/p&gt;
+
+&lt;p&gt;The most readily apparent simplification between Chef and Ansible is the lack of both an agent and a server in the Ansible model.
+Many simplifications flow from this fundamental design decision, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Extremely simple startup. There is no need to install a server or agents or even learn the depths of the tools paradigm before starting. In
+practice this is fairly important as few start with overhauling the entire configuration management of a service as I did but rather
+start with a single aspect and incrementally grow their coverage.&lt;/li&gt;
+&lt;li&gt;Encryption of data becomes much simpler as there is no need to take a shared secret and distribute to
+the agent on each box. Additionally unlike Chef there is no need to modify the recipes to use encrypted data, the decrypted data
+is just treated as normal variables during an Ansible run&lt;/li&gt;
+&lt;li&gt;With all runs potentially starting on a workstation Ansible is easily enabled for orchestration tasks as well as configuration management.
+Fundamentally there is little difference between the work done by Ansible to enable each use case. This allows tool simplification, no need for an additional
+orchestration layer.&lt;/li&gt;
+&lt;li&gt;Related to the enabling of orchestration tasks the simplicity of running plays via Ansible means it is easy to activate Ansible
+within larger scripts. I for example use a deployment script based on &lt;a href=&#34;http://www.fabfile.org/en/latest/&#34;&gt;Fabric&lt;/a&gt; which interacts with
+git as well as some in house tools as it deploys. The script already relies on an ssh key for the git aspects and so adding in the
+triggering of an Ansible run is extremely easy. When using chef with the script the proper triggering of a run is much more
+complicated as I not only have to upload to the server I also have to navigate an entirely separate authentication system. Ansible covers
+many of the same use case as fabric so I could probably rewrite much if not all of the script in Ansible but I don&amp;rsquo;t need to,
+and can choose to do so or not later. This ability to be a self contained layer that is easy to interact with a key feature of a truly
+useful model that should not be understated.&lt;/li&gt;
+&lt;li&gt;SSH authentication management is required for Ansible and a at first glance seems to be a disadvantage but in all environments
+I have worked with it was already happening. Given that the end result of avoiding the need for another authentication/authorization
+system is an advantage for this simplified model.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ansible&amp;rsquo;s lack of an agent or server is perhaps a factor in why regular unattended runs of Ansible are not built into the system.
+If you want these to happen you must add additional
+scripting around Ansible, via a cron job or a more sophisticated tool such as &lt;a href=&#34;http://www.ansible.com/tower&#34;&gt;Ansible Tower&lt;/a&gt;. This
+is in contrast to Chef where unattended runs are trivial to enable and take advantage of. It is also a
+great example of a theoretical deficiency on the side of Ansible which in practical terms isn&amp;rsquo;t. In all the infrastructures I have
+worked with the professionalism of administrators has been sufficient that I can&amp;rsquo;t recall an instance where the unattended chef runs were
+actually useful. Perhaps I am fortunate regarding the people I have worked with but regardless requiring unattended Ansible runs to use
+another layer of abstraction is not much of a negative. Layers of abstraction are fundamental to computing and when used well they simplify
+the solution rather than complicate it, I believe this is such a case.&lt;/p&gt;
+
+&lt;p&gt;As one who has used Chef for years to deploy various software one of the biggest areas where Ansible&amp;rsquo;s simplicity shines is the variables.
+In Ansible there are variables with a just
+&lt;a href=&#34;http://docs.ansible.com/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable&#34;&gt;5 layers of precedence&lt;/a&gt;
+there is no merging of dictionaries or lists across those layers. In contrast in Chef there are attributes as well as data bags, two distinct types.
+For each type the scope can vary with data bags being across the entire chef server and attributes either having an environment, node or run scope.
+Additionally there are multiple types of attributes and during a run there is a list of
+&lt;a href=&#34;https://docs.getchef.com/chef_overview_attributes.html#attribute-precedence&#34;&gt;15 levels of precedence&lt;/a&gt;. Lastly as the attributes for a run are built
+they merge in certain ways for the final product. The Ansible variables have in my experience been quite sufficient to get the job done and are
+a welcome relief from the headache of Chef attributes, data bags and encrypted data bags.&lt;/p&gt;
+
+&lt;p&gt;Ansible is simpler in that it uses a yaml configuration for plays rather than Chef&amp;rsquo;s extensions to ruby with a fully capable ruby interpreter
+running. Though this perhaps makes it easier to approach Ansible for a non-programmer this is one instance where perhaps simplicity isn&amp;rsquo;t an advantage.
+Chef has far more capability in its cookbooks, a large advantage in some situations, however there is no need to use the ruby aspects of Chef if they are not needed,
+so many situations are kept simpler. In Ansible loops and conditionals are a bit cumbersome and more complicated combinations are either downright atrocious
+or best done utilizing multiple runs. In short the lack of code like control structures makes the implementation more complicated. On
+the plus side multiple runs in Ansible are much easier to accomplish and even multiple plays can sometimes be sufficient. There is also a big catch in my argument,
+I have yet to investigate creating modules in Ansible, if they are sufficiently quick to implement and powerful then perhaps yaml plus modules will just be
+a way of enforcing clear code structure.&lt;/p&gt;
+
+&lt;p&gt;My conclusion after converting &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;monasca-vagrant&lt;/a&gt; is that the simplicity of Ansible reflects the type of
+trade offs that favor practical usage rather than theoretically superior design. In general Ansible is easier to start a configuration management project
+with and quicker to finish, with the result being easier for others to understand. This will make it more accessible for others on my team with
+limited time to dedicate to configuration management tasks as well as allow my work to progress more quickly. Further we should be able to consolidate
+our orchestration scripts around Ansible, simplifying the knowledge needed to run our toolset.
+I have yet to use Ansible for more complicated fully HA deploys, orchestration, nor have I created a Ansible module to extend the capabilities. If in my exploration
+of these more advanced topics I am able to retain the simplicity for common installations and continue to find a practical usefulness in the design
+decisions, then Ansible will truly be a joy to use and the most useful tool in the field.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Time to Blog!</title>
+      <link>http://backgroundprocess.com/learning/time-to-blog/</link>
+      <pubDate>Tue, 28 Oct 2014 22:17:36 MDT</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/learning/time-to-blog/</guid>
+      <description>&lt;p&gt;Recently in my normal reading I ran across this
+&lt;a href=&#34;http://nathanmarz.com/blog/you-should-blog-even-if-you-have-no-readers.html&#34;&gt;blog post&lt;/a&gt; by Nathan Marz expounding
+the merits of a blog. Not long after reading this and letting it percolate through my mental background process I
+begun a class on &lt;a href=&#34;https://www.coursera.org/&#34;&gt;Coursera&lt;/a&gt;, titled &lt;a href=&#34;https://www.coursera.org/course/learning&#34;&gt;Learning How to Learn&lt;/a&gt;.
+In this midst of this class I realized that the benefits of blogging Nathan promotes are essentially
+ways to enhance your day to day learning.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m convinced, I will join the ranks of bloggers.&lt;/p&gt;
+
+&lt;p&gt;While debating with myself on whether this was a worthwhile project I decided my primary goals for a blog are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To take ideas and develop them fully.&lt;/li&gt;
+&lt;li&gt;To improve my written communication skills.&lt;/li&gt;
+&lt;li&gt;To sharpen my brain in regards to forming and analyzing arguments.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://www.coursera.org/course/learning&#34;&gt;Learning How to Learn&lt;/a&gt; course has taught me that writing a blog can be a great tool
+for attaining those learning goals in a number of ways.&lt;/p&gt;
+
+&lt;p&gt;First the very name of this blog is a reflection that I expect to primarily get the ideas for blog topics from the periods of
+diffuse thinking in my life. The times when I intensely focused may result in some blog posts but generally when I am focused
+the goal and outcome are not to create a blog post. The blog is a great outlet for the thoughts from my diffuse thinking, allowing
+me to more fully explore such ideas.&lt;/p&gt;
+
+&lt;p&gt;As I begin to explore ideas for a post I will need to practice recall which will help me to better remember the topics in my recent
+learning. Recalling the various aspects for a post and attempting to organize them into a coherent whole will assist me in forming
+mental chunks which are the basis of so much learning.&lt;/p&gt;
+
+&lt;p&gt;Lastly sending my ideas out to the world is not something to be done without first testing and validating the thoughts. Self testing
+of an idea or topic being learned is an important learning skill.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
