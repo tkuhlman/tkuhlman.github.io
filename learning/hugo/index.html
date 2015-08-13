@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Background Process</title>
+	<title>Hugo - Background Process</title>
 	<meta name="author" content="map[name:Tim Kuhlman email:tim@backgroundprocess.com]">
 
 	
@@ -19,7 +19,7 @@
     
 	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://backgroundprocess.com/tags/">
+	<link rel="canonical" href="http://backgroundprocess.com/learning/hugo/">
 	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
 	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -99,45 +99,80 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner">
-          <div itemscope itemtype="http://schema.org/Blog">
-            <section class="archives">
-              <h1 id="title">Tags</h1>
-              <br>
-              <h2>
-                <ul>
-                
-                
-                  <li><a href="/tags/ansible">ansible</a> 4</li>
-                
-                  <li><a href="/tags/blogging">blogging</a> 1</li>
-                
-                  <li><a href="/tags/configuration-management">configuration-management</a> 3</li>
-                
-                  <li><a href="/tags/docker">docker</a> 1</li>
-                
-                  <li><a href="/tags/golang">golang</a> 1</li>
-                
-                  <li><a href="/tags/hugo">hugo</a> 1</li>
-                
-                  <li><a href="/tags/learning">learning</a> 1</li>
-                
-                  <li><a href="/tags/linux">linux</a> 1</li>
-                
-                  <li><a href="/tags/management">management</a> 1</li>
-                
-                  <li><a href="/tags/python">python</a> 1</li>
-                
-                  <li><a href="/tags/scripts">scripts</a> 1</li>
-                
-                  <li><a href="/tags/systemd">systemd</a> 1</li>
-                
-                  <li><a href="/tags/vagrant">vagrant</a> 1</li>
-                
-                </ul>
-              </h2>
-              <br>
-            </section>
-  				</div>
+					<div itemscope itemtype="http://schema.org/Blog">
+					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">Hugo</h1>
+		<div class="date"><time datetime='Wed, Aug 12, 2015' data-updated="true" itemprop="datePublished">Wed, Aug 12, 2015</time>
+</div>
+	<div class="entry-content" itemprop="articleBody"><p>I like static generated sites, simple, effective and secure. I love github pages as it gets the job done easily and well. Jekyll is a natural fit
+with github pages and was a great way to start building a blog. However recently <a href="http://gohugo.io/">Hugo</a> has caught my attention.</p>
+
+<p>I decided to switch to Hugo for a few different reasons:</p>
+
+<ul>
+<li><p>I like the clean directory layout better with Hugo.</p></li>
+
+<li><p>I want disqus, rss, tags, some easy social sharing links and google analytics. All of that is possible with Jekyll but some of these are much easier to setup with Hugo.</p></li>
+
+<li><p>It continues to have all the static site generation goodness and allows me to keep working with markdown and yaml.</p></li>
+
+<li><p>Not that I have the greatest visual appeal to the blog now but a refreshed look is still welcome.</p></li>
+</ul>
+
+<p>On top of those reasons I am learning golang, which happens to be why I haven&rsquo;t blogged in awhile but also adds some appeal to Hugo. The simple single binary installation
+is great compared to dealing with ruby gems. That along with the ability to explore the code while I learn golang are really the reasons I first started looking at Hugo.</p>
+
+<p>It isn&rsquo;t all great with Hugo, it does need a separate git repo which is a bit of a pain. Luckily the <a href="http://gohugo.io/tutorials/github-pages-blog">github pages tutorial</a>
+does a great job at explaining a few different git subrepo techniques and scripts to minimize the pain.</p>
+</div>
+</article>
+					
+						<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size=''></a>
+	
+	
+	</div>
+	
+  	<script type="text/javascript" src='http://s7.addthis.com/js/250/addthis_widget.js#pubid='></script>
+  	
+</div>
+
+					
+					
+					<section id="comment">
+					    <h1 class="title">Comments</h1>
+					    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+					</section>
+					
+					
+
+<script type="text/javascript">
+    
+    var disqus_shortname = 'backgroundprocess';
+
+    
+    
+
+    
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+    
+</script>
+
+
+				    </div>
 				</div>
 			</div>
 			<footer id="footer" class="inner">Copyright &copy; 2015
