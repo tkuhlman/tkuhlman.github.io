@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Docker for Messy Pets - Background Process</title>
+	<meta name="author" content="map[name:Tim Kuhlman email:tim@backgroundprocess.com]">
+
+	
+	
+	<meta name="description" content="">
+	
+
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://backgroundprocess.com/systems/desktop_docker/">
+	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
+	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-56102734-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	
+	<script src="http://backgroundprocess.com//js/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('tim@backgroundprocess.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+	
+</div>
+
+<nav id="main-nav"><ul class="main">
+    <li><a href="http://backgroundprocess.com//">Blog</a></li>
+    <li><a href="http://backgroundprocess.com//about/">About</a></li>
+    <li><a href="http://backgroundprocess.com//tags/">Tags</a></li>
+</ul>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="github" href='https://github.com/tkuhlman' title="GitHub">GitHub</a>
+		
+		
+		
+		
+			<a class="linkedin" href='http://www.linkedin.com/in/timkuhlman' title="LinkedIn">LinkedIn</a>
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+			<a class="rss" href='http://feeds.feedburner.com/BackgroundProcess' title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>
+			</div>
+		</div>
+		<div class="mid-col">
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+					<div itemscope itemtype="http://schema.org/Blog">
+					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">Docker for Messy Pets</h1>
+		<div class="date"><time datetime='Fri, Sep 11, 2015' data-updated="true" itemprop="datePublished">Fri, Sep 11, 2015</time>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+
+<p>The primary advantages of containers are realized when they are treated as the cattle of computing not pets. There are many
+articles using that analogy to extol the advantages of containers as cattle or
+<a href="http://thenewstack.io/pets-and-cattle-symbolize-servers-so-what-does-that-make-containers-chickens/">even as chickens</a>.
+However I have been recently rebuilding my Ubuntu Desktop and found containers can at times be great for pets also, most particularly the messy ones.</p>
+
+<p>I embarked down this route because of my sense of system cleanliness; too many apps I run excrete their dependencies all over my nice newly
+installed system. I run a variety of apps that are not available either in the primary repo nor as a PPA or at least not with the version I need. If
+I am not careful I can soon find myself juggling gems, eggs, wheels and jars all at the same time. Language specific package managers and tools like
+virtualenv and bundler all help some but none are complete enough to take away all management so I still end up following many tools and cleaning
+up the mess they leave behind.</p>
+
+<p>This is where Docker containers step in to save me. I simply need to build an image with the app and all its associated dependencies and wrap a
+simple shell script around it. Now I can run my app while still maintaining a well organized system with no dependency hell, with no mess left behind
+on my system. Instead of using various tools I now have one management tool to aid in running multiple versions or modifications of apps. In addition
+I gain additional capabilities, most notably the ability to easily limit the resources an app can use.</p>
+
+<p>On Ubuntu, apt handles both dependency installation and cleanup very well and coupled with the availability of many
+<a href="https://help.launchpad.net/Packaging/PPA">Personal Package Archives (ppa)</a> the additional overhead of creating a container is not
+worth it for these well behaved apps. This is particularly true as using apt enables automatic notification of security updates.
+Nevertheless there are many apps or at least versions of the app I am using that aren&rsquo;t available as a well behaved deb. These are the messy pets of
+my workstation and I am much happier to have them in a container than to have them leaving a mess all over my desktop.</p>
+
+<h3 id="implementation-details:8f5ecc9060646138683359a3408ed656">Implementation Details</h3>
+
+<p>I have begun a <a href="https://github.com/tkuhlman/containers">github repo</a> with Dockerfiles and shell scripts I use for containers on my desktop. I will keep
+expanding this as I add more apps which I use in this way. Here are some considerations as you put your messy pets in containers:</p>
+
+<ul>
+<li>In the wrapper scripts use Docker volumes to setup the appropriate directories, ie <code>-v /home/me/myfiles:/root/myfiles</code>.</li>
+<li>GUI apps require some proper setup when running a container:
+
+<ul>
+<li>For X based apps first you must allow the app to connect to X then setup access to the display.</li>
+<li>To allow access to X I generally run &lsquo;xhost local:&rsquo; in the wrapper script. This has security
+implications and shouldn&rsquo;t be done on a shared system but for a system dedicated to a single user is reasonably safe.</li>
+<li>To setup access to the display export the Display variable with <code>-e DISPLAY=$DISPLAY</code> and setup the volume with the x socket
+<code>-v /tmp/.X11-unix:/tmp/.X11-unix</code>.</li>
+<li>For advanced graphics with DRI things are a bit more complicated as you need the drivers you install in the image to match what the host uses.
+After that I found you need to use the device flag for the Docker command to share in the dri device, ie <code>--device /dev/dri/card0:/dev/dri/card0</code>.</li>
+<li>For pulseaudio, these flags to the Docker command work though possible could be distilled down to simpler steps:
+
+<ul>
+<li><code>-v /dev/shm:/dev/shm</code></li>
+<li><code>-v /etc/machine-id:/etc/machine-id</code></li>
+<li><code>-v /run/user/$uid/pulse:/run/user/$uid/pulse</code>,</li>
+<li><code>-v /var/lib/dbus:/var/lib/dbus</code>,</li>
+<li><code>-v ~/.pulse:/home/$dockerUsername/.pulse</code>.</li>
+</ul></li>
+</ul></li>
+<li>Most docker images run apps as root within the container. Though this is generally fine it can be annoying for files in volume mounts to end up owned
+as root. To work around this you can create a simplified user in the image matching your uid/gid and run apps as that user. All that is needed in
+the images is an /etc/passwd entry, /etc/group entry and an appropriately owned home directory.</li>
+<li>Though this technique could work for any OS, it is most feasible where containers run natively. For those operating systems where containers are run in
+a vm it is considerably more painful to run any desktop apps in containers. This is a good reason to run Linux on the desktop.</li>
+<li>The extra security of this approach was not my goal and I have not contemplated the implications much.
+The app is far more isolated, but not perfectly so. Also an existing image
+won&rsquo;t update and break but is also more difficult to update for application security fixes. In short first glance you gain some security but there
+are more aspects that need consideration.</li>
+<li>This technique is less annoying if your local user can run docker without sudo.</li>
+</ul>
+
+<h3 id="references:8f5ecc9060646138683359a3408ed656">References</h3>
+
+<p>I am by no means the first to try this and in fact was able to find many tips on how to accomplish desktop apps in containers. Here are the primary pages
+I used as sources:</p>
+
+<ul>
+<li><a href="https://blog.jessfraz.com/post/docker-containers-on-the-desktop/">https://blog.jessfraz.com/post/docker-containers-on-the-desktop/</a></li>
+<li><a href="http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/">http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/</a></li>
+<li><a href="http://stackoverflow.com/questions/28985714/run-apps-using-audio-in-a-docker-container">http://stackoverflow.com/questions/28985714/run-apps-using-audio-in-a-docker-container</a></li>
+<li><a href="http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/">http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/</a></li>
+</ul>
+</div>
+</article>
+					
+						<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size=''></a>
+	
+	
+	</div>
+	
+  	<script type="text/javascript" src='http://s7.addthis.com/js/250/addthis_widget.js#pubid='></script>
+  	
+</div>
+
+					
+					
+					<section id="comment">
+					    <h1 class="title">Comments</h1>
+					    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+					</section>
+					
+					
+
+<script type="text/javascript">
+    
+    var disqus_shortname = 'backgroundprocess';
+
+    
+    
+
+    
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+    
+</script>
+
+
+				    </div>
+				</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2015
+
+    Tim Kuhlman
+
+| Design based on <a href="https://github.com/cxfksword/greyshade">greyshade</a>
+| <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons License</a>
+<script src="http://backgroundprocess.com//js/slash.js"></script>
+<script src="http://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script>
+</footer>
+		</div>
+	</div>
+	
+</body>
+</html>
