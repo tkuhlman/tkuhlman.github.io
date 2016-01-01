@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Development Best Practices for Systems Administrators - Background Process</title>
+	<meta name="author" content="map[name:Tim Kuhlman email:tim@backgroundprocess.com]">
+
+	
+	
+	<meta name="description" content="">
+	
+
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://localhost:1313/code/sysadmins/">
+	<link href="http://localhost:1313//favicon.png" rel="shortcut icon">
+	<link href="http://localhost:1313//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="http://localhost:1313//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-56102734-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	
+	<script src="http://localhost:1313//js/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('tim@backgroundprocess.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+	
+</div>
+
+<nav id="main-nav"><ul class="main">
+    <li><a href="http://localhost:1313//">Blog</a></li>
+    <li><a href="http://localhost:1313//about/">About</a></li>
+    <li><a href="http://localhost:1313//tags/">Tags</a></li>
+</ul>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="github" href='https://github.com/tkuhlman' title="GitHub">GitHub</a>
+		
+		
+		
+		
+			<a class="linkedin" href='http://www.linkedin.com/in/timkuhlman' title="LinkedIn">LinkedIn</a>
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+			<a class="rss" href='http://feeds.feedburner.com/BackgroundProcess' title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>
+			</div>
+		</div>
+		<div class="mid-col">
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+					<div itemscope itemtype="http://schema.org/Blog">
+					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">Development Best Practices for Systems Administrators</h1>
+		<div class="date"><time datetime='Sat, Dec 12, 2015' data-updated="true" itemprop="datePublished">Sat, Dec 12, 2015</time>
+</div>
+	<div class="entry-content" itemprop="articleBody">
+
+<p>The days where systems administrators can avoid development are long gone. Just as developers
+leverage cloud infrastructure and tooling to deploy services, sys admins develop code to automate
+their infrastructure and to fill the gaps that they are uniquely positioned to see.</p>
+
+<p>The heart of devops is operators and developers coming together as their roles now overlap. In that vein this
+post is really about what Sys Admins can learn from developers, really about what I am learning from developers.
+The best development practices are really the same for both sys admins and devs, some just come more
+naturally to one group or another, so here are some best practices I think come less naturally to operators.</p>
+
+<h2 id="best-practices:321805f9cf4c4e61486b15fa3eccd686">Best Practices</h2>
+
+<ul>
+<li>Make it simple to use. Sysadmins are badasses at the CLI and forget not everyone is.</li>
+<li>good separation of concern and good code structure.
+
+<ul>
+<li>Turns out the basics of code are easy. 5 year olds can grasp the concepts of branches and loops, most of code is dealing with the complexity
+of having a lot of branches and loops. That is why the common code constructs (classes, inheritance, types/interfaces) exist.
+Techniques like layers of abstraction and encapsulation are key to good complexity management. The difference between
+good system design and bad is often how well the complexity management is done.</li>
+</ul></li>
+<li>Simplify
+
+<ul>
+<li>Standardize - Choose sane defaults, don&rsquo;t be afraid to limit choice and flexibility so the code steers people towards good practices, or at least standard practices.</li>
+<li>YAGNI - reference - <a href="http://martinfowler.com/bliki/Yagni.html">http://martinfowler.com/bliki/Yagni.html</a></li>
+<li>In particular this quote &ldquo;Yagni only applies to capabilities built into the software to support a presumptive feature, it does not apply to effort to make the software easier to modify.&rdquo;</li>
+</ul></li>
+<li>Better automated testing. Devs need to do better testing in general I find sysadmins test scripts
+manually really well but don&rsquo;t automate the testing as well. The manual testing is great that first
+time but the automated testing really helps for any future edits. Code is alive there will be future work done on any sufficiently sized chunk of code.
+
+<ul>
+<li>Repeatability is the name of the game hear.</li>
+<li>automating tests force you think about how your code is used and organized often leading to a better result.</li>
+<li>Automated testing does have its limits, in particular unit testing is limited in how useful it can be especially for code that interacts with other
+systems a lot. This is the type of code sysadmins write most often. It is so difficult and fragile to mock out code that does network, I/O, db I/O and
+more network I/O that often it isn&rsquo;t worth the effort. This doesn&rsquo;t mean don&rsquo;t automate the tests but rather make sure the use cases are covered with
+automated integration tests. I am big fan of using containers with some pre-built test environments to more easily automate integration testing.</li>
+</ul></li>
+<li>Document it. Maybe this is one both devs and sys admins could do better at. When you just wrote it you know what it does but everyone appreciates good
+documentation, ideally built-in. The closer to the code the better as it is the most likely to stay up to date as things evolve and is the easiest for
+users to find.</li>
+</ul>
+
+<p>There are of course many best practices that come more naturally to sys admins and are mostly worth highlighting
+in a post about best practices for devs not sys admins. The most critical of these is that you must use and
+run your own code. The importance of that could be a post in and of itself, perhaps someday I will write that.</p>
+</div>
+</article>
+					
+						<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size=''></a>
+	
+	
+	</div>
+	
+  	<script type="text/javascript" src='http://s7.addthis.com/js/250/addthis_widget.js#pubid='></script>
+  	
+</div>
+
+					
+					
+					<section id="comment">
+					    <h1 class="title">Comments</h1>
+					    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+					</section>
+					
+					
+
+<script type="text/javascript">
+    
+    var disqus_shortname = 'backgroundprocess';
+
+    
+    
+
+    
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+    
+</script>
+
+
+				    </div>
+				</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2015
+
+    Tim Kuhlman
+
+| Design based on <a href="https://github.com/cxfksword/greyshade">greyshade</a>
+| <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons License</a>
+<script src="http://localhost:1313//js/slash.js"></script>
+<script src="http://localhost:1313//js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script>
+</footer>
+		</div>
+	</div>
+	
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Launchpad on Background Process </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://backgroundprocess.com/tags/launchpad/</link>
+    <language>en-us</language>
+    <author>Tim Kuhlman</author>
+    
+    <updated>Fri, 01 Jan 2016 12:20:22 MST</updated>
+    
+    <item>
+      <title>Launchpad Merge Proposal Helper Script</title>
+      <link>http://backgroundprocess.com/code/mp/</link>
+      <pubDate>Fri, 01 Jan 2016 12:20:22 MST</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/code/mp/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve written a script to aid in merge proposals done with &lt;a href=&#34;https://launchpad.net/&#34;&gt;Launchpad&lt;/a&gt;.
+Simply run the command with the url of the merge proposal as the argument and the script will
+ spawn a shell with the working directory being the code with the uncommitted
+merge. You can then diff the code, run tests or whatever else as needed.&lt;/p&gt;
+
+&lt;p&gt;When you exit the shell you will be prompted to merge, if you choose to do so a commit message will be
+populated for you and opened in an editor so you can edit as you choose. This is also your 2nd
+opportunity to bail if you need to. Assuming all is good save and the merge will be done.&lt;/p&gt;
+
+&lt;p&gt;The script leverages your installed credentials for bzr and will use
+&lt;a href=&#34;https://help.launchpad.net/API/launchpadlib&#34;&gt;launchpadlib&lt;/a&gt; to authenticate
+against the api on your first usage.&lt;/p&gt;
+
+&lt;p&gt;The script is at &lt;a href=&#34;https://github.com/tkuhlman/scripts/blob/master/bin/mp&#34;&gt;https://github.com/tkuhlman/scripts/blob/master/bin/mp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you use &lt;a href=&#34;https://launchpad.net/&#34;&gt;Launchpad&lt;/a&gt; give it a try and let me know if it works or you have
+any ideas to improve it.&lt;/p&gt;
+
+&lt;p&gt;I should note it is bzr specific at this point as the reviews I do are primarily on bzr but it could be
+extended with git support as needed.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
