@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Codes on Background Process </title>
+      <title>Development on Background Process </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/code/</link>
+    <link>http://backgroundprocess.com/tags/development/</link>
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
@@ -95,91 +95,6 @@ automated integration tests. A great use of containers is to create pre-built te
 &lt;p&gt;Use and run your own code in a real environment. It is through running code in a real environment that you discover the true
 problems that need fixing. Indeed the motivation for much of the code sysadmins write comes from running real environments. Even though this seems
 obvious to sysadmins it is a key best practices that is so important it needs to be mentioned.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Launchpad Merge Proposal Helper Script</title>
-      <link>http://backgroundprocess.com/code/mp/</link>
-      <pubDate>Fri, 01 Jan 2016 12:20:22 MST</pubDate>
-      <author>Tim Kuhlman</author>
-      <guid>http://backgroundprocess.com/code/mp/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve written a script to aid in merge proposals done with &lt;a href=&#34;https://launchpad.net/&#34;&gt;Launchpad&lt;/a&gt;.
-Simply run the command with the url of the merge proposal as the argument and the script will
- spawn a shell with the working directory being the code with the uncommitted
-merge. You can then diff the code, run tests or whatever else as needed.&lt;/p&gt;
-
-&lt;p&gt;When you exit the shell you will be prompted to merge, if you choose to do so a commit message will be
-populated for you and opened in an editor so you can edit as you choose. This is also your 2nd
-opportunity to bail if you need to. Assuming all is good save and the merge will be done.&lt;/p&gt;
-
-&lt;p&gt;The script leverages your installed credentials for bzr and will use
-&lt;a href=&#34;https://help.launchpad.net/API/launchpadlib&#34;&gt;launchpadlib&lt;/a&gt; to authenticate
-against the api on your first usage.&lt;/p&gt;
-
-&lt;p&gt;The script is at &lt;a href=&#34;https://github.com/tkuhlman/scripts/blob/master/bin/mp&#34;&gt;https://github.com/tkuhlman/scripts/blob/master/bin/mp&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;If you use &lt;a href=&#34;https://launchpad.net/&#34;&gt;Launchpad&lt;/a&gt; give it a try and let me know if it works or you have
-any ideas to improve it.&lt;/p&gt;
-
-&lt;p&gt;I should note it is bzr specific at this point as the reviews I do are primarily on bzr but it could be
-extended with git support as needed.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Ansible Modules</title>
-      <link>http://backgroundprocess.com/code/ansible-modules/</link>
-      <pubDate>Tue, 06 Jan 2015 21:43:31 -0600</pubDate>
-      <author>Tim Kuhlman</author>
-      <guid>http://backgroundprocess.com/code/ansible-modules/</guid>
-      <description>
-
-&lt;p&gt;Ansible is relatively simple in relation to other configuration management frameworks. This makes it easier to approach and accomplish real work with, especially
-for those who don&amp;rsquo;t work in it full time, however there are times when more functionality is needed. Ansible&amp;rsquo;s answer for most of these situations is to
-write a module.&lt;/p&gt;
-
-&lt;p&gt;I have written a couple of &lt;a href=&#34;https://github.com/hpcloud-mon/ansible-module-monasca&#34;&gt;modules for Monasca&lt;/a&gt; and doing so was easy, particularly if you know Python.&lt;/p&gt;
-
-&lt;h2 id=&#34;common-python-functions:452a8813491776755aef8af7303e4551&#34;&gt;Common Python Functions&lt;/h2&gt;
-
-&lt;p&gt;Though you can write modules in any language there are various functions available for Python that simplify the process.&lt;/p&gt;
-
-&lt;p&gt;The documentation for &lt;a href=&#34;http://docs.ansible.com/developing_modules.html&#34;&gt;writing Ansible modules&lt;/a&gt; is a bit light on some details particularly on using the
-Python common functions. The docs mostly encourage you to check out code examples, my initial reaction to this was dread that things were going to get difficult.
-Happily I found most of the examples were straight forward and so it was simple enough for someone already familiar with Python.&lt;/p&gt;
-
-&lt;p&gt;The common functions make the writing of the modules in Python a simple coding task. Looking back at the modules I have written more lines are dedicated to the documentation
-of the module than to the code itself. Among the code a large chunk is dealing with defining the various optional values that can be passed in. I point
-this out only to highlight that the common libraries make the code and the logic itself quite simple and even naturally steer toward documentation
-driven development.&lt;/p&gt;
-
-&lt;h2 id=&#34;modules-for-idempotency:452a8813491776755aef8af7303e4551&#34;&gt;Modules for Idempotency&lt;/h2&gt;
-
-&lt;p&gt;As I have &lt;a href=&#34;infrastructure/2014/11/02/ansible-config-management-simplified.html&#34;&gt;written previously&lt;/a&gt; loops and conditionals are cumbersome in Ansible. In my
-usage I particularly felt this at times I tried to accomplish a task lacking a module and retain idempotency. Looping through a list to check the status and
-then conditionally performing operations based on the result is possible in raw Ansible but is more straight forward, flexible and cleaner to implement in a
-module.&lt;/p&gt;
-
-&lt;p&gt;In Ansible a module is the fundamental mechanism used to accomplish idempotent operations. The ease of implementing idempotency in a module
-verses in Ansible directly has more than anything else motivated me to add to my todo list a few modules I would like to write.&lt;/p&gt;
-
-&lt;h2 id=&#34;shared-code-among-modules:452a8813491776755aef8af7303e4551&#34;&gt;Shared code among modules&lt;/h2&gt;
-
-&lt;p&gt;The one major complaint I have with the modules I have written is that it is difficult to have code shared between modules. Importing python libraries is straight forward
-as well as including code from the Ansible base but code shared between Ansible modules is not possible.&lt;/p&gt;
-
-&lt;p&gt;The reason it doesn&amp;rsquo;t work is because Ansible does not execute the module locally but rather copies it to
-a remote host. Additionally Ansible is trying to do this with as few operations as possible to keep it performant. Ansible would have to either parse the module
-or copy the entire library directory on each run for a shared file to be available.&lt;/p&gt;
-
-&lt;p&gt;Though I understand the reasons behind this
-behaviour since Ansible handles including libraries from the Ansible core and any included python libraries in the system path are available I found myself expecting
-to be able to define my own shared python files. After spending a bit of time looking for a way to have a shared python file shipped with my Ansible modules, I
-choose to just copy the shared code to both Ansible modules. That is far from ideal but the amount of shared code was relatively small so the alternative of packing
-it into a library to be installed on the remote machine would be more trouble.&lt;/p&gt;
-
-&lt;p&gt;Ultimately I have no solution for this so will live with it as a minor annoyance for now.&lt;/p&gt;
 </description>
     </item>
     
