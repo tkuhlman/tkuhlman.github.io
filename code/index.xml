@@ -7,7 +7,24 @@
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
-    <updated>Sat, 16 Jan 2016 20:44:55 MST</updated>
+    <updated>Mon, 01 Feb 2016 21:39:58 MST</updated>
+    
+    <item>
+      <title>Weechat Command Queues</title>
+      <link>http://backgroundprocess.com/code/weechat-queue/</link>
+      <pubDate>Mon, 01 Feb 2016 21:39:58 MST</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/code/weechat-queue/</guid>
+      <description>&lt;p&gt;I use &lt;a href=&#34;http://weechat.org&#34;&gt;weechat&lt;/a&gt; for much of the day and have issue regular repetitive commands periodically.
+If you are in the same situation you may find the &lt;a href=&#34;https://weechat.org/scripts/source/queue.py.html/&#34;&gt;queue plugin&lt;/a&gt; I recently modified to be useful.&lt;/p&gt;
+
+&lt;p&gt;The queue plugin simply allows you to build up a list of commands then run them all at once. My
+&lt;a href=&#34;https://github.com/weechat/scripts/pull/137/files&#34;&gt;modification&lt;/a&gt; was to allow saving these across restarts of weechat.
+That way I can build up a few queues I use regularily and just call them whenever needed.&lt;/p&gt;
+
+&lt;p&gt;For example when I start my day I just execute &lt;code&gt;/qu exec morning&lt;/code&gt; to switch my away status, announce my availability in a couple of rooms, etc.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Development Best Practices for Systems Administrators</title>

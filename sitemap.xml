@@ -3,8 +3,13 @@
   
   <url>
     <loc>http://backgroundprocess.com/</loc>
-    <lastmod>2016-01-16T20:44:55-07:00</lastmod>
+    <lastmod>2016-02-01T21:39:58-07:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://backgroundprocess.com/code/weechat-queue/</loc>
+    <lastmod>2016-02-01T21:39:58-07:00</lastmod>
   </url>
   
   <url>
