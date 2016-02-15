@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>An Engineer&#39;s Perspective on the Value of Management - Background Process</title>
+	<title>Mojo Integration Tests with LXD - Background Process</title>
 	<meta name="author" content="map[name:Tim Kuhlman email:tim@backgroundprocess.com]">
 
 	
@@ -19,7 +19,7 @@
     
 	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://backgroundprocess.com/people/managements_role/">
+	<link rel="canonical" href="http://backgroundprocess.com/code/mojo-integration-tests/">
 	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
 	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -101,45 +101,51 @@
 				<div id="content" class="inner">
 					<div itemscope itemtype="http://schema.org/Blog">
 					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="title" itemprop="name">An Engineer&#39;s Perspective on the Value of Management</h1>
-		<div class="date"><time datetime='Mon, Feb 23, 2015' data-updated="true" itemprop="datePublished">Mon, Feb 23, 2015</time>
+    <h1 class="title" itemprop="name">Mojo Integration Tests with LXD</h1>
+		<div class="date"><time datetime='Fri, Feb 12, 2016' data-updated="true" itemprop="datePublished">Fri, Feb 12, 2016</time>
 </div>
 	<div class="entry-content" itemprop="articleBody">
 
-<h2 id="the-managers-goal-enable-team-productivity:b6314b790005f3a25a81b5da65ef1f09">The Managers Goal - Enable Team Productivity</h2>
+<p>I have recently finished building an LXD image for doing integration tests of <a href="https://mojo.canonical.com">Mojo</a>.
+I did this because I wanted to be able to reliably test the changes to Mojo that I was making. A repeatable,
+standard environment that can run set of integration tests fits the bill.</p>
 
-<p>I am not management expert and it is beyond my expertise to layout the value of management for an organization. On the other hand I am engineer on
-a software engineering team and I do have some clear ideas on what I want from management and what I believe most of my peers also would like. It all boils
-down to this, an engineering manager should enable his team to get work done.</p>
+<h2 id="using-a-container:3ff64b5a6405cf38b785717275d6a424">Using a Container</h2>
 
-<p>For most engineers a large part of their motivation is the desire to be productive. The more a manager enables this the better everything works. Not only
-does more work get done, engineers are more satisfied and they have a better perception of and relationship with their manager.</p>
-
-<h2 id="management-responsibilities:b6314b790005f3a25a81b5da65ef1f09">Management Responsibilities</h2>
-
-<p>The nature of management, or any other discipline primarily concerning people, is such that you can&rsquo;t define exactly what that means for most situations.
-I believe this is a large part of the reason that a few managers are horribly bad, a small proportion great, but most find themselves somewhere in
-the middle. Though I am sure I am missing some key points here are a few things that I believe are the responsibility of a manager. Depending on the
-organization some of these may fall to other roles but someone needs to get them done and the manager should at least make sure they are being achieved.</p>
-
-<h3 id="within-the-team:b6314b790005f3a25a81b5da65ef1f09">Within the Team</h3>
+<p>There are a few key advantages I see to doing the integration tests in a container image like this:</p>
 
 <ul>
-<li>Engaging engineers in appropriate planning, but not stifling them with it.</li>
-<li>Fostering a collaborative environment.</li>
-<li>Rewarding achievement.</li>
-<li>Where needed dealing with employees who are holding back the rest of the team.</li>
+<li>Having a repeatable environment enables automation, sharing of the environment among developers, using
+the environment as a base standard and incremental improvement.</li>
+<li>The image can be built to a stanadard, in this case it runs Ubuntu LTS with the latest distributed versions
+of Juju/Mojo and other tooling.</li>
+<li>Isolation from the primary dev environment allows for easy cleanup, easier testing of various branches and tests
+more easily run in parallel.</li>
 </ul>
 
-<h3 id="within-the-organization:b6314b790005f3a25a81b5da65ef1f09">Within the Organization</h3>
+<h2 id="integration-tests:3ff64b5a6405cf38b785717275d6a424">Integration Tests</h2>
 
-<ul>
-<li>Removing organizational road blocks to progress.</li>
-<li>Being an a voice representing the team to the rest of the organization.</li>
-<li>Listening to the orgnaization and appropriately sharing themes and key details with the team.</li>
-<li>Being a catalyst and enabler for cross-team collaboration.</li>
-<li>Representing the team in organizational planning.</li>
-</ul>
+<p>Integration tests themselves I want running because some tests are just not practical to do via
+unit tests. This is especially true for code that interacts with a lot of other programs such as Mojo.</p>
+
+<p>In many cases integration tests bring an real world element unit tests don&rsquo;t. For example the Mojo unit tests
+cover Juju interactions decently well using the expected Juju status output. However what if that
+expected output changes? For example Juju output could change in a way that is harmless and not
+noticed so everyone upgrades Juju, then later Mojo changes but the unit tests are all based on the
+older output, integration tests will catch this before sending broken code to production.</p>
+
+<p>On the other hand some tests, ie proper parsing of a manifest file, work better as a unit test. In other
+situations it perhaps isn&rsquo;t so clear. Have integration tests as a tool in addition to unit tests gives Mojo
+developers another way to validate code before merging.</p>
+
+<h2 id="more-information:3ff64b5a6405cf38b785717275d6a424">More Information</h2>
+
+<p>The image can also be used for development of Mojo specs, there is some information on that and more information on using the image in the
+image <a href="http://bazaar.launchpad.net/~mojo-maintainers/mojo/trunk/view/head:/contrib/LXD/README.md">readme</a>.
+I also made this <a href="https://youtu.be/Q8ll7OsTtMk">screen cast</a> to introduce how I use the image today. I often watch
+these screen casts at double speed and recommend you do for this one also.</p>
+
+<p>Now that the base image is done all the Mojo developers can all incrementally add more tests and I look forward to seeing it expand.</p>
 </div>
 </article>
 					
