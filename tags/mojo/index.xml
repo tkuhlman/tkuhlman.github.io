@@ -28,7 +28,7 @@ standard environment that can run set of integration tests fits the bill.&lt;/p&
 &lt;ul&gt;
 &lt;li&gt;Having a repeatable environment enables automation, sharing of the environment among developers, using
 the environment as a base standard and incremental improvement.&lt;/li&gt;
-&lt;li&gt;The image can be built to a stanadard, in this case it runs Ubuntu LTS with the latest distributed versions
+&lt;li&gt;The image can be built to a standard, in this case it runs Ubuntu LTS with the latest distributed versions
 of Juju/Mojo and other tooling.&lt;/li&gt;
 &lt;li&gt;Isolation from the primary dev environment allows for easy cleanup, easier testing of various branches and tests
 more easily run in parallel.&lt;/li&gt;

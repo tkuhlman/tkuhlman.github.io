@@ -7,7 +7,48 @@
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
-    <updated>Fri, 12 Feb 2016 13:36:07 MST</updated>
+    <updated>Sat, 16 Apr 2016 21:06:14 MDT</updated>
+    
+    <item>
+      <title>Containers over VMs</title>
+      <link>http://backgroundprocess.com/infrastructure/containers-over-vms/</link>
+      <pubDate>Sat, 16 Apr 2016 21:06:14 MDT</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/infrastructure/containers-over-vms/</guid>
+      <description>&lt;p&gt;I recently realized it has been over 6 months since I have used a VM on my workstation. Previously I
+like many developers used VMs for various development tasks. The change hasn&amp;rsquo;t be in my usage of
+cloud based VMs, I continue to do that as needed and appropriate. The change is that I use containers.
+I now use a mix of &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; and &lt;a href=&#34;https://linuxcontainers.org/lxd/&#34;&gt;LXD&lt;/a&gt; for dev and
+test environments and everything else I used to frequently use VMs for on my workstation. I even use containers in some
+&lt;a href=&#34;http://backgroundprocess.com/systems/desktop_docker/&#34;&gt;ways&lt;/a&gt; that I haven&amp;rsquo;t used VMs.&lt;/p&gt;
+
+&lt;p&gt;Realizing this change in my behavior is somewhat startling for me, after all VMs represented a paradigm
+shift in the industry which certainly affected my workflow years ago. I previously found tools like
+&lt;a href=&#34;http://backgroundprocess.com/infrastructure/vagrant/&#34;&gt;Vagrant&lt;/a&gt; a very useful part of my workflow. Nevertheless the advantages to
+using containers for tasks on my personal workstation have change my workflow.&lt;/p&gt;
+
+&lt;p&gt;Containers come with nearly all the workflow advantages that VMs do but also with additional advantages
+beyond VMs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Speed of execution - I have various aliases and scripts that launch containerized applications
+and speed of startup and execution is indistinguishable from native apps.&lt;/li&gt;
+&lt;li&gt;Lightweight - Not only are containers much faster than VMs they are light on resource usage so
+much so that you can have many running and not notice it. I actually use signficantly less memory on my
+machine than I did a year ago.&lt;/li&gt;
+&lt;li&gt;Easier to share - Though possible with VMs it is just simply quicker and easier to share Docker containers.&lt;/li&gt;
+&lt;li&gt;Quicker and simpler to build - The speed of startup and ease of sharing contribute to it being
+really easy to startup a new container makes some changes and save it off for further use. This allows me
+to nest usages, repeat test cases on different versions, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The net effect is that for many uses containers just have less overhead than VMs but retain the primary advantages
+that VMs brought to the industry. There are of course reasons to still use VMs on a personal workstation,
+such as not running Linux as a primary OS and so lacking container support natively, doing development on the kernel,
+or developing for an OS other than Linux. None of these are relevant for me so containers is the way forward on
+my machines.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Mojo Integration Tests with LXD</title>
@@ -28,7 +69,7 @@ standard environment that can run set of integration tests fits the bill.&lt;/p&
 &lt;ul&gt;
 &lt;li&gt;Having a repeatable environment enables automation, sharing of the environment among developers, using
 the environment as a base standard and incremental improvement.&lt;/li&gt;
-&lt;li&gt;The image can be built to a stanadard, in this case it runs Ubuntu LTS with the latest distributed versions
+&lt;li&gt;The image can be built to a standard, in this case it runs Ubuntu LTS with the latest distributed versions
 of Juju/Mojo and other tooling.&lt;/li&gt;
 &lt;li&gt;Isolation from the primary dev environment allows for easy cleanup, easier testing of various branches and tests
 more easily run in parallel.&lt;/li&gt;
@@ -672,86 +713,6 @@ mental context switch was needed and I was able to write it quickly. It is simpl
 easily written this is Fabric also but it would have taken me much longer if I wanted to make an equivalent Fabric script idempotent. In my first run idempotency
 isn&amp;rsquo;t needed but it gives peace of mind because there is no danger if I accidentally run it twice. This will be especially helpful a month or two from now when
 I have forgotten where I ran it.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Ansible - Configuration Management Simplifed</title>
-      <link>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</link>
-      <pubDate>Sun, 02 Nov 2014 21:00:22 -0600</pubDate>
-      <author>Tim Kuhlman</author>
-      <guid>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</guid>
-      <description>&lt;p&gt;In the last couple of weeks I have been converting &lt;a href=&#34;https://wiki.openstack.org/wiki/Monasca&#34;&gt;Monasca&lt;/a&gt; from &lt;a href=&#34;https://www.getchef.com/&#34;&gt;Chef&lt;/a&gt;
-to &lt;a href=&#34;http://www.ansible.com/&#34;&gt;Ansible&lt;/a&gt;.
-This has begun with the &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;monasca-vagrant&lt;/a&gt; development environment. Having worked with
-Chef for the last 3 years as I learn Ansible I inevitably evaluate it in comparision to Chef.&lt;/p&gt;
-
-&lt;p&gt;The core quality of Ansible compared to Chef is Simplicity. Ansible attempts to solve many of the same problems as Chef but with an
-approach that seems born of real world experience and eliminates many theoretically superior design paradigms for practical alternatives.&lt;/p&gt;
-
-&lt;p&gt;The most readily apparent simplification between Chef and Ansible is the lack of both an agent and a server in the Ansible model.
-Many simplifications flow from this fundamental design decision, including:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Extremely simple startup. There is no need to install a server or agents or even learn the depths of the tools paradigm before starting. In
-practice this is fairly important as few start with overhauling the entire configuration management of a service as I did but rather
-start with a single aspect and incrementally grow their coverage.&lt;/li&gt;
-&lt;li&gt;Encryption of data becomes much simpler as there is no need to take a shared secret and distribute to
-the agent on each box. Additionally unlike Chef there is no need to modify the recipes to use encrypted data, the decrypted data
-is just treated as normal variables during an Ansible run&lt;/li&gt;
-&lt;li&gt;With all runs potentially starting on a workstation Ansible is easily enabled for orchestration tasks as well as configuration management.
-Fundamentally there is little difference between the work done by Ansible to enable each use case. This allows tool simplification, no need for an additional
-orchestration layer.&lt;/li&gt;
-&lt;li&gt;Related to the enabling of orchestration tasks the simplicity of running plays via Ansible means it is easy to activate Ansible
-within larger scripts. I for example use a deployment script based on &lt;a href=&#34;http://www.fabfile.org/en/latest/&#34;&gt;Fabric&lt;/a&gt; which interacts with
-git as well as some in house tools as it deploys. The script already relies on an ssh key for the git aspects and so adding in the
-triggering of an Ansible run is extremely easy. When using chef with the script the proper triggering of a run is much more
-complicated as I not only have to upload to the server I also have to navigate an entirely separate authentication system. Ansible covers
-many of the same use case as fabric so I could probably rewrite much if not all of the script in Ansible but I don&amp;rsquo;t need to,
-and can choose to do so or not later. This ability to be a self contained layer that is easy to interact with a key feature of a truly
-useful model that should not be understated.&lt;/li&gt;
-&lt;li&gt;SSH authentication management is required for Ansible and a at first glance seems to be a disadvantage but in all environments
-I have worked with it was already happening. Given that the end result of avoiding the need for another authentication/authorization
-system is an advantage for this simplified model.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ansible&amp;rsquo;s lack of an agent or server is perhaps a factor in why regular unattended runs of Ansible are not built into the system.
-If you want these to happen you must add additional
-scripting around Ansible, via a cron job or a more sophisticated tool such as &lt;a href=&#34;http://www.ansible.com/tower&#34;&gt;Ansible Tower&lt;/a&gt;. This
-is in contrast to Chef where unattended runs are trivial to enable and take advantage of. It is also a
-great example of a theoretical deficiency on the side of Ansible which in practical terms isn&amp;rsquo;t. In all the infrastructures I have
-worked with the professionalism of administrators has been sufficient that I can&amp;rsquo;t recall an instance where the unattended chef runs were
-actually useful. Perhaps I am fortunate regarding the people I have worked with but regardless requiring unattended Ansible runs to use
-another layer of abstraction is not much of a negative. Layers of abstraction are fundamental to computing and when used well they simplify
-the solution rather than complicate it, I believe this is such a case.&lt;/p&gt;
-
-&lt;p&gt;As one who has used Chef for years to deploy various software one of the biggest areas where Ansible&amp;rsquo;s simplicity shines is the variables.
-In Ansible there are variables with a just
-&lt;a href=&#34;http://docs.ansible.com/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable&#34;&gt;5 layers of precedence&lt;/a&gt;
-there is no merging of dictionaries or lists across those layers. In contrast in Chef there are attributes as well as data bags, two distinct types.
-For each type the scope can vary with data bags being across the entire chef server and attributes either having an environment, node or run scope.
-Additionally there are multiple types of attributes and during a run there is a list of
-&lt;a href=&#34;https://docs.getchef.com/chef_overview_attributes.html#attribute-precedence&#34;&gt;15 levels of precedence&lt;/a&gt;. Lastly as the attributes for a run are built
-they merge in certain ways for the final product. The Ansible variables have in my experience been quite sufficient to get the job done and are
-a welcome relief from the headache of Chef attributes, data bags and encrypted data bags.&lt;/p&gt;
-
-&lt;p&gt;Ansible is simpler in that it uses a yaml configuration for plays rather than Chef&amp;rsquo;s extensions to ruby with a fully capable ruby interpreter
-running. Though this perhaps makes it easier to approach Ansible for a non-programmer this is one instance where perhaps simplicity isn&amp;rsquo;t an advantage.
-Chef has far more capability in its cookbooks, a large advantage in some situations, however there is no need to use the ruby aspects of Chef if they are not needed,
-so many situations are kept simpler. In Ansible loops and conditionals are a bit cumbersome and more complicated combinations are either downright atrocious
-or best done utilizing multiple runs. In short the lack of code like control structures makes the implementation more complicated. On
-the plus side multiple runs in Ansible are much easier to accomplish and even multiple plays can sometimes be sufficient. There is also a big catch in my argument,
-I have yet to investigate creating modules in Ansible, if they are sufficiently quick to implement and powerful then perhaps yaml plus modules will just be
-a way of enforcing clear code structure.&lt;/p&gt;
-
-&lt;p&gt;My conclusion after converting &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;monasca-vagrant&lt;/a&gt; is that the simplicity of Ansible reflects the type of
-trade offs that favor practical usage rather than theoretically superior design. In general Ansible is easier to start a configuration management project
-with and quicker to finish, with the result being easier for others to understand. This will make it more accessible for others on my team with
-limited time to dedicate to configuration management tasks as well as allow my work to progress more quickly. Further we should be able to consolidate
-our orchestration scripts around Ansible, simplifying the knowledge needed to run our toolset.
-I have yet to use Ansible for more complicated fully HA deploys, orchestration, nor have I created a Ansible module to extend the capabilities. If in my exploration
-of these more advanced topics I am able to retain the simplicity for common installations and continue to find a practical usefulness in the design
-decisions, then Ansible will truly be a joy to use and the most useful tool in the field.&lt;/p&gt;
 </description>
     </item>
     

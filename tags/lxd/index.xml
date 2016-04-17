@@ -7,7 +7,48 @@
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
-    <updated>Fri, 12 Feb 2016 13:36:07 MST</updated>
+    <updated>Sat, 16 Apr 2016 21:06:14 MDT</updated>
+    
+    <item>
+      <title>Containers over VMs</title>
+      <link>http://backgroundprocess.com/infrastructure/containers-over-vms/</link>
+      <pubDate>Sat, 16 Apr 2016 21:06:14 MDT</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/infrastructure/containers-over-vms/</guid>
+      <description>&lt;p&gt;I recently realized it has been over 6 months since I have used a VM on my workstation. Previously I
+like many developers used VMs for various development tasks. The change hasn&amp;rsquo;t be in my usage of
+cloud based VMs, I continue to do that as needed and appropriate. The change is that I use containers.
+I now use a mix of &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; and &lt;a href=&#34;https://linuxcontainers.org/lxd/&#34;&gt;LXD&lt;/a&gt; for dev and
+test environments and everything else I used to frequently use VMs for on my workstation. I even use containers in some
+&lt;a href=&#34;http://backgroundprocess.com/systems/desktop_docker/&#34;&gt;ways&lt;/a&gt; that I haven&amp;rsquo;t used VMs.&lt;/p&gt;
+
+&lt;p&gt;Realizing this change in my behavior is somewhat startling for me, after all VMs represented a paradigm
+shift in the industry which certainly affected my workflow years ago. I previously found tools like
+&lt;a href=&#34;http://backgroundprocess.com/infrastructure/vagrant/&#34;&gt;Vagrant&lt;/a&gt; a very useful part of my workflow. Nevertheless the advantages to
+using containers for tasks on my personal workstation have change my workflow.&lt;/p&gt;
+
+&lt;p&gt;Containers come with nearly all the workflow advantages that VMs do but also with additional advantages
+beyond VMs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Speed of execution - I have various aliases and scripts that launch containerized applications
+and speed of startup and execution is indistinguishable from native apps.&lt;/li&gt;
+&lt;li&gt;Lightweight - Not only are containers much faster than VMs they are light on resource usage so
+much so that you can have many running and not notice it. I actually use signficantly less memory on my
+machine than I did a year ago.&lt;/li&gt;
+&lt;li&gt;Easier to share - Though possible with VMs it is just simply quicker and easier to share Docker containers.&lt;/li&gt;
+&lt;li&gt;Quicker and simpler to build - The speed of startup and ease of sharing contribute to it being
+really easy to startup a new container makes some changes and save it off for further use. This allows me
+to nest usages, repeat test cases on different versions, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The net effect is that for many uses containers just have less overhead than VMs but retain the primary advantages
+that VMs brought to the industry. There are of course reasons to still use VMs on a personal workstation,
+such as not running Linux as a primary OS and so lacking container support natively, doing development on the kernel,
+or developing for an OS other than Linux. None of these are relevant for me so containers is the way forward on
+my machines.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Mojo Integration Tests with LXD</title>
@@ -28,7 +69,7 @@ standard environment that can run set of integration tests fits the bill.&lt;/p&
 &lt;ul&gt;
 &lt;li&gt;Having a repeatable environment enables automation, sharing of the environment among developers, using
 the environment as a base standard and incremental improvement.&lt;/li&gt;
-&lt;li&gt;The image can be built to a stanadard, in this case it runs Ubuntu LTS with the latest distributed versions
+&lt;li&gt;The image can be built to a standard, in this case it runs Ubuntu LTS with the latest distributed versions
 of Juju/Mojo and other tooling.&lt;/li&gt;
 &lt;li&gt;Isolation from the primary dev environment allows for easy cleanup, easier testing of various branches and tests
 more easily run in parallel.&lt;/li&gt;

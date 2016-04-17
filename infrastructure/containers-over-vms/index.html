@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Mojo Integration Tests with LXD - Background Process</title>
+	<title>Containers over VMs - Background Process</title>
 	<meta name="author" content="map[name:Tim Kuhlman email:tim@backgroundprocess.com]">
 
 	
@@ -19,7 +19,7 @@
     
 	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://backgroundprocess.com/code/mojo-integration-tests/">
+	<link rel="canonical" href="http://backgroundprocess.com/infrastructure/containers-over-vms/">
 	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
 	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -101,51 +101,41 @@
 				<div id="content" class="inner">
 					<div itemscope itemtype="http://schema.org/Blog">
 					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="title" itemprop="name">Mojo Integration Tests with LXD</h1>
-		<div class="date"><time datetime='Fri, Feb 12, 2016' data-updated="true" itemprop="datePublished">Fri, Feb 12, 2016</time>
+    <h1 class="title" itemprop="name">Containers over VMs</h1>
+		<div class="date"><time datetime='Sat, Apr 16, 2016' data-updated="true" itemprop="datePublished">Sat, Apr 16, 2016</time>
 </div>
-	<div class="entry-content" itemprop="articleBody">
+	<div class="entry-content" itemprop="articleBody"><p>I recently realized it has been over 6 months since I have used a VM on my workstation. Previously I
+like many developers used VMs for various development tasks. The change hasn&rsquo;t be in my usage of
+cloud based VMs, I continue to do that as needed and appropriate. The change is that I use containers.
+I now use a mix of <a href="https://www.docker.com/">Docker</a> and <a href="https://linuxcontainers.org/lxd/">LXD</a> for dev and
+test environments and everything else I used to frequently use VMs for on my workstation. I even use containers in some
+<a href="/systems/desktop_docker/">ways</a> that I haven&rsquo;t used VMs.</p>
 
-<p>I have recently finished building an LXD image for doing integration tests of <a href="https://mojo.canonical.com">Mojo</a>.
-I did this because I wanted to be able to reliably test the changes to Mojo that I was making. A repeatable,
-standard environment that can run set of integration tests fits the bill.</p>
+<p>Realizing this change in my behavior is somewhat startling for me, after all VMs represented a paradigm
+shift in the industry which certainly affected my workflow years ago. I previously found tools like
+<a href="/infrastructure/vagrant/">Vagrant</a> a very useful part of my workflow. Nevertheless the advantages to
+using containers for tasks on my personal workstation have change my workflow.</p>
 
-<h2 id="using-a-container:3ff64b5a6405cf38b785717275d6a424">Using a Container</h2>
-
-<p>There are a few key advantages I see to doing the integration tests in a container image like this:</p>
+<p>Containers come with nearly all the workflow advantages that VMs do but also with additional advantages
+beyond VMs:</p>
 
 <ul>
-<li>Having a repeatable environment enables automation, sharing of the environment among developers, using
-the environment as a base standard and incremental improvement.</li>
-<li>The image can be built to a standard, in this case it runs Ubuntu LTS with the latest distributed versions
-of Juju/Mojo and other tooling.</li>
-<li>Isolation from the primary dev environment allows for easy cleanup, easier testing of various branches and tests
-more easily run in parallel.</li>
+<li>Speed of execution - I have various aliases and scripts that launch containerized applications
+and speed of startup and execution is indistinguishable from native apps.</li>
+<li>Lightweight - Not only are containers much faster than VMs they are light on resource usage so
+much so that you can have many running and not notice it. I actually use signficantly less memory on my
+machine than I did a year ago.</li>
+<li>Easier to share - Though possible with VMs it is just simply quicker and easier to share Docker containers.</li>
+<li>Quicker and simpler to build - The speed of startup and ease of sharing contribute to it being
+really easy to startup a new container makes some changes and save it off for further use. This allows me
+to nest usages, repeat test cases on different versions, etc.</li>
 </ul>
 
-<h2 id="integration-tests:3ff64b5a6405cf38b785717275d6a424">Integration Tests</h2>
-
-<p>Integration tests themselves I want running because some tests are just not practical to do via
-unit tests. This is especially true for code that interacts with a lot of other programs such as Mojo.</p>
-
-<p>In many cases integration tests bring an real world element unit tests don&rsquo;t. For example the Mojo unit tests
-cover Juju interactions decently well using the expected Juju status output. However what if that
-expected output changes? For example Juju output could change in a way that is harmless and not
-noticed so everyone upgrades Juju, then later Mojo changes but the unit tests are all based on the
-older output, integration tests will catch this before sending broken code to production.</p>
-
-<p>On the other hand some tests, ie proper parsing of a manifest file, work better as a unit test. In other
-situations it perhaps isn&rsquo;t so clear. Have integration tests as a tool in addition to unit tests gives Mojo
-developers another way to validate code before merging.</p>
-
-<h2 id="more-information:3ff64b5a6405cf38b785717275d6a424">More Information</h2>
-
-<p>The image can also be used for development of Mojo specs, there is some information on that and more information on using the image in the
-image <a href="http://bazaar.launchpad.net/~mojo-maintainers/mojo/trunk/view/head:/contrib/LXD/README.md">readme</a>.
-I also made this <a href="https://youtu.be/Q8ll7OsTtMk">screen cast</a> to introduce how I use the image today. I often watch
-these screen casts at double speed and recommend you do for this one also.</p>
-
-<p>Now that the base image is done all the Mojo developers can all incrementally add more tests and I look forward to seeing it expand.</p>
+<p>The net effect is that for many uses containers just have less overhead than VMs but retain the primary advantages
+that VMs brought to the industry. There are of course reasons to still use VMs on a personal workstation,
+such as not running Linux as a primary OS and so lacking container support natively, doing development on the kernel,
+or developing for an OS other than Linux. None of these are relevant for me so containers is the way forward on
+my machines.</p>
 </div>
 </article>
 					
