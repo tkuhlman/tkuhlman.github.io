@@ -7,7 +7,67 @@
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
-    <updated>Fri, 11 Sep 2015 21:12:37 MDT</updated>
+    <updated>Mon, 02 May 2016 21:07:28 MDT</updated>
+    
+    <item>
+      <title>Docker for Messy Pets - Updates</title>
+      <link>http://backgroundprocess.com/systems/desktop_docker2/</link>
+      <pubDate>Mon, 02 May 2016 21:07:28 MDT</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/systems/desktop_docker2/</guid>
+      <description>&lt;p&gt;About 8 months ago I posted about how I run some
+&lt;a href=&#34;http://backgroundprocess.com/systems/desktop_docker/&#34;&gt;applications in containers&lt;/a&gt;
+so that they stay nicely contained. I have refined and changed a few things about how I do this
+recently and so felt it was time for an update. I do maintain a
+&lt;a href=&#34;https://github.com/tkuhlman/containers&#34;&gt;git repo&lt;/a&gt; that will always have the latest I am using but
+here is the summary:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;At some point pulseaudio broke for me, possibly after an OS or Docker upgrade. I didn&amp;rsquo;t track
+down the cause but rather just decided to setup tcp based pulse audio. This is more initial
+setup but should be more stable and is simpler in the startup scripts. Audio works great this
+way and the container can play audio but not run configuration commands like pacmd.
+To setup:
+
+&lt;ul&gt;
+&lt;li&gt;Turn on tcp for pulseaudio, in &lt;code&gt;/etc/pulse/default.pa&lt;/code&gt; add a line like &lt;code&gt;load-module
+module-native-protocol-tcp&lt;/code&gt; and restart pulseaudio, &lt;code&gt;pulseaudio -k&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;If you are running ufw like me you need a rule like,
+&lt;code&gt;ufw allow in on docker0 to my-docker-ip proto tcp port 4713&lt;/code&gt; with the appropriate Docker ip.
+This allows Docker containers to reach pulse on port 4713 but should keep everything else out.&lt;/li&gt;
+&lt;li&gt;Then in the container startup scripts I have some lines like these used for Docker options:&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;-v ~/.config/pulse/cookie:/run/pulse/cookie
+-e PULSE_SERVER=tcp:$(ifconfig docker0| awk &#39;/inet addr/{print substr($2,6)}&#39;):4713
+-e PULSE_COOKIE=/run/pulse/cookie
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Turns out you don&amp;rsquo;t need &lt;code&gt;xhost local:&lt;/code&gt; in your scripts if I you are sharing &lt;code&gt;/tmp/.X11-unix&lt;/code&gt;
+and have $DISPLAY set. I&amp;rsquo;m not sure how I missed this 8 months ago but it is nice to avoid that.&lt;/li&gt;
+&lt;li&gt;There is a lot to love about Docker but like many CLI interfaces it could use some work.
+I mostly start containers with scripts but I also have a couple of aliases for some common other
+tasks:
+
+&lt;ul&gt;
+&lt;li&gt;To show current containers both running and not, &lt;code&gt;alias dps=&#39;docker ps -a --format &amp;quot;table
+{{.Names}}\t{{.Status}}\t{{.Image}}&amp;quot;&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;To run a command in the container with a terminal, which I often use like &lt;code&gt;dexec container
+bash&lt;/code&gt;. The alias is &lt;code&gt;alias dexec=&#39;docker exec -t -i&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Recently I posted about how I use
+&lt;a href=&#34;http://backgroundprocess.com/infrastructure/containers-over-vms/&#34;&gt;containers rather than VMs&lt;/a&gt; but
+those use cases are just the beginning. As I add applications
+to my workstation I can now be conservative on what I install and what install sources I trust on
+my workstation and instead use a container to keep unknown software confined.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Docker for Messy Pets</title>

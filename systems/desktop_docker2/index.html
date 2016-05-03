@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Vagrant Love - Background Process</title>
+	<title>Docker for Messy Pets - Updates - Background Process</title>
 	<meta name="author" content="map[name:Tim Kuhlman email:tim@backgroundprocess.com]">
 
 	
@@ -19,7 +19,7 @@
     
 	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://backgroundprocess.com/infrastructure/vagrant/">
+	<link rel="canonical" href="http://backgroundprocess.com/systems/desktop_docker2/">
 	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
 	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -101,26 +101,60 @@
 				<div id="content" class="inner">
 					<div itemscope itemtype="http://schema.org/Blog">
 					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="title" itemprop="name">Vagrant Love</h1>
-		<div class="date"><time datetime='Tue, May 19, 2015' data-updated="true" itemprop="datePublished">Tue, May 19, 2015</time>
+    <h1 class="title" itemprop="name">Docker for Messy Pets - Updates</h1>
+		<div class="date"><time datetime='Mon, May 2, 2016' data-updated="true" itemprop="datePublished">Mon, May 2, 2016</time>
 </div>
-	<div class="entry-content" itemprop="articleBody"><p><strong><a href="https://www.vagrantup.com/">Vagrant</a> is awesome!</strong></p>
+	<div class="entry-content" itemprop="articleBody"><p>About 8 months ago I posted about how I run some
+<a href="http://backgroundprocess.com/systems/desktop_docker/">applications in containers</a>
+so that they stay nicely contained. I have refined and changed a few things about how I do this
+recently and so felt it was time for an update. I do maintain a
+<a href="https://github.com/tkuhlman/containers">git repo</a> that will always have the latest I am using but
+here is the summary:</p>
 
-<p>Given its much deserved popularity this won&rsquo;t surprise many. This isn&rsquo;t even new, I&rsquo;ve used it daily for quite awhile.
-Recently while discussing use cases where Vagrant was an awesome fit I found myself wondering just why is it such a great tool?</p>
+<ul>
+<li>At some point pulseaudio broke for me, possibly after an OS or Docker upgrade. I didn&rsquo;t track
+down the cause but rather just decided to setup tcp based pulse audio. This is more initial
+setup but should be more stable and is simpler in the startup scripts. Audio works great this
+way and the container can play audio but not run configuration commands like pacmd.
+To setup:
 
-<p>The best tools are those that reflect a deep understanding of the use cases and paradigms they are made for. Vagrant is actually
-quite simple, roughly it just ties together some pre-built vms with the appropriate providers and configuration management tool. The key is that it does so
-cleanly without adding baggage to the process.</p>
+<ul>
+<li>Turn on tcp for pulseaudio, in <code>/etc/pulse/default.pa</code> add a line like <code>load-module
+module-native-protocol-tcp</code> and restart pulseaudio, <code>pulseaudio -k</code>.</li>
+<li>If you are running ufw like me you need a rule like,
+<code>ufw allow in on docker0 to my-docker-ip proto tcp port 4713</code> with the appropriate Docker ip.
+This allows Docker containers to reach pulse on port 4713 but should keep everything else out.</li>
+<li>Then in the container startup scripts I have some lines like these used for Docker options:</li>
+</ul></li>
+</ul>
 
-<p>Another aspect that is important is that Vagrant chooses sane defaults but still allows configurability. The sane defaults combined with the clean design mean
-that more often than not Vagrant makes building vm based environments far easier than any other way. This is probably what I love most about Vagrant, I can turn
-around a clustered dev environment in under 5 minutes and even share it with my team with no extra work. This is orders of magnitude faster than other solutions.</p>
+<blockquote>
+<pre><code>-v ~/.config/pulse/cookie:/run/pulse/cookie
+-e PULSE_SERVER=tcp:$(ifconfig docker0| awk '/inet addr/{print substr($2,6)}'):4713
+-e PULSE_COOKIE=/run/pulse/cookie
+</code></pre>
+</blockquote>
 
-<p>Building Vagrant based environments that fast takes good docs and familiarity with Vagrant. Vagrant has <a href="https://docs.vagrantup.com/v2/">great simple and clear docs</a>
-and the familiarity largely comes because Vagrant is versatile. The configurability of Vagrant allows it to have quite a bit of depth for those less than standard use cases.
-This in turn means you come to know the tool and appreciate its simplicity and ease, which in turn makes it easier to use. All of this ultimately culminates in you
-writing a blog post about Vagrant love.</p>
+<ul>
+<li>Turns out you don&rsquo;t need <code>xhost local:</code> in your scripts if I you are sharing <code>/tmp/.X11-unix</code>
+and have $DISPLAY set. I&rsquo;m not sure how I missed this 8 months ago but it is nice to avoid that.</li>
+<li>There is a lot to love about Docker but like many CLI interfaces it could use some work.
+I mostly start containers with scripts but I also have a couple of aliases for some common other
+tasks:
+
+<ul>
+<li>To show current containers both running and not, <code>alias dps='docker ps -a --format &quot;table
+{{.Names}}\t{{.Status}}\t{{.Image}}&quot;'</code></li>
+<li>To run a command in the container with a terminal, which I often use like <code>dexec container
+bash</code>. The alias is <code>alias dexec='docker exec -t -i'</code></li>
+</ul></li>
+</ul>
+
+<p>Recently I posted about how I use
+<a href="http://backgroundprocess.com/infrastructure/containers-over-vms/">containers rather than VMs</a> but
+those use cases are just the beginning. As I add applications
+to my workstation I can now be conservative on what I install and what install sources I trust on
+my workstation and instead use a container to keep unknown software confined.</p>
 </div>
 </article>
 					
