@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Golang on Background Process </title>
+      <title>Passwordsafe on Background Process </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/tags/golang/</link>
+    <link>http://backgroundprocess.com/tags/passwordsafe/</link>
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
@@ -30,35 +30,6 @@ section. Primarily these are features that take advantage of have multiple DBs o
 Lastly the gtk gui could use countless tweaks to clean it up.&lt;/p&gt;
 
 &lt;p&gt;If you test it out have any feedback or find any bugs use the &lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/issues&#34;&gt;project issues&lt;/a&gt; section to notify me.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>http://backgroundprocess.com/learning/hugo/</link>
-      <pubDate>Wed, 12 Aug 2015 21:54:04 MDT</pubDate>
-      <author>Tim Kuhlman</author>
-      <guid>http://backgroundprocess.com/learning/hugo/</guid>
-      <description>&lt;p&gt;I like static generated sites, simple, effective and secure. I love github pages as it gets the job done easily and well. Jekyll is a natural fit
-with github pages and was a great way to start building a blog. However recently &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; has caught my attention.&lt;/p&gt;
-
-&lt;p&gt;I decided to switch to Hugo for a few different reasons:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;I like the clean directory layout better with Hugo.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;I want disqus, rss, tags, some easy social sharing links and google analytics. All of that is possible with Jekyll but some of these are much easier to setup with Hugo.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;It continues to have all the static site generation goodness and allows me to keep working with markdown and yaml.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Not that I have the greatest visual appeal to the blog now but a refreshed look is still welcome.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;On top of those reasons I am learning golang, which happens to be why I haven&amp;rsquo;t blogged in awhile but also adds some appeal to Hugo. The simple single binary installation
-is great compared to dealing with ruby gems. That along with the ability to explore the code while I learn golang are really the reasons I first started looking at Hugo.&lt;/p&gt;
-
-&lt;p&gt;It isn&amp;rsquo;t all great with Hugo, it does need a separate git repo which is a bit of a pain. Luckily the &lt;a href=&#34;http://gohugo.io/tutorials/github-pages-blog&#34;&gt;github pages tutorial&lt;/a&gt;
-does a great job at explaining a few different git subrepo techniques and scripts to minimize the pain.&lt;/p&gt;
 </description>
     </item>
     
