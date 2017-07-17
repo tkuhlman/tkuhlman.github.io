@@ -104,14 +104,13 @@
     <h1 class="title" itemprop="name">Initial impressions of lxd</h1>
 		<div class="date"><time datetime='Wed, Oct 14, 2015' data-updated="true" itemprop="datePublished">Wed, Oct 14, 2015</time>
 </div>
-	<div class="entry-content" itemprop="articleBody">
-
-<p>In the last couple of weeks I have been taking a bit of time here and there to explore <a href="http://www.ubuntu.com/cloud/tools/lxd">LXD</a>.
+	<div class="entry-content" itemprop="articleBody"><p>In the last couple of weeks I have been taking a bit of time here and there to explore <a href="http://www.ubuntu.com/cloud/tools/lxd">LXD</a>.
 LXD is a tool for managing system containers. As both LXD and Docker deal with containers in many ways there is quite a
 bit of overlap but LXD is aiming for full isolated system containers where Docker is more focused on application containers. You can even run
-Docker within an LXD image. I find it helpful to think of LXD as a replacement for virtual machines.</p>
+Docker within an LXD image. I find it helpful to think of LXD as a replacement for virtual machines.
+</p>
 
-<h3 id="lxd-features:4812a1332fc3c3c9233a069930d0aa44">LXD Features</h3>
+<h3 id="lxd-features">LXD Features</h3>
 
 <p>LXD is built upon <a href="https://linuxcontainers.org/">LXC</a> which is impressively mature when compared to most of the container ecosystem. There are some
 lacking features with LXC as pointed out at <a href="https://www.stgraber.org/2015/04/21/lxd-getting-started/">by the project lead</a>.
@@ -129,7 +128,7 @@ LXC could benefit with some things that Docker brought to the table and LXD fill
 <li>Checkpoint/restore support to enable live migration</li>
 </ul>
 
-<h3 id="what-about-docker:4812a1332fc3c3c9233a069930d0aa44">What about Docker</h3>
+<h3 id="what-about-docker">What about Docker</h3>
 
 <p>Thinking of LXD as a VM helps to clarify where it fits in a system workflow, it isn&rsquo;t the entire picture. I have often thought of Docker containers
 as a new style of highly specialized VMs. In fact many of the use cases where I have used Docker I have treated my container in many ways like a VM.
@@ -151,7 +150,7 @@ I expect much of this to be fixed as things mature but it is a sign that this is
 improve in this area. LXD is also implementing live migration which I believe Docker is further behind on. This mostly seems to fit with the general
 philosophy of a VM like system container versus application container.</p>
 
-<h3 id="app-container-or-system-container:4812a1332fc3c3c9233a069930d0aa44">App container or System container</h3>
+<h3 id="app-container-or-system-container">App container or System container</h3>
 
 <p>In order to really think about when to use LXD and when to use Docker and how they overlap you have to explore the differences and use cases for
 app container versus system containers. System containers act more like a VM with multiple processes and an init daemon. Applications containers
@@ -175,8 +174,7 @@ container with all the standard tools and later a move to a more tightly built a
 
 <p>Regarding tooling it seems to me that container management tools should support both. They may have
 their initial leanings simply as a way to focus development but ultimately I think system or app container is something to be decided by the use case
-not by the tooling.</p>
-</div>
+not by the tooling.</p></div>
 </article>
 					
 						<div class="share">
@@ -227,7 +225,7 @@ not by the tooling.</p>
 				    </div>
 				</div>
 			</div>
-			<footer id="footer" class="inner">Copyright &copy; 2016
+			<footer id="footer" class="inner">Copyright &copy; 2017
 
     Tim Kuhlman
 

@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Mojo Integration Tests with LXD - Background Process</title>
-	<meta name="author" content="map[email:tim@backgroundprocess.com name:Tim Kuhlman]">
+	<meta name="author" content="map[name:Tim Kuhlman email:tim@backgroundprocess.com]">
 
 	
 	
@@ -104,13 +104,12 @@
     <h1 class="title" itemprop="name">Mojo Integration Tests with LXD</h1>
 		<div class="date"><time datetime='Fri, Feb 12, 2016' data-updated="true" itemprop="datePublished">Fri, Feb 12, 2016</time>
 </div>
-	<div class="entry-content" itemprop="articleBody">
-
-<p>I have recently finished building an LXD image for doing integration tests of <a href="https://mojo.canonical.com">Mojo</a>.
+	<div class="entry-content" itemprop="articleBody"><p>I have recently finished building an LXD image for doing integration tests of <a href="https://mojo.canonical.com">Mojo</a>.
 I did this because I wanted to be able to reliably test the changes to Mojo that I was making. A repeatable,
-standard environment that can run set of integration tests fits the bill.</p>
+standard environment that can run set of integration tests fits the bill.
+</p>
 
-<h2 id="using-a-container:3ff64b5a6405cf38b785717275d6a424">Using a Container</h2>
+<h2 id="using-a-container">Using a Container</h2>
 
 <p>There are a few key advantages I see to doing the integration tests in a container image like this:</p>
 
@@ -123,7 +122,7 @@ of Juju/Mojo and other tooling.</li>
 more easily run in parallel.</li>
 </ul>
 
-<h2 id="integration-tests:3ff64b5a6405cf38b785717275d6a424">Integration Tests</h2>
+<h2 id="integration-tests">Integration Tests</h2>
 
 <p>Integration tests themselves I want running because some tests are just not practical to do via
 unit tests. This is especially true for code that interacts with a lot of other programs such as Mojo.</p>
@@ -138,15 +137,14 @@ older output, integration tests will catch this before sending broken code to pr
 situations it perhaps isn&rsquo;t so clear. Have integration tests as a tool in addition to unit tests gives Mojo
 developers another way to validate code before merging.</p>
 
-<h2 id="more-information:3ff64b5a6405cf38b785717275d6a424">More Information</h2>
+<h2 id="more-information">More Information</h2>
 
 <p>The image can also be used for development of Mojo specs, there is some information on that and more information on using the image in the
 image <a href="http://bazaar.launchpad.net/~mojo-maintainers/mojo/trunk/view/head:/contrib/LXD/README.md">readme</a>.
 I also made this <a href="https://youtu.be/Q8ll7OsTtMk">screen cast</a> to introduce how I use the image today. I often watch
 these screen casts at double speed and recommend you do for this one also.</p>
 
-<p>Now that the base image is done all the Mojo developers can all incrementally add more tests and I look forward to seeing it expand.</p>
-</div>
+<p>Now that the base image is done all the Mojo developers can all incrementally add more tests and I look forward to seeing it expand.</p></div>
 </article>
 					
 						<div class="share">
@@ -197,7 +195,7 @@ these screen casts at double speed and recommend you do for this one also.</p>
 				    </div>
 				</div>
 			</div>
-			<footer id="footer" class="inner">Copyright &copy; 2016
+			<footer id="footer" class="inner">Copyright &copy; 2017
 
     Tim Kuhlman
 

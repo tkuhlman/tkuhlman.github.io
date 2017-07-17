@@ -3,11 +3,11 @@
   <channel>
       <title>Vagrant on Background Process </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/tags/vagrant/</link>
+    <link>http://backgroundprocess.com/tags/vagrant/index.xml</link>
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
-    <updated>Tue, 19 May 2015 21:56:28 MDT</updated>
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
     
     <item>
       <title>Vagrant Love</title>
@@ -26,13 +26,12 @@ cleanly without adding baggage to the process.&lt;/p&gt;
 
 &lt;p&gt;Another aspect that is important is that Vagrant chooses sane defaults but still allows configurability. The sane defaults combined with the clean design mean
 that more often than not Vagrant makes building vm based environments far easier than any other way. This is probably what I love most about Vagrant, I can turn
-around a clustered dev environment in under 5 minutes and even share it with my team with no extra work. This is orders of magnitude faster than other solutions.&lt;/p&gt;
+around a clustered dev environment in under 5 minutes and even share it with my team with no extra work. This is orders of magnitude faster than other solutions.
 
-&lt;p&gt;Building Vagrant based environments that fast takes good docs and familiarity with Vagrant. Vagrant has &lt;a href=&#34;https://docs.vagrantup.com/v2/&#34;&gt;great simple and clear docs&lt;/a&gt;
+Building Vagrant based environments that fast takes good docs and familiarity with Vagrant. Vagrant has &lt;a href=&#34;https://docs.vagrantup.com/v2/&#34;&gt;great simple and clear docs&lt;/a&gt;
 and the familiarity largely comes because Vagrant is versatile. The configurability of Vagrant allows it to have quite a bit of depth for those less than standard use cases.
 This in turn means you come to know the tool and appreciate its simplicity and ease, which in turn makes it easier to use. All of this ultimately culminates in you
-writing a blog post about Vagrant love.&lt;/p&gt;
-</description>
+writing a blog post about Vagrant love.&lt;/p&gt;</description>
     </item>
     
   </channel>

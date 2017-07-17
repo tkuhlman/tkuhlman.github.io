@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Docker for Messy Pets - Background Process</title>
-	<meta name="author" content="map[email:tim@backgroundprocess.com name:Tim Kuhlman]">
+	<meta name="author" content="map[name:Tim Kuhlman email:tim@backgroundprocess.com]">
 
 	
 	
@@ -104,12 +104,11 @@
     <h1 class="title" itemprop="name">Docker for Messy Pets</h1>
 		<div class="date"><time datetime='Fri, Sep 11, 2015' data-updated="true" itemprop="datePublished">Fri, Sep 11, 2015</time>
 </div>
-	<div class="entry-content" itemprop="articleBody">
-
-<p>The primary advantages of containers are realized when they are treated as the cattle of computing not pets. There are many
+	<div class="entry-content" itemprop="articleBody"><p>The primary advantages of containers are realized when they are treated as the cattle of computing not pets. There are many
 articles using that analogy to extol the advantages of containers as cattle or
 <a href="http://thenewstack.io/pets-and-cattle-symbolize-servers-so-what-does-that-make-containers-chickens/">even as chickens</a>.
-However I have been recently rebuilding my Ubuntu Desktop and found containers can at times be great for pets also, most particularly the messy ones.</p>
+However I have been recently rebuilding my Ubuntu Desktop and found containers can at times be great for pets also, most particularly the messy ones.
+</p>
 
 <p>I embarked down this route because of my sense of system cleanliness; too many apps I run excrete their dependencies all over my nice newly
 installed system. I run a variety of apps that are not available either in the primary repo nor as a PPA or at least not with the version I need. If
@@ -128,7 +127,7 @@ worth it for these well behaved apps. This is particularly true as using apt ena
 Nevertheless there are many apps or at least versions of the app I am using that aren&rsquo;t available as a well behaved deb. These are the messy pets of
 my workstation and I am much happier to have them in a container than to have them leaving a mess all over my desktop.</p>
 
-<h3 id="implementation-details:8f5ecc9060646138683359a3408ed656">Implementation Details</h3>
+<h3 id="implementation-details">Implementation Details</h3>
 
 <p>I have begun a <a href="https://github.com/tkuhlman/containers">github repo</a> with Dockerfiles and shell scripts I use for containers on my desktop. I will keep
 expanding this as I add more apps which I use in this way. Here are some considerations as you put your messy pets in containers:</p>
@@ -167,7 +166,7 @@ are more aspects that need consideration.</li>
 <li>This technique is less annoying if your local user can run docker without sudo.</li>
 </ul>
 
-<h3 id="references:8f5ecc9060646138683359a3408ed656">References</h3>
+<h3 id="references">References</h3>
 
 <p>I am by no means the first to try this and in fact was able to find many tips on how to accomplish desktop apps in containers. Here are the primary pages
 I used as sources:</p>
@@ -177,8 +176,7 @@ I used as sources:</p>
 <li><a href="http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/">http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/</a></li>
 <li><a href="http://stackoverflow.com/questions/28985714/run-apps-using-audio-in-a-docker-container">http://stackoverflow.com/questions/28985714/run-apps-using-audio-in-a-docker-container</a></li>
 <li><a href="http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/">http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/</a></li>
-</ul>
-</div>
+</ul></div>
 </article>
 					
 						<div class="share">
@@ -229,7 +227,7 @@ I used as sources:</p>
 				    </div>
 				</div>
 			</div>
-			<footer id="footer" class="inner">Copyright &copy; 2016
+			<footer id="footer" class="inner">Copyright &copy; 2017
 
     Tim Kuhlman
 

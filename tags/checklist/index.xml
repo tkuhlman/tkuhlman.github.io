@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Checklist on Background Process </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://backgroundprocess.com/tags/checklist/index.xml</link>
+    <language>en-us</language>
+    <author>Tim Kuhlman</author>
+    
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Done Criteria</title>
+      <link>http://backgroundprocess.com/code/done/</link>
+      <pubDate>Mon, 17 Jul 2017 00:00:00 UTC</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/code/done/</guid>
+      <description>&lt;p&gt;A checklist list of done criteria is helpful to avoid skipping any steps in code creation, this is the list I use for my projects.
+Where possible automated tools should be used to help verify good practices are followed.
+These tools are typically language specific so I skipped adding any here.
+&lt;/p&gt;
+
+&lt;h2 id=&#34;ready-for-review&#34;&gt;Ready for Review&lt;/h2&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Committed with a good commit message to appropriate branches as determined by the teams source control practices.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt;  The code works and shows that by being well covered with automated tests, some combination of unit and/or integration tests as appropriate.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Quality, including:
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; The code has good style and has been lint checked.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Simplicity, the code is easy to read and maintain, avoids complexitiy and is focused on solving a single problem.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; All errors are handled.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Documented - design and implementations documented in or close to the code as needed.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Metrics exposed, healthcheck exposed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ready-for-deployment&#34;&gt;Ready for Deployment&lt;/h2&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Reviewed and merged.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Tested in a staging environment.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Demoed and approved by product owner.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;done&#34;&gt;Done&lt;/h2&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Dashboards for metrics created.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Alerts in place.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Runbook for alerts created&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Documented - All relevant user and administration documentation is in place.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Live&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

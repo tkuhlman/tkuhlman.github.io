@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title> on Background Process </title>
+      <title>Background Process on Background Process </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/</link>
+    <link>http://backgroundprocess.com/index.xml</link>
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
-    <updated>Fri, 27 May 2016 21:43:39 MDT</updated>
+    <updated>Mon, 17 Jul 2017 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Done Criteria</title>
+      <link>http://backgroundprocess.com/code/done/</link>
+      <pubDate>Mon, 17 Jul 2017 00:00:00 UTC</pubDate>
+      <author>Tim Kuhlman</author>
+      <guid>http://backgroundprocess.com/code/done/</guid>
+      <description>&lt;p&gt;A checklist list of done criteria is helpful to avoid skipping any steps in code creation, this is the list I use for my projects.
+Where possible automated tools should be used to help verify good practices are followed.
+These tools are typically language specific so I skipped adding any here.
+&lt;/p&gt;
+
+&lt;h2 id=&#34;ready-for-review&#34;&gt;Ready for Review&lt;/h2&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Committed with a good commit message to appropriate branches as determined by the teams source control practices.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt;  The code works and shows that by being well covered with automated tests, some combination of unit and/or integration tests as appropriate.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Quality, including:
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; The code has good style and has been lint checked.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Simplicity, the code is easy to read and maintain, avoids complexitiy and is focused on solving a single problem.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; All errors are handled.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Documented - design and implementations documented in or close to the code as needed.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Metrics exposed, healthcheck exposed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ready-for-deployment&#34;&gt;Ready for Deployment&lt;/h2&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Reviewed and merged.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Tested in a staging environment.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Demoed and approved by product owner.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;done&#34;&gt;Done&lt;/h2&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Dashboards for metrics created.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Alerts in place.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Runbook for alerts created&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Documented - All relevant user and administration documentation is in place.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Live&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>A Golang implementation of PasswordSafe V3, ready for Beta</title>
@@ -17,7 +63,7 @@
       <guid>http://backgroundprocess.com/code/gopwsafe-beta/</guid>
       <description>&lt;p&gt;The password database I have been implementing in go is ready for Beta! The DB is implemented using the &lt;a href=&#34;http://pwsafe.org/&#34;&gt;password safe&lt;/a&gt; version 3
 database spec. Enough of the features for this are now working that
-&lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/releases/tag/0.3.0&#34;&gt;0.3.0 release&lt;/a&gt; is ready for others to test.&lt;/p&gt;
+&lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/releases/tag/0.3.0&#34;&gt;0.3.0 release&lt;/a&gt; is ready for others to test. &lt;/p&gt;
 
 &lt;p&gt;I have been using this code for months and would encourage anyone else needing a password DB to check it out now. I have particularly enjoyed the ability
 to search across multiple open password dbs at one time. This was the primary itch I was scratching in taking up this project. Though that feature has been
@@ -29,8 +75,7 @@ without closing the entire program. The &lt;a href=&#34;https://github.com/tkuhl
 section. Primarily these are features that take advantage of have multiple DBs open at once, such as the ability to move records from one DB to another.
 Lastly the gtk gui could use countless tweaks to clean it up.&lt;/p&gt;
 
-&lt;p&gt;If you test it out have any feedback or find any bugs use the &lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/issues&#34;&gt;project issues&lt;/a&gt; section to notify me.&lt;/p&gt;
-</description>
+&lt;p&gt;If you test it out have any feedback or find any bugs use the &lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/issues&#34;&gt;project issues&lt;/a&gt; section to notify me.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -89,8 +134,7 @@ bash&lt;/code&gt;. The alias is &lt;code&gt;alias dexec=&#39;docker exec -t -i&#
 &lt;a href=&#34;http://backgroundprocess.com/infrastructure/containers-over-vms/&#34;&gt;containers rather than VMs&lt;/a&gt; but
 those use cases are just the beginning. As I add applications
 to my workstation I can now be conservative on what I install and what install sources I trust on
-my workstation and instead use a container to keep unknown software confined.&lt;/p&gt;
-</description>
+my workstation and instead use a container to keep unknown software confined.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -101,7 +145,7 @@ my workstation and instead use a container to keep unknown software confined.&lt
       <guid>http://backgroundprocess.com/infrastructure/containers-over-vms/</guid>
       <description>&lt;p&gt;I recently realized it has been over 6 months since I have used a VM on my workstation. Previously I
 like many developers used VMs for various development tasks. The change hasn&amp;rsquo;t be in my usage of
-cloud based VMs, I continue to do that as needed and appropriate. The change is that I use containers.
+cloud based VMs, I continue to do that as needed and appropriate. The change is that I use containers. 
 I now use a mix of &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; and &lt;a href=&#34;https://linuxcontainers.org/lxd/&#34;&gt;LXD&lt;/a&gt; for dev and
 test environments and everything else I used to frequently use VMs for on my workstation. I even use containers in some
 &lt;a href=&#34;http://backgroundprocess.com/systems/desktop_docker/&#34;&gt;ways&lt;/a&gt; that I haven&amp;rsquo;t used VMs.&lt;/p&gt;
@@ -130,8 +174,7 @@ to nest usages, repeat test cases on different versions, etc.&lt;/li&gt;
 that VMs brought to the industry. There are of course reasons to still use VMs on a personal workstation,
 such as not running Linux as a primary OS and so lacking container support natively, doing development on the kernel,
 or developing for an OS other than Linux. None of these are relevant for me so containers is the way forward on
-my machines.&lt;/p&gt;
-</description>
+my machines.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -140,13 +183,12 @@ my machines.&lt;/p&gt;
       <pubDate>Fri, 12 Feb 2016 13:36:07 MST</pubDate>
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/code/mojo-integration-tests/</guid>
-      <description>
-
-&lt;p&gt;I have recently finished building an LXD image for doing integration tests of &lt;a href=&#34;https://mojo.canonical.com&#34;&gt;Mojo&lt;/a&gt;.
+      <description>&lt;p&gt;I have recently finished building an LXD image for doing integration tests of &lt;a href=&#34;https://mojo.canonical.com&#34;&gt;Mojo&lt;/a&gt;.
 I did this because I wanted to be able to reliably test the changes to Mojo that I was making. A repeatable,
-standard environment that can run set of integration tests fits the bill.&lt;/p&gt;
+standard environment that can run set of integration tests fits the bill.
+&lt;/p&gt;
 
-&lt;h2 id=&#34;using-a-container:3ff64b5a6405cf38b785717275d6a424&#34;&gt;Using a Container&lt;/h2&gt;
+&lt;h2 id=&#34;using-a-container&#34;&gt;Using a Container&lt;/h2&gt;
 
 &lt;p&gt;There are a few key advantages I see to doing the integration tests in a container image like this:&lt;/p&gt;
 
@@ -159,7 +201,7 @@ of Juju/Mojo and other tooling.&lt;/li&gt;
 more easily run in parallel.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;integration-tests:3ff64b5a6405cf38b785717275d6a424&#34;&gt;Integration Tests&lt;/h2&gt;
+&lt;h2 id=&#34;integration-tests&#34;&gt;Integration Tests&lt;/h2&gt;
 
 &lt;p&gt;Integration tests themselves I want running because some tests are just not practical to do via
 unit tests. This is especially true for code that interacts with a lot of other programs such as Mojo.&lt;/p&gt;
@@ -174,15 +216,14 @@ older output, integration tests will catch this before sending broken code to pr
 situations it perhaps isn&amp;rsquo;t so clear. Have integration tests as a tool in addition to unit tests gives Mojo
 developers another way to validate code before merging.&lt;/p&gt;
 
-&lt;h2 id=&#34;more-information:3ff64b5a6405cf38b785717275d6a424&#34;&gt;More Information&lt;/h2&gt;
+&lt;h2 id=&#34;more-information&#34;&gt;More Information&lt;/h2&gt;
 
 &lt;p&gt;The image can also be used for development of Mojo specs, there is some information on that and more information on using the image in the
 image &lt;a href=&#34;http://bazaar.launchpad.net/~mojo-maintainers/mojo/trunk/view/head:/contrib/LXD/README.md&#34;&gt;readme&lt;/a&gt;.
 I also made this &lt;a href=&#34;https://youtu.be/Q8ll7OsTtMk&#34;&gt;screen cast&lt;/a&gt; to introduce how I use the image today. I often watch
 these screen casts at double speed and recommend you do for this one also.&lt;/p&gt;
 
-&lt;p&gt;Now that the base image is done all the Mojo developers can all incrementally add more tests and I look forward to seeing it expand.&lt;/p&gt;
-</description>
+&lt;p&gt;Now that the base image is done all the Mojo developers can all incrementally add more tests and I look forward to seeing it expand.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -192,14 +233,14 @@ these screen casts at double speed and recommend you do for this one also.&lt;/p
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/code/weechat-queue/</guid>
       <description>&lt;p&gt;I use &lt;a href=&#34;http://weechat.org&#34;&gt;weechat&lt;/a&gt; for much of the day and have issue regular repetitive commands periodically.
-If you are in the same situation you may find the &lt;a href=&#34;https://weechat.org/scripts/source/queue.py.html/&#34;&gt;queue plugin&lt;/a&gt; I recently modified to be useful.&lt;/p&gt;
+If you are in the same situation you may find the &lt;a href=&#34;https://weechat.org/scripts/source/queue.py.html/&#34;&gt;queue plugin&lt;/a&gt; I recently modified to be useful.
+&lt;/p&gt;
 
 &lt;p&gt;The queue plugin simply allows you to build up a list of commands then run them all at once. My
 &lt;a href=&#34;https://github.com/weechat/scripts/pull/137/files&#34;&gt;modification&lt;/a&gt; was to allow saving these across restarts of weechat.
 That way I can build up a few queues I use regularily and just call them whenever needed.&lt;/p&gt;
 
-&lt;p&gt;For example when I start my day I just execute &lt;code&gt;/qu exec morning&lt;/code&gt; to switch my away status, announce my availability in a couple of rooms, etc.&lt;/p&gt;
-</description>
+&lt;p&gt;For example when I start my day I just execute &lt;code&gt;/qu exec morning&lt;/code&gt; to switch my away status, announce my availability in a couple of rooms, etc.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -208,19 +249,17 @@ That way I can build up a few queues I use regularily and just call them wheneve
       <pubDate>Sat, 16 Jan 2016 20:44:55 MST</pubDate>
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/code/sysadmins/</guid>
-      <description>
-
-&lt;p&gt;The days where systems administrators do no development are gone. Just as developers
+      <description>&lt;p&gt;The days where systems administrators do no development are gone. Just as developers
 leverage cloud infrastructure and tooling to deploy services, sysadmins develop code to automate
-their infrastructure and to fill the feature gaps that they are uniquely positioned to see.&lt;/p&gt;
+their infrastructure and to fill the feature gaps that they are uniquely positioned to see.
 
-&lt;p&gt;Though best development practices are the same for both sysadmins and devs, some are more
+Though best development practices are the same for both sysadmins and devs, some are more
 natural to one group or another. The heart of devops is operators and developers coming together and in many ways this
 post is really about what sysadmins can learn from developers. Here are some best practices I think come less naturally to operators.&lt;/p&gt;
 
-&lt;h2 id=&#34;best-practices:321805f9cf4c4e61486b15fa3eccd686&#34;&gt;Best Practices&lt;/h2&gt;
+&lt;h2 id=&#34;best-practices&#34;&gt;Best Practices&lt;/h2&gt;
 
-&lt;h3 id=&#34;simplify:321805f9cf4c4e61486b15fa3eccd686&#34;&gt;Simplify&lt;/h3&gt;
+&lt;h3 id=&#34;simplify&#34;&gt;Simplify&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Interface&lt;/strong&gt;&lt;/p&gt;
 
@@ -253,7 +292,7 @@ not apply to effort to make the software easier to modify.&amp;rdquo; In short Y
 organization to keep it organized as it grows and more features are added.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;document:321805f9cf4c4e61486b15fa3eccd686&#34;&gt;Document&lt;/h3&gt;
+&lt;h3 id=&#34;document&#34;&gt;Document&lt;/h3&gt;
 
 &lt;p&gt;Document your code! Maybe this is one both devs and sysadmins could do better at.&lt;/p&gt;
 
@@ -270,7 +309,7 @@ When documenting you have to force yourself to think like someone unfamiliar wit
 This is especially true when writing the overview section of your docs which links project components together into a whole that users will interact with.
 I often find documenting reveals big wins where just a bit more code results in a large improvements.&lt;/p&gt;
 
-&lt;h3 id=&#34;test:321805f9cf4c4e61486b15fa3eccd686&#34;&gt;Test&lt;/h3&gt;
+&lt;h3 id=&#34;test&#34;&gt;Test&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Automated Testing&lt;/strong&gt;&lt;/p&gt;
 
@@ -287,8 +326,7 @@ automated integration tests. A great use of containers is to create pre-built te
 
 &lt;p&gt;Use and run your own code in a real environment. It is through running code in a real environment that you discover the true
 problems that need fixing. Indeed the motivation for much of the code sysadmins write comes from running real environments. Even though this seems
-obvious to sysadmins it is a key best practices that is so important it needs to be mentioned.&lt;/p&gt;
-</description>
+obvious to sysadmins it is a key best practices that is so important it needs to be mentioned.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -316,8 +354,7 @@ against the api on your first usage.&lt;/p&gt;
 any ideas to improve it.&lt;/p&gt;
 
 &lt;p&gt;I should note it is bzr specific at this point as the reviews I do are primarily on bzr but it could be
-extended with git support as needed.&lt;/p&gt;
-</description>
+extended with git support as needed.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -326,14 +363,13 @@ extended with git support as needed.&lt;/p&gt;
       <pubDate>Wed, 14 Oct 2015 11:04:37 MDT</pubDate>
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/infrastructure/lxd/</guid>
-      <description>
-
-&lt;p&gt;In the last couple of weeks I have been taking a bit of time here and there to explore &lt;a href=&#34;http://www.ubuntu.com/cloud/tools/lxd&#34;&gt;LXD&lt;/a&gt;.
+      <description>&lt;p&gt;In the last couple of weeks I have been taking a bit of time here and there to explore &lt;a href=&#34;http://www.ubuntu.com/cloud/tools/lxd&#34;&gt;LXD&lt;/a&gt;.
 LXD is a tool for managing system containers. As both LXD and Docker deal with containers in many ways there is quite a
 bit of overlap but LXD is aiming for full isolated system containers where Docker is more focused on application containers. You can even run
-Docker within an LXD image. I find it helpful to think of LXD as a replacement for virtual machines.&lt;/p&gt;
+Docker within an LXD image. I find it helpful to think of LXD as a replacement for virtual machines.
+&lt;/p&gt;
 
-&lt;h3 id=&#34;lxd-features:4812a1332fc3c3c9233a069930d0aa44&#34;&gt;LXD Features&lt;/h3&gt;
+&lt;h3 id=&#34;lxd-features&#34;&gt;LXD Features&lt;/h3&gt;
 
 &lt;p&gt;LXD is built upon &lt;a href=&#34;https://linuxcontainers.org/&#34;&gt;LXC&lt;/a&gt; which is impressively mature when compared to most of the container ecosystem. There are some
 lacking features with LXC as pointed out at &lt;a href=&#34;https://www.stgraber.org/2015/04/21/lxd-getting-started/&#34;&gt;by the project lead&lt;/a&gt;.
@@ -351,7 +387,7 @@ LXC could benefit with some things that Docker brought to the table and LXD fill
 &lt;li&gt;Checkpoint/restore support to enable live migration&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;what-about-docker:4812a1332fc3c3c9233a069930d0aa44&#34;&gt;What about Docker&lt;/h3&gt;
+&lt;h3 id=&#34;what-about-docker&#34;&gt;What about Docker&lt;/h3&gt;
 
 &lt;p&gt;Thinking of LXD as a VM helps to clarify where it fits in a system workflow, it isn&amp;rsquo;t the entire picture. I have often thought of Docker containers
 as a new style of highly specialized VMs. In fact many of the use cases where I have used Docker I have treated my container in many ways like a VM.
@@ -373,7 +409,7 @@ I expect much of this to be fixed as things mature but it is a sign that this is
 improve in this area. LXD is also implementing live migration which I believe Docker is further behind on. This mostly seems to fit with the general
 philosophy of a VM like system container versus application container.&lt;/p&gt;
 
-&lt;h3 id=&#34;app-container-or-system-container:4812a1332fc3c3c9233a069930d0aa44&#34;&gt;App container or System container&lt;/h3&gt;
+&lt;h3 id=&#34;app-container-or-system-container&#34;&gt;App container or System container&lt;/h3&gt;
 
 &lt;p&gt;In order to really think about when to use LXD and when to use Docker and how they overlap you have to explore the differences and use cases for
 app container versus system containers. System containers act more like a VM with multiple processes and an init daemon. Applications containers
@@ -397,8 +433,7 @@ container with all the standard tools and later a move to a more tightly built a
 
 &lt;p&gt;Regarding tooling it seems to me that container management tools should support both. They may have
 their initial leanings simply as a way to focus development but ultimately I think system or app container is something to be decided by the use case
-not by the tooling.&lt;/p&gt;
-</description>
+not by the tooling.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -407,12 +442,11 @@ not by the tooling.&lt;/p&gt;
       <pubDate>Fri, 11 Sep 2015 21:12:37 MDT</pubDate>
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/systems/desktop_docker/</guid>
-      <description>
-
-&lt;p&gt;The primary advantages of containers are realized when they are treated as the cattle of computing not pets. There are many
+      <description>&lt;p&gt;The primary advantages of containers are realized when they are treated as the cattle of computing not pets. There are many
 articles using that analogy to extol the advantages of containers as cattle or
 &lt;a href=&#34;http://thenewstack.io/pets-and-cattle-symbolize-servers-so-what-does-that-make-containers-chickens/&#34;&gt;even as chickens&lt;/a&gt;.
-However I have been recently rebuilding my Ubuntu Desktop and found containers can at times be great for pets also, most particularly the messy ones.&lt;/p&gt;
+However I have been recently rebuilding my Ubuntu Desktop and found containers can at times be great for pets also, most particularly the messy ones.
+&lt;/p&gt;
 
 &lt;p&gt;I embarked down this route because of my sense of system cleanliness; too many apps I run excrete their dependencies all over my nice newly
 installed system. I run a variety of apps that are not available either in the primary repo nor as a PPA or at least not with the version I need. If
@@ -431,7 +465,7 @@ worth it for these well behaved apps. This is particularly true as using apt ena
 Nevertheless there are many apps or at least versions of the app I am using that aren&amp;rsquo;t available as a well behaved deb. These are the messy pets of
 my workstation and I am much happier to have them in a container than to have them leaving a mess all over my desktop.&lt;/p&gt;
 
-&lt;h3 id=&#34;implementation-details:8f5ecc9060646138683359a3408ed656&#34;&gt;Implementation Details&lt;/h3&gt;
+&lt;h3 id=&#34;implementation-details&#34;&gt;Implementation Details&lt;/h3&gt;
 
 &lt;p&gt;I have begun a &lt;a href=&#34;https://github.com/tkuhlman/containers&#34;&gt;github repo&lt;/a&gt; with Dockerfiles and shell scripts I use for containers on my desktop. I will keep
 expanding this as I add more apps which I use in this way. Here are some considerations as you put your messy pets in containers:&lt;/p&gt;
@@ -470,7 +504,7 @@ are more aspects that need consideration.&lt;/li&gt;
 &lt;li&gt;This technique is less annoying if your local user can run docker without sudo.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;references:8f5ecc9060646138683359a3408ed656&#34;&gt;References&lt;/h3&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 
 &lt;p&gt;I am by no means the first to try this and in fact was able to find many tips on how to accomplish desktop apps in containers. Here are the primary pages
 I used as sources:&lt;/p&gt;
@@ -480,8 +514,7 @@ I used as sources:&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/&#34;&gt;http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/28985714/run-apps-using-audio-in-a-docker-container&#34;&gt;http://stackoverflow.com/questions/28985714/run-apps-using-audio-in-a-docker-container&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/&#34;&gt;http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -499,18 +532,20 @@ with github pages and was a great way to start building a blog. However recently
 &lt;li&gt;&lt;p&gt;I like the clean directory layout better with Hugo.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;I want disqus, rss, tags, some easy social sharing links and google analytics. All of that is possible with Jekyll but some of these are much easier to setup with Hugo.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;li&gt;&lt;p&gt;It continues to have all the static site generation goodness and allows me to keep working with markdown and yaml.&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;
+- It continues to have all the static site generation goodness and allows me to keep working with markdown and yaml.&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;Not that I have the greatest visual appeal to the blog now but a refreshed look is still welcome.&lt;/p&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Not that I have the greatest visual appeal to the blog now but a refreshed look is still welcome.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;On top of those reasons I am learning golang, which happens to be why I haven&amp;rsquo;t blogged in awhile but also adds some appeal to Hugo. The simple single binary installation
 is great compared to dealing with ruby gems. That along with the ability to explore the code while I learn golang are really the reasons I first started looking at Hugo.&lt;/p&gt;
 
 &lt;p&gt;It isn&amp;rsquo;t all great with Hugo, it does need a separate git repo which is a bit of a pain. Luckily the &lt;a href=&#34;http://gohugo.io/tutorials/github-pages-blog&#34;&gt;github pages tutorial&lt;/a&gt;
-does a great job at explaining a few different git subrepo techniques and scripts to minimize the pain.&lt;/p&gt;
-</description>
+does a great job at explaining a few different git subrepo techniques and scripts to minimize the pain.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -530,13 +565,12 @@ cleanly without adding baggage to the process.&lt;/p&gt;
 
 &lt;p&gt;Another aspect that is important is that Vagrant chooses sane defaults but still allows configurability. The sane defaults combined with the clean design mean
 that more often than not Vagrant makes building vm based environments far easier than any other way. This is probably what I love most about Vagrant, I can turn
-around a clustered dev environment in under 5 minutes and even share it with my team with no extra work. This is orders of magnitude faster than other solutions.&lt;/p&gt;
+around a clustered dev environment in under 5 minutes and even share it with my team with no extra work. This is orders of magnitude faster than other solutions.
 
-&lt;p&gt;Building Vagrant based environments that fast takes good docs and familiarity with Vagrant. Vagrant has &lt;a href=&#34;https://docs.vagrantup.com/v2/&#34;&gt;great simple and clear docs&lt;/a&gt;
+Building Vagrant based environments that fast takes good docs and familiarity with Vagrant. Vagrant has &lt;a href=&#34;https://docs.vagrantup.com/v2/&#34;&gt;great simple and clear docs&lt;/a&gt;
 and the familiarity largely comes because Vagrant is versatile. The configurability of Vagrant allows it to have quite a bit of depth for those less than standard use cases.
 This in turn means you come to know the tool and appreciate its simplicity and ease, which in turn makes it easier to use. All of this ultimately culminates in you
-writing a blog post about Vagrant love.&lt;/p&gt;
-</description>
+writing a blog post about Vagrant love.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -545,16 +579,15 @@ writing a blog post about Vagrant love.&lt;/p&gt;
       <pubDate>Wed, 11 Mar 2015 21:36:35 MDT</pubDate>
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/infrastructure/docker/</guid>
-      <description>
-
-&lt;p&gt;Anyone in the industry who hasn&amp;rsquo;t yet read multiple blog posts on &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; is living under a rock. There is a lot of hype about Docker
+      <description>&lt;p&gt;Anyone in the industry who hasn&amp;rsquo;t yet read multiple blog posts on &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; is living under a rock. There is a lot of hype about Docker
 and its potential. I also revel in the long term vision for containers and their potential impact on the industry. However until I have an awesome
 infrastructure where I can deploy images into production my practical mindset drives me to cut through the hype and ask what
 use is Docker for my work today?&lt;/p&gt;
 
-&lt;p&gt;As I have explored Docker here are the uses for it that I have encountered that bring practical value to my day to day work.&lt;/p&gt;
+&lt;p&gt;As I have explored Docker here are the uses for it that I have encountered that bring practical value to my day to day work.
+&lt;/p&gt;
 
-&lt;h2 id=&#34;development-environments:69e60651f42783a7df723575c4088b5b&#34;&gt;Development Environments&lt;/h2&gt;
+&lt;h2 id=&#34;development-environments&#34;&gt;Development Environments&lt;/h2&gt;
 
 &lt;p&gt;When it comes to starting up a quick environment to test out something you may or may not keep around, VMs are an undisputed improvement over bare metal and
 containers are step above VMs. It is so quick and seamless to get a dedicated container for whatever the current need is I find myself doing more and more
@@ -569,13 +602,13 @@ different environment. Some tools want to setup a firewall or change sysctl sett
 Despite these annoyances, as tools for containers improve I expect more and more the balance tipping in favor of Docker.
 The quick startup, lighter resource utilization, easy versioning and other advantages of Docker containers are quite compelling especially for all new environments.&lt;/p&gt;
 
-&lt;h2 id=&#34;testing:69e60651f42783a7df723575c4088b5b&#34;&gt;Testing&lt;/h2&gt;
+&lt;h2 id=&#34;testing&#34;&gt;Testing&lt;/h2&gt;
 
 &lt;p&gt;The easy versioning and quick startup of containers make them ideal for testing. This is a key part of the primary vision of Docker, an image built
 by development can be easily tested. Even with no production environment ready for Docker, containers have been useful for testing in a few scenarios
 I have encountered.&lt;/p&gt;
 
-&lt;h3 id=&#34;integration-tests:69e60651f42783a7df723575c4088b5b&#34;&gt;Integration Tests&lt;/h3&gt;
+&lt;h3 id=&#34;integration-tests&#34;&gt;Integration Tests&lt;/h3&gt;
 
 &lt;p&gt;It seems you always have more scenarios to test then available resources to test them on. Containers allow you to easily switch between different
 configurations and software versions or to even have multiple running at one time. This is obtainable
@@ -585,19 +618,18 @@ using VMs also but it is much quicker to build, run and switch scenarios with co
 the entire database and various REST API services used by the code, he was able to run them in Docker containers with a known set of data. Not only is this easier
 to setup then mocking out these interfaces it results in much more realistic tests.&lt;/p&gt;
 
-&lt;h3 id=&#34;load-testing:69e60651f42783a7df723575c4088b5b&#34;&gt;Load testing&lt;/h3&gt;
+&lt;h3 id=&#34;load-testing&#34;&gt;Load testing&lt;/h3&gt;
 
 &lt;p&gt;When you want to run many clients but only have a few machines to do so for many applications your options are quite limited.
 You can spin up bunches of machines with your favorite cloud provider, you can write a load test tool that simulates clients or attempt to mangle code, configuration
 and startup scripts such that many client instances run. Quicker and easier than all of those options is to just start up a few hundred clients each running in a
 new Docker container.&lt;/p&gt;
 
-&lt;h2 id=&#34;demos:69e60651f42783a7df723575c4088b5b&#34;&gt;Demos&lt;/h2&gt;
+&lt;h2 id=&#34;demos&#34;&gt;Demos&lt;/h2&gt;
 
 &lt;p&gt;The last practical use for Docker that comes to mind is one I am actively working on, a demo environment. A single command to start, a single download and you
 have a complex system up and running that anyone can explore. VMs can fulfill this need also but Docker images are smaller and quicker to run as well as simpler to build
-and update. This means the key quality of a demo, barrier to entry, is lower.&lt;/p&gt;
-</description>
+and update. This means the key quality of a demo, barrier to entry, is lower.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -606,25 +638,24 @@ and update. This means the key quality of a demo, barrier to entry, is lower.&lt
       <pubDate>Mon, 23 Feb 2015 21:41:01 -0600</pubDate>
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/people/managements_role/</guid>
-      <description>
-
-&lt;h2 id=&#34;the-managers-goal-enable-team-productivity:b6314b790005f3a25a81b5da65ef1f09&#34;&gt;The Managers Goal - Enable Team Productivity&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;the-managers-goal-enable-team-productivity&#34;&gt;The Managers Goal - Enable Team Productivity&lt;/h2&gt;
 
 &lt;p&gt;I am not management expert and it is beyond my expertise to layout the value of management for an organization. On the other hand I am engineer on
 a software engineering team and I do have some clear ideas on what I want from management and what I believe most of my peers also would like. It all boils
 down to this, an engineering manager should enable his team to get work done.&lt;/p&gt;
 
 &lt;p&gt;For most engineers a large part of their motivation is the desire to be productive. The more a manager enables this the better everything works. Not only
-does more work get done, engineers are more satisfied and they have a better perception of and relationship with their manager.&lt;/p&gt;
+does more work get done, engineers are more satisfied and they have a better perception of and relationship with their manager.
+&lt;/p&gt;
 
-&lt;h2 id=&#34;management-responsibilities:b6314b790005f3a25a81b5da65ef1f09&#34;&gt;Management Responsibilities&lt;/h2&gt;
+&lt;h2 id=&#34;management-responsibilities&#34;&gt;Management Responsibilities&lt;/h2&gt;
 
 &lt;p&gt;The nature of management, or any other discipline primarily concerning people, is such that you can&amp;rsquo;t define exactly what that means for most situations.
 I believe this is a large part of the reason that a few managers are horribly bad, a small proportion great, but most find themselves somewhere in
 the middle. Though I am sure I am missing some key points here are a few things that I believe are the responsibility of a manager. Depending on the
 organization some of these may fall to other roles but someone needs to get them done and the manager should at least make sure they are being achieved.&lt;/p&gt;
 
-&lt;h3 id=&#34;within-the-team:b6314b790005f3a25a81b5da65ef1f09&#34;&gt;Within the Team&lt;/h3&gt;
+&lt;h3 id=&#34;within-the-team&#34;&gt;Within the Team&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Engaging engineers in appropriate planning, but not stifling them with it.&lt;/li&gt;
@@ -633,7 +664,7 @@ organization some of these may fall to other roles but someone needs to get them
 &lt;li&gt;Where needed dealing with employees who are holding back the rest of the team.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;within-the-organization:b6314b790005f3a25a81b5da65ef1f09&#34;&gt;Within the Organization&lt;/h3&gt;
+&lt;h3 id=&#34;within-the-organization&#34;&gt;Within the Organization&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Removing organizational road blocks to progress.&lt;/li&gt;
@@ -641,8 +672,7 @@ organization some of these may fall to other roles but someone needs to get them
 &lt;li&gt;Listening to the orgnaization and appropriately sharing themes and key details with the team.&lt;/li&gt;
 &lt;li&gt;Being a catalyst and enabler for cross-team collaboration.&lt;/li&gt;
 &lt;li&gt;Representing the team in organizational planning.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -651,15 +681,14 @@ organization some of these may fall to other roles but someone needs to get them
       <pubDate>Tue, 06 Jan 2015 21:43:31 -0600</pubDate>
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/code/ansible-modules/</guid>
-      <description>
-
-&lt;p&gt;Ansible is relatively simple in relation to other configuration management frameworks. This makes it easier to approach and accomplish real work with, especially
+      <description>&lt;p&gt;Ansible is relatively simple in relation to other configuration management frameworks. This makes it easier to approach and accomplish real work with, especially
 for those who don&amp;rsquo;t work in it full time, however there are times when more functionality is needed. Ansible&amp;rsquo;s answer for most of these situations is to
 write a module.&lt;/p&gt;
 
-&lt;p&gt;I have written a couple of &lt;a href=&#34;https://github.com/hpcloud-mon/ansible-module-monasca&#34;&gt;modules for Monasca&lt;/a&gt; and doing so was easy, particularly if you know Python.&lt;/p&gt;
+&lt;p&gt;I have written a couple of &lt;a href=&#34;https://github.com/hpcloud-mon/ansible-module-monasca&#34;&gt;modules for Monasca&lt;/a&gt; and doing so was easy, particularly if you know Python.
+&lt;/p&gt;
 
-&lt;h2 id=&#34;common-python-functions:452a8813491776755aef8af7303e4551&#34;&gt;Common Python Functions&lt;/h2&gt;
+&lt;h2 id=&#34;common-python-functions&#34;&gt;Common Python Functions&lt;/h2&gt;
 
 &lt;p&gt;Though you can write modules in any language there are various functions available for Python that simplify the process.&lt;/p&gt;
 
@@ -672,7 +701,7 @@ of the module than to the code itself. Among the code a large chunk is dealing w
 this out only to highlight that the common libraries make the code and the logic itself quite simple and even naturally steer toward documentation
 driven development.&lt;/p&gt;
 
-&lt;h2 id=&#34;modules-for-idempotency:452a8813491776755aef8af7303e4551&#34;&gt;Modules for Idempotency&lt;/h2&gt;
+&lt;h2 id=&#34;modules-for-idempotency&#34;&gt;Modules for Idempotency&lt;/h2&gt;
 
 &lt;p&gt;As I have &lt;a href=&#34;infrastructure/2014/11/02/ansible-config-management-simplified.html&#34;&gt;written previously&lt;/a&gt; loops and conditionals are cumbersome in Ansible. In my
 usage I particularly felt this at times I tried to accomplish a task lacking a module and retain idempotency. Looping through a list to check the status and
@@ -682,7 +711,7 @@ module.&lt;/p&gt;
 &lt;p&gt;In Ansible a module is the fundamental mechanism used to accomplish idempotent operations. The ease of implementing idempotency in a module
 verses in Ansible directly has more than anything else motivated me to add to my todo list a few modules I would like to write.&lt;/p&gt;
 
-&lt;h2 id=&#34;shared-code-among-modules:452a8813491776755aef8af7303e4551&#34;&gt;Shared code among modules&lt;/h2&gt;
+&lt;h2 id=&#34;shared-code-among-modules&#34;&gt;Shared code among modules&lt;/h2&gt;
 
 &lt;p&gt;The one major complaint I have with the modules I have written is that it is difficult to have code shared between modules. Importing python libraries is straight forward
 as well as including code from the Ansible base but code shared between Ansible modules is not possible.&lt;/p&gt;
@@ -697,47 +726,7 @@ to be able to define my own shared python files. After spending a bit of time lo
 choose to just copy the shared code to both Ansible modules. That is far from ideal but the amount of shared code was relatively small so the alternative of packing
 it into a library to be installed on the remote machine would be more trouble.&lt;/p&gt;
 
-&lt;p&gt;Ultimately I have no solution for this so will live with it as a minor annoyance for now.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Advanced Ansible</title>
-      <link>http://backgroundprocess.com/infrastructure/advanced-ansible/</link>
-      <pubDate>Thu, 18 Dec 2014 22:01:37 -0600</pubDate>
-      <author>Tim Kuhlman</author>
-      <guid>http://backgroundprocess.com/infrastructure/advanced-ansible/</guid>
-      <description>&lt;p&gt;It would be an mistake to call me an Ansible expert but I am now an experienced Ansible user and it is time to expand on my earlier &lt;a href=&#34;http://backgroundprocess.com/tags/#Ansible&#34;&gt;Ansible posts&lt;/a&gt;.
-I have now been using Ansible on a regular basis for awhile and have used it with vagrant based vms, docker containers, as well as across small clusters of machines.
-I have also written a couple of Ansible modules and will likely write another one or two soon. Writing modules is a topic that I will address in
-another post.&lt;/p&gt;
-
-&lt;p&gt;As I use Ansible in various environments I continue to enjoy the simplicity of its model. I find it easy to run against a wide variety of deployment
-models by taking existing playbooks and tweaking them slightly or combining them in new ways. This flexibility has been key for my use cases lately as I can
-work on making my roles and modules robust and then easily use them for small installs, clusters, one or os or another and anything else needed.&lt;/p&gt;
-
-&lt;p&gt;I have found that rolling deploys with deployment verification is much easier in Ansible then with many other configuration management tools I have previously used.
-Targeting a subset of hosts is as simple as setting the correct serial value in the playbook or even targeting groups of hosts over multiple subsequent runs. Next
-you just need to add in deployment verification. For most of the services I have setup that is as simple as a &lt;a href=&#34;http://docs.ansible.com/wait_for_module.html&#34;&gt;wait_for&lt;/a&gt;
-task, though for some the &lt;a href=&#34;http://docs.ansible.com/assert_module.html&#34;&gt;assert&lt;/a&gt; module is a better option. Either option is easy to implement.&lt;/p&gt;
-
-&lt;p&gt;One aspect of Ansible that needs some work is its ability to finishing running triggered handlers on failure. I have encountered many situations where we are running
-a play with multiple roles and earlier roles register handlers which never run because a later role fails and handlers have not yet been flushed. In the case of a
-restarted service this is quite annoying especially as the next run won&amp;rsquo;t trigger handlers and if I put both the handler and a service start task in some instances
-the service will restart twice. There is a work around, basically first flush handlers then define the service task with a state of started. This works well but
-it is a bit annoying that I have to remember to explicitly flush handlers for every role.&lt;/p&gt;
-
-&lt;p&gt;I have hope that the running of queued handlers is something that will be fixed because I am happy to see improvements in Ansible with 1.8 that directly affect my
-work. The most notable changes for me were actually in the Ansible Galaxy command. The ability to specify a role requirements file in yaml and point at git repos directly
-as well as optionally specify tags is essential. Though I like what is happening with the Ansible Galaxy public site it just isn&amp;rsquo;t always possible to push things up there and
-often while waiting for a pull request to be approved it is nice to point to my updated version without making a new entry in galaxy.
-I am also tired of seeing tkuhlman prepended to the beginning of my roles in the various playbooks. Though account based differentiation is a good feature for
-Galaxy that encourages sharing of tweaks to existing roles I really only want to be aware of it on download, the new format accomplishes exactly that.&lt;/p&gt;
-
-&lt;p&gt;Besides continued work with writing modules there are some other aspects of Ansible I still would like to explore. Wider use of assert and lookups as well as
-pipelining come to mind. Also, I have not yet had the opportunity to use Ansible across a large cluster of nodes. I have worked with large clusters before and likely
-will again fairly soon, I look forward to the learning that will come from running Ansible in such an environment.&lt;/p&gt;
-</description>
+&lt;p&gt;Ultimately I have no solution for this so will live with it as a minor annoyance for now.&lt;/p&gt;</description>
     </item>
     
   </channel>

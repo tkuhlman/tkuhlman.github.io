@@ -3,7 +3,7 @@
   <channel>
       <title>Systems on Background Process </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/systems/</link>
+    <link>http://backgroundprocess.com/systems/index.xml</link>
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
@@ -65,8 +65,7 @@ bash&lt;/code&gt;. The alias is &lt;code&gt;alias dexec=&#39;docker exec -t -i&#
 &lt;a href=&#34;http://backgroundprocess.com/infrastructure/containers-over-vms/&#34;&gt;containers rather than VMs&lt;/a&gt; but
 those use cases are just the beginning. As I add applications
 to my workstation I can now be conservative on what I install and what install sources I trust on
-my workstation and instead use a container to keep unknown software confined.&lt;/p&gt;
-</description>
+my workstation and instead use a container to keep unknown software confined.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -75,12 +74,11 @@ my workstation and instead use a container to keep unknown software confined.&lt
       <pubDate>Fri, 11 Sep 2015 21:12:37 MDT</pubDate>
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/systems/desktop_docker/</guid>
-      <description>
-
-&lt;p&gt;The primary advantages of containers are realized when they are treated as the cattle of computing not pets. There are many
+      <description>&lt;p&gt;The primary advantages of containers are realized when they are treated as the cattle of computing not pets. There are many
 articles using that analogy to extol the advantages of containers as cattle or
 &lt;a href=&#34;http://thenewstack.io/pets-and-cattle-symbolize-servers-so-what-does-that-make-containers-chickens/&#34;&gt;even as chickens&lt;/a&gt;.
-However I have been recently rebuilding my Ubuntu Desktop and found containers can at times be great for pets also, most particularly the messy ones.&lt;/p&gt;
+However I have been recently rebuilding my Ubuntu Desktop and found containers can at times be great for pets also, most particularly the messy ones.
+&lt;/p&gt;
 
 &lt;p&gt;I embarked down this route because of my sense of system cleanliness; too many apps I run excrete their dependencies all over my nice newly
 installed system. I run a variety of apps that are not available either in the primary repo nor as a PPA or at least not with the version I need. If
@@ -99,7 +97,7 @@ worth it for these well behaved apps. This is particularly true as using apt ena
 Nevertheless there are many apps or at least versions of the app I am using that aren&amp;rsquo;t available as a well behaved deb. These are the messy pets of
 my workstation and I am much happier to have them in a container than to have them leaving a mess all over my desktop.&lt;/p&gt;
 
-&lt;h3 id=&#34;implementation-details:8f5ecc9060646138683359a3408ed656&#34;&gt;Implementation Details&lt;/h3&gt;
+&lt;h3 id=&#34;implementation-details&#34;&gt;Implementation Details&lt;/h3&gt;
 
 &lt;p&gt;I have begun a &lt;a href=&#34;https://github.com/tkuhlman/containers&#34;&gt;github repo&lt;/a&gt; with Dockerfiles and shell scripts I use for containers on my desktop. I will keep
 expanding this as I add more apps which I use in this way. Here are some considerations as you put your messy pets in containers:&lt;/p&gt;
@@ -138,7 +136,7 @@ are more aspects that need consideration.&lt;/li&gt;
 &lt;li&gt;This technique is less annoying if your local user can run docker without sudo.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;references:8f5ecc9060646138683359a3408ed656&#34;&gt;References&lt;/h3&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 
 &lt;p&gt;I am by no means the first to try this and in fact was able to find many tips on how to accomplish desktop apps in containers. Here are the primary pages
 I used as sources:&lt;/p&gt;
@@ -148,8 +146,7 @@ I used as sources:&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/&#34;&gt;http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/28985714/run-apps-using-audio-in-a-docker-container&#34;&gt;http://stackoverflow.com/questions/28985714/run-apps-using-audio-in-a-docker-container&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/&#34;&gt;http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>

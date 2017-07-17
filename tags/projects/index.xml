@@ -3,11 +3,11 @@
   <channel>
       <title>Projects on Background Process </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/tags/projects/</link>
+    <link>http://backgroundprocess.com/tags/projects/index.xml</link>
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
-    <updated>Fri, 27 May 2016 21:43:39 MDT</updated>
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
     
     <item>
       <title>A Golang implementation of PasswordSafe V3, ready for Beta</title>
@@ -17,7 +17,7 @@
       <guid>http://backgroundprocess.com/code/gopwsafe-beta/</guid>
       <description>&lt;p&gt;The password database I have been implementing in go is ready for Beta! The DB is implemented using the &lt;a href=&#34;http://pwsafe.org/&#34;&gt;password safe&lt;/a&gt; version 3
 database spec. Enough of the features for this are now working that
-&lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/releases/tag/0.3.0&#34;&gt;0.3.0 release&lt;/a&gt; is ready for others to test.&lt;/p&gt;
+&lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/releases/tag/0.3.0&#34;&gt;0.3.0 release&lt;/a&gt; is ready for others to test. &lt;/p&gt;
 
 &lt;p&gt;I have been using this code for months and would encourage anyone else needing a password DB to check it out now. I have particularly enjoyed the ability
 to search across multiple open password dbs at one time. This was the primary itch I was scratching in taking up this project. Though that feature has been
@@ -29,8 +29,7 @@ without closing the entire program. The &lt;a href=&#34;https://github.com/tkuhl
 section. Primarily these are features that take advantage of have multiple DBs open at once, such as the ability to move records from one DB to another.
 Lastly the gtk gui could use countless tweaks to clean it up.&lt;/p&gt;
 
-&lt;p&gt;If you test it out have any feedback or find any bugs use the &lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/issues&#34;&gt;project issues&lt;/a&gt; section to notify me.&lt;/p&gt;
-</description>
+&lt;p&gt;If you test it out have any feedback or find any bugs use the &lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/issues&#34;&gt;project issues&lt;/a&gt; section to notify me.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,14 +39,14 @@ Lastly the gtk gui could use countless tweaks to clean it up.&lt;/p&gt;
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/code/weechat-queue/</guid>
       <description>&lt;p&gt;I use &lt;a href=&#34;http://weechat.org&#34;&gt;weechat&lt;/a&gt; for much of the day and have issue regular repetitive commands periodically.
-If you are in the same situation you may find the &lt;a href=&#34;https://weechat.org/scripts/source/queue.py.html/&#34;&gt;queue plugin&lt;/a&gt; I recently modified to be useful.&lt;/p&gt;
+If you are in the same situation you may find the &lt;a href=&#34;https://weechat.org/scripts/source/queue.py.html/&#34;&gt;queue plugin&lt;/a&gt; I recently modified to be useful.
+&lt;/p&gt;
 
 &lt;p&gt;The queue plugin simply allows you to build up a list of commands then run them all at once. My
 &lt;a href=&#34;https://github.com/weechat/scripts/pull/137/files&#34;&gt;modification&lt;/a&gt; was to allow saving these across restarts of weechat.
 That way I can build up a few queues I use regularily and just call them whenever needed.&lt;/p&gt;
 
-&lt;p&gt;For example when I start my day I just execute &lt;code&gt;/qu exec morning&lt;/code&gt; to switch my away status, announce my availability in a couple of rooms, etc.&lt;/p&gt;
-</description>
+&lt;p&gt;For example when I start my day I just execute &lt;code&gt;/qu exec morning&lt;/code&gt; to switch my away status, announce my availability in a couple of rooms, etc.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -75,8 +74,7 @@ against the api on your first usage.&lt;/p&gt;
 any ideas to improve it.&lt;/p&gt;
 
 &lt;p&gt;I should note it is bzr specific at this point as the reviews I do are primarily on bzr but it could be
-extended with git support as needed.&lt;/p&gt;
-</description>
+extended with git support as needed.&lt;/p&gt;</description>
     </item>
     
   </channel>

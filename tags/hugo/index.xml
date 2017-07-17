@@ -3,11 +3,11 @@
   <channel>
       <title>Hugo on Background Process </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/tags/hugo/</link>
+    <link>http://backgroundprocess.com/tags/hugo/index.xml</link>
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
-    <updated>Wed, 12 Aug 2015 21:54:04 MDT</updated>
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
     
     <item>
       <title>Hugo</title>
@@ -24,18 +24,20 @@ with github pages and was a great way to start building a blog. However recently
 &lt;li&gt;&lt;p&gt;I like the clean directory layout better with Hugo.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;I want disqus, rss, tags, some easy social sharing links and google analytics. All of that is possible with Jekyll but some of these are much easier to setup with Hugo.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;li&gt;&lt;p&gt;It continues to have all the static site generation goodness and allows me to keep working with markdown and yaml.&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;
+- It continues to have all the static site generation goodness and allows me to keep working with markdown and yaml.&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;Not that I have the greatest visual appeal to the blog now but a refreshed look is still welcome.&lt;/p&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Not that I have the greatest visual appeal to the blog now but a refreshed look is still welcome.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;On top of those reasons I am learning golang, which happens to be why I haven&amp;rsquo;t blogged in awhile but also adds some appeal to Hugo. The simple single binary installation
 is great compared to dealing with ruby gems. That along with the ability to explore the code while I learn golang are really the reasons I first started looking at Hugo.&lt;/p&gt;
 
 &lt;p&gt;It isn&amp;rsquo;t all great with Hugo, it does need a separate git repo which is a bit of a pain. Luckily the &lt;a href=&#34;http://gohugo.io/tutorials/github-pages-blog&#34;&gt;github pages tutorial&lt;/a&gt;
-does a great job at explaining a few different git subrepo techniques and scripts to minimize the pain.&lt;/p&gt;
-</description>
+does a great job at explaining a few different git subrepo techniques and scripts to minimize the pain.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -3,11 +3,11 @@
   <channel>
       <title>Docker on Background Process </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/tags/docker/</link>
+    <link>http://backgroundprocess.com/tags/docker/index.xml</link>
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
-    <updated>Mon, 02 May 2016 21:07:28 MDT</updated>
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
     
     <item>
       <title>Docker for Messy Pets - Updates</title>
@@ -65,8 +65,7 @@ bash&lt;/code&gt;. The alias is &lt;code&gt;alias dexec=&#39;docker exec -t -i&#
 &lt;a href=&#34;http://backgroundprocess.com/infrastructure/containers-over-vms/&#34;&gt;containers rather than VMs&lt;/a&gt; but
 those use cases are just the beginning. As I add applications
 to my workstation I can now be conservative on what I install and what install sources I trust on
-my workstation and instead use a container to keep unknown software confined.&lt;/p&gt;
-</description>
+my workstation and instead use a container to keep unknown software confined.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -77,7 +76,7 @@ my workstation and instead use a container to keep unknown software confined.&lt
       <guid>http://backgroundprocess.com/infrastructure/containers-over-vms/</guid>
       <description>&lt;p&gt;I recently realized it has been over 6 months since I have used a VM on my workstation. Previously I
 like many developers used VMs for various development tasks. The change hasn&amp;rsquo;t be in my usage of
-cloud based VMs, I continue to do that as needed and appropriate. The change is that I use containers.
+cloud based VMs, I continue to do that as needed and appropriate. The change is that I use containers. 
 I now use a mix of &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; and &lt;a href=&#34;https://linuxcontainers.org/lxd/&#34;&gt;LXD&lt;/a&gt; for dev and
 test environments and everything else I used to frequently use VMs for on my workstation. I even use containers in some
 &lt;a href=&#34;http://backgroundprocess.com/systems/desktop_docker/&#34;&gt;ways&lt;/a&gt; that I haven&amp;rsquo;t used VMs.&lt;/p&gt;
@@ -106,8 +105,7 @@ to nest usages, repeat test cases on different versions, etc.&lt;/li&gt;
 that VMs brought to the industry. There are of course reasons to still use VMs on a personal workstation,
 such as not running Linux as a primary OS and so lacking container support natively, doing development on the kernel,
 or developing for an OS other than Linux. None of these are relevant for me so containers is the way forward on
-my machines.&lt;/p&gt;
-</description>
+my machines.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -116,14 +114,13 @@ my machines.&lt;/p&gt;
       <pubDate>Wed, 14 Oct 2015 11:04:37 MDT</pubDate>
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/infrastructure/lxd/</guid>
-      <description>
-
-&lt;p&gt;In the last couple of weeks I have been taking a bit of time here and there to explore &lt;a href=&#34;http://www.ubuntu.com/cloud/tools/lxd&#34;&gt;LXD&lt;/a&gt;.
+      <description>&lt;p&gt;In the last couple of weeks I have been taking a bit of time here and there to explore &lt;a href=&#34;http://www.ubuntu.com/cloud/tools/lxd&#34;&gt;LXD&lt;/a&gt;.
 LXD is a tool for managing system containers. As both LXD and Docker deal with containers in many ways there is quite a
 bit of overlap but LXD is aiming for full isolated system containers where Docker is more focused on application containers. You can even run
-Docker within an LXD image. I find it helpful to think of LXD as a replacement for virtual machines.&lt;/p&gt;
+Docker within an LXD image. I find it helpful to think of LXD as a replacement for virtual machines.
+&lt;/p&gt;
 
-&lt;h3 id=&#34;lxd-features:4812a1332fc3c3c9233a069930d0aa44&#34;&gt;LXD Features&lt;/h3&gt;
+&lt;h3 id=&#34;lxd-features&#34;&gt;LXD Features&lt;/h3&gt;
 
 &lt;p&gt;LXD is built upon &lt;a href=&#34;https://linuxcontainers.org/&#34;&gt;LXC&lt;/a&gt; which is impressively mature when compared to most of the container ecosystem. There are some
 lacking features with LXC as pointed out at &lt;a href=&#34;https://www.stgraber.org/2015/04/21/lxd-getting-started/&#34;&gt;by the project lead&lt;/a&gt;.
@@ -141,7 +138,7 @@ LXC could benefit with some things that Docker brought to the table and LXD fill
 &lt;li&gt;Checkpoint/restore support to enable live migration&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;what-about-docker:4812a1332fc3c3c9233a069930d0aa44&#34;&gt;What about Docker&lt;/h3&gt;
+&lt;h3 id=&#34;what-about-docker&#34;&gt;What about Docker&lt;/h3&gt;
 
 &lt;p&gt;Thinking of LXD as a VM helps to clarify where it fits in a system workflow, it isn&amp;rsquo;t the entire picture. I have often thought of Docker containers
 as a new style of highly specialized VMs. In fact many of the use cases where I have used Docker I have treated my container in many ways like a VM.
@@ -163,7 +160,7 @@ I expect much of this to be fixed as things mature but it is a sign that this is
 improve in this area. LXD is also implementing live migration which I believe Docker is further behind on. This mostly seems to fit with the general
 philosophy of a VM like system container versus application container.&lt;/p&gt;
 
-&lt;h3 id=&#34;app-container-or-system-container:4812a1332fc3c3c9233a069930d0aa44&#34;&gt;App container or System container&lt;/h3&gt;
+&lt;h3 id=&#34;app-container-or-system-container&#34;&gt;App container or System container&lt;/h3&gt;
 
 &lt;p&gt;In order to really think about when to use LXD and when to use Docker and how they overlap you have to explore the differences and use cases for
 app container versus system containers. System containers act more like a VM with multiple processes and an init daemon. Applications containers
@@ -187,8 +184,7 @@ container with all the standard tools and later a move to a more tightly built a
 
 &lt;p&gt;Regarding tooling it seems to me that container management tools should support both. They may have
 their initial leanings simply as a way to focus development but ultimately I think system or app container is something to be decided by the use case
-not by the tooling.&lt;/p&gt;
-</description>
+not by the tooling.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -197,12 +193,11 @@ not by the tooling.&lt;/p&gt;
       <pubDate>Fri, 11 Sep 2015 21:12:37 MDT</pubDate>
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/systems/desktop_docker/</guid>
-      <description>
-
-&lt;p&gt;The primary advantages of containers are realized when they are treated as the cattle of computing not pets. There are many
+      <description>&lt;p&gt;The primary advantages of containers are realized when they are treated as the cattle of computing not pets. There are many
 articles using that analogy to extol the advantages of containers as cattle or
 &lt;a href=&#34;http://thenewstack.io/pets-and-cattle-symbolize-servers-so-what-does-that-make-containers-chickens/&#34;&gt;even as chickens&lt;/a&gt;.
-However I have been recently rebuilding my Ubuntu Desktop and found containers can at times be great for pets also, most particularly the messy ones.&lt;/p&gt;
+However I have been recently rebuilding my Ubuntu Desktop and found containers can at times be great for pets also, most particularly the messy ones.
+&lt;/p&gt;
 
 &lt;p&gt;I embarked down this route because of my sense of system cleanliness; too many apps I run excrete their dependencies all over my nice newly
 installed system. I run a variety of apps that are not available either in the primary repo nor as a PPA or at least not with the version I need. If
@@ -221,7 +216,7 @@ worth it for these well behaved apps. This is particularly true as using apt ena
 Nevertheless there are many apps or at least versions of the app I am using that aren&amp;rsquo;t available as a well behaved deb. These are the messy pets of
 my workstation and I am much happier to have them in a container than to have them leaving a mess all over my desktop.&lt;/p&gt;
 
-&lt;h3 id=&#34;implementation-details:8f5ecc9060646138683359a3408ed656&#34;&gt;Implementation Details&lt;/h3&gt;
+&lt;h3 id=&#34;implementation-details&#34;&gt;Implementation Details&lt;/h3&gt;
 
 &lt;p&gt;I have begun a &lt;a href=&#34;https://github.com/tkuhlman/containers&#34;&gt;github repo&lt;/a&gt; with Dockerfiles and shell scripts I use for containers on my desktop. I will keep
 expanding this as I add more apps which I use in this way. Here are some considerations as you put your messy pets in containers:&lt;/p&gt;
@@ -260,7 +255,7 @@ are more aspects that need consideration.&lt;/li&gt;
 &lt;li&gt;This technique is less annoying if your local user can run docker without sudo.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;references:8f5ecc9060646138683359a3408ed656&#34;&gt;References&lt;/h3&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 
 &lt;p&gt;I am by no means the first to try this and in fact was able to find many tips on how to accomplish desktop apps in containers. Here are the primary pages
 I used as sources:&lt;/p&gt;
@@ -270,8 +265,7 @@ I used as sources:&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/&#34;&gt;http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/28985714/run-apps-using-audio-in-a-docker-container&#34;&gt;http://stackoverflow.com/questions/28985714/run-apps-using-audio-in-a-docker-container&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/&#34;&gt;http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -280,16 +274,15 @@ I used as sources:&lt;/p&gt;
       <pubDate>Wed, 11 Mar 2015 21:36:35 MDT</pubDate>
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/infrastructure/docker/</guid>
-      <description>
-
-&lt;p&gt;Anyone in the industry who hasn&amp;rsquo;t yet read multiple blog posts on &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; is living under a rock. There is a lot of hype about Docker
+      <description>&lt;p&gt;Anyone in the industry who hasn&amp;rsquo;t yet read multiple blog posts on &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; is living under a rock. There is a lot of hype about Docker
 and its potential. I also revel in the long term vision for containers and their potential impact on the industry. However until I have an awesome
 infrastructure where I can deploy images into production my practical mindset drives me to cut through the hype and ask what
 use is Docker for my work today?&lt;/p&gt;
 
-&lt;p&gt;As I have explored Docker here are the uses for it that I have encountered that bring practical value to my day to day work.&lt;/p&gt;
+&lt;p&gt;As I have explored Docker here are the uses for it that I have encountered that bring practical value to my day to day work.
+&lt;/p&gt;
 
-&lt;h2 id=&#34;development-environments:69e60651f42783a7df723575c4088b5b&#34;&gt;Development Environments&lt;/h2&gt;
+&lt;h2 id=&#34;development-environments&#34;&gt;Development Environments&lt;/h2&gt;
 
 &lt;p&gt;When it comes to starting up a quick environment to test out something you may or may not keep around, VMs are an undisputed improvement over bare metal and
 containers are step above VMs. It is so quick and seamless to get a dedicated container for whatever the current need is I find myself doing more and more
@@ -304,13 +297,13 @@ different environment. Some tools want to setup a firewall or change sysctl sett
 Despite these annoyances, as tools for containers improve I expect more and more the balance tipping in favor of Docker.
 The quick startup, lighter resource utilization, easy versioning and other advantages of Docker containers are quite compelling especially for all new environments.&lt;/p&gt;
 
-&lt;h2 id=&#34;testing:69e60651f42783a7df723575c4088b5b&#34;&gt;Testing&lt;/h2&gt;
+&lt;h2 id=&#34;testing&#34;&gt;Testing&lt;/h2&gt;
 
 &lt;p&gt;The easy versioning and quick startup of containers make them ideal for testing. This is a key part of the primary vision of Docker, an image built
 by development can be easily tested. Even with no production environment ready for Docker, containers have been useful for testing in a few scenarios
 I have encountered.&lt;/p&gt;
 
-&lt;h3 id=&#34;integration-tests:69e60651f42783a7df723575c4088b5b&#34;&gt;Integration Tests&lt;/h3&gt;
+&lt;h3 id=&#34;integration-tests&#34;&gt;Integration Tests&lt;/h3&gt;
 
 &lt;p&gt;It seems you always have more scenarios to test then available resources to test them on. Containers allow you to easily switch between different
 configurations and software versions or to even have multiple running at one time. This is obtainable
@@ -320,19 +313,18 @@ using VMs also but it is much quicker to build, run and switch scenarios with co
 the entire database and various REST API services used by the code, he was able to run them in Docker containers with a known set of data. Not only is this easier
 to setup then mocking out these interfaces it results in much more realistic tests.&lt;/p&gt;
 
-&lt;h3 id=&#34;load-testing:69e60651f42783a7df723575c4088b5b&#34;&gt;Load testing&lt;/h3&gt;
+&lt;h3 id=&#34;load-testing&#34;&gt;Load testing&lt;/h3&gt;
 
 &lt;p&gt;When you want to run many clients but only have a few machines to do so for many applications your options are quite limited.
 You can spin up bunches of machines with your favorite cloud provider, you can write a load test tool that simulates clients or attempt to mangle code, configuration
 and startup scripts such that many client instances run. Quicker and easier than all of those options is to just start up a few hundred clients each running in a
 new Docker container.&lt;/p&gt;
 
-&lt;h2 id=&#34;demos:69e60651f42783a7df723575c4088b5b&#34;&gt;Demos&lt;/h2&gt;
+&lt;h2 id=&#34;demos&#34;&gt;Demos&lt;/h2&gt;
 
 &lt;p&gt;The last practical use for Docker that comes to mind is one I am actively working on, a demo environment. A single command to start, a single download and you
 have a complex system up and running that anyone can explore. VMs can fulfill this need also but Docker images are smaller and quicker to run as well as simpler to build
-and update. This means the key quality of a demo, barrier to entry, is lower.&lt;/p&gt;
-</description>
+and update. This means the key quality of a demo, barrier to entry, is lower.&lt;/p&gt;</description>
     </item>
     
   </channel>

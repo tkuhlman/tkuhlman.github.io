@@ -3,11 +3,11 @@
   <channel>
       <title>Lxd on Background Process </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/tags/lxd/</link>
+    <link>http://backgroundprocess.com/tags/lxd/index.xml</link>
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
-    <updated>Sat, 16 Apr 2016 21:06:14 MDT</updated>
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
     
     <item>
       <title>Containers over VMs</title>
@@ -17,7 +17,7 @@
       <guid>http://backgroundprocess.com/infrastructure/containers-over-vms/</guid>
       <description>&lt;p&gt;I recently realized it has been over 6 months since I have used a VM on my workstation. Previously I
 like many developers used VMs for various development tasks. The change hasn&amp;rsquo;t be in my usage of
-cloud based VMs, I continue to do that as needed and appropriate. The change is that I use containers.
+cloud based VMs, I continue to do that as needed and appropriate. The change is that I use containers. 
 I now use a mix of &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; and &lt;a href=&#34;https://linuxcontainers.org/lxd/&#34;&gt;LXD&lt;/a&gt; for dev and
 test environments and everything else I used to frequently use VMs for on my workstation. I even use containers in some
 &lt;a href=&#34;http://backgroundprocess.com/systems/desktop_docker/&#34;&gt;ways&lt;/a&gt; that I haven&amp;rsquo;t used VMs.&lt;/p&gt;
@@ -46,8 +46,7 @@ to nest usages, repeat test cases on different versions, etc.&lt;/li&gt;
 that VMs brought to the industry. There are of course reasons to still use VMs on a personal workstation,
 such as not running Linux as a primary OS and so lacking container support natively, doing development on the kernel,
 or developing for an OS other than Linux. None of these are relevant for me so containers is the way forward on
-my machines.&lt;/p&gt;
-</description>
+my machines.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -56,13 +55,12 @@ my machines.&lt;/p&gt;
       <pubDate>Fri, 12 Feb 2016 13:36:07 MST</pubDate>
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/code/mojo-integration-tests/</guid>
-      <description>
-
-&lt;p&gt;I have recently finished building an LXD image for doing integration tests of &lt;a href=&#34;https://mojo.canonical.com&#34;&gt;Mojo&lt;/a&gt;.
+      <description>&lt;p&gt;I have recently finished building an LXD image for doing integration tests of &lt;a href=&#34;https://mojo.canonical.com&#34;&gt;Mojo&lt;/a&gt;.
 I did this because I wanted to be able to reliably test the changes to Mojo that I was making. A repeatable,
-standard environment that can run set of integration tests fits the bill.&lt;/p&gt;
+standard environment that can run set of integration tests fits the bill.
+&lt;/p&gt;
 
-&lt;h2 id=&#34;using-a-container:3ff64b5a6405cf38b785717275d6a424&#34;&gt;Using a Container&lt;/h2&gt;
+&lt;h2 id=&#34;using-a-container&#34;&gt;Using a Container&lt;/h2&gt;
 
 &lt;p&gt;There are a few key advantages I see to doing the integration tests in a container image like this:&lt;/p&gt;
 
@@ -75,7 +73,7 @@ of Juju/Mojo and other tooling.&lt;/li&gt;
 more easily run in parallel.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;integration-tests:3ff64b5a6405cf38b785717275d6a424&#34;&gt;Integration Tests&lt;/h2&gt;
+&lt;h2 id=&#34;integration-tests&#34;&gt;Integration Tests&lt;/h2&gt;
 
 &lt;p&gt;Integration tests themselves I want running because some tests are just not practical to do via
 unit tests. This is especially true for code that interacts with a lot of other programs such as Mojo.&lt;/p&gt;
@@ -90,15 +88,14 @@ older output, integration tests will catch this before sending broken code to pr
 situations it perhaps isn&amp;rsquo;t so clear. Have integration tests as a tool in addition to unit tests gives Mojo
 developers another way to validate code before merging.&lt;/p&gt;
 
-&lt;h2 id=&#34;more-information:3ff64b5a6405cf38b785717275d6a424&#34;&gt;More Information&lt;/h2&gt;
+&lt;h2 id=&#34;more-information&#34;&gt;More Information&lt;/h2&gt;
 
 &lt;p&gt;The image can also be used for development of Mojo specs, there is some information on that and more information on using the image in the
 image &lt;a href=&#34;http://bazaar.launchpad.net/~mojo-maintainers/mojo/trunk/view/head:/contrib/LXD/README.md&#34;&gt;readme&lt;/a&gt;.
 I also made this &lt;a href=&#34;https://youtu.be/Q8ll7OsTtMk&#34;&gt;screen cast&lt;/a&gt; to introduce how I use the image today. I often watch
 these screen casts at double speed and recommend you do for this one also.&lt;/p&gt;
 
-&lt;p&gt;Now that the base image is done all the Mojo developers can all incrementally add more tests and I look forward to seeing it expand.&lt;/p&gt;
-</description>
+&lt;p&gt;Now that the base image is done all the Mojo developers can all incrementally add more tests and I look forward to seeing it expand.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -107,14 +104,13 @@ these screen casts at double speed and recommend you do for this one also.&lt;/p
       <pubDate>Wed, 14 Oct 2015 11:04:37 MDT</pubDate>
       <author>Tim Kuhlman</author>
       <guid>http://backgroundprocess.com/infrastructure/lxd/</guid>
-      <description>
-
-&lt;p&gt;In the last couple of weeks I have been taking a bit of time here and there to explore &lt;a href=&#34;http://www.ubuntu.com/cloud/tools/lxd&#34;&gt;LXD&lt;/a&gt;.
+      <description>&lt;p&gt;In the last couple of weeks I have been taking a bit of time here and there to explore &lt;a href=&#34;http://www.ubuntu.com/cloud/tools/lxd&#34;&gt;LXD&lt;/a&gt;.
 LXD is a tool for managing system containers. As both LXD and Docker deal with containers in many ways there is quite a
 bit of overlap but LXD is aiming for full isolated system containers where Docker is more focused on application containers. You can even run
-Docker within an LXD image. I find it helpful to think of LXD as a replacement for virtual machines.&lt;/p&gt;
+Docker within an LXD image. I find it helpful to think of LXD as a replacement for virtual machines.
+&lt;/p&gt;
 
-&lt;h3 id=&#34;lxd-features:4812a1332fc3c3c9233a069930d0aa44&#34;&gt;LXD Features&lt;/h3&gt;
+&lt;h3 id=&#34;lxd-features&#34;&gt;LXD Features&lt;/h3&gt;
 
 &lt;p&gt;LXD is built upon &lt;a href=&#34;https://linuxcontainers.org/&#34;&gt;LXC&lt;/a&gt; which is impressively mature when compared to most of the container ecosystem. There are some
 lacking features with LXC as pointed out at &lt;a href=&#34;https://www.stgraber.org/2015/04/21/lxd-getting-started/&#34;&gt;by the project lead&lt;/a&gt;.
@@ -132,7 +128,7 @@ LXC could benefit with some things that Docker brought to the table and LXD fill
 &lt;li&gt;Checkpoint/restore support to enable live migration&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;what-about-docker:4812a1332fc3c3c9233a069930d0aa44&#34;&gt;What about Docker&lt;/h3&gt;
+&lt;h3 id=&#34;what-about-docker&#34;&gt;What about Docker&lt;/h3&gt;
 
 &lt;p&gt;Thinking of LXD as a VM helps to clarify where it fits in a system workflow, it isn&amp;rsquo;t the entire picture. I have often thought of Docker containers
 as a new style of highly specialized VMs. In fact many of the use cases where I have used Docker I have treated my container in many ways like a VM.
@@ -154,7 +150,7 @@ I expect much of this to be fixed as things mature but it is a sign that this is
 improve in this area. LXD is also implementing live migration which I believe Docker is further behind on. This mostly seems to fit with the general
 philosophy of a VM like system container versus application container.&lt;/p&gt;
 
-&lt;h3 id=&#34;app-container-or-system-container:4812a1332fc3c3c9233a069930d0aa44&#34;&gt;App container or System container&lt;/h3&gt;
+&lt;h3 id=&#34;app-container-or-system-container&#34;&gt;App container or System container&lt;/h3&gt;
 
 &lt;p&gt;In order to really think about when to use LXD and when to use Docker and how they overlap you have to explore the differences and use cases for
 app container versus system containers. System containers act more like a VM with multiple processes and an init daemon. Applications containers
@@ -178,8 +174,7 @@ container with all the standard tools and later a move to a more tightly built a
 
 &lt;p&gt;Regarding tooling it seems to me that container management tools should support both. They may have
 their initial leanings simply as a way to focus development but ultimately I think system or app container is something to be decided by the use case
-not by the tooling.&lt;/p&gt;
-</description>
+not by the tooling.&lt;/p&gt;</description>
     </item>
     
   </channel>

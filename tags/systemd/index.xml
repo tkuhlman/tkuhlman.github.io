@@ -3,11 +3,11 @@
   <channel>
       <title>Systemd on Background Process </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/tags/systemd/</link>
+    <link>http://backgroundprocess.com/tags/systemd/index.xml</link>
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
-    <updated>Fri, 28 Nov 2014 10:46:35 -0600</updated>
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
     
     <item>
       <title>Initial impressions of systemd</title>

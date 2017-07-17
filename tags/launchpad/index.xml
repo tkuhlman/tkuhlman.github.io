@@ -3,11 +3,11 @@
   <channel>
       <title>Launchpad on Background Process </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/tags/launchpad/</link>
+    <link>http://backgroundprocess.com/tags/launchpad/index.xml</link>
     <language>en-us</language>
     <author>Tim Kuhlman</author>
     
-    <updated>Fri, 01 Jan 2016 12:20:22 MST</updated>
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
     
     <item>
       <title>Launchpad Merge Proposal Helper Script</title>
@@ -34,8 +34,7 @@ against the api on your first usage.&lt;/p&gt;
 any ideas to improve it.&lt;/p&gt;
 
 &lt;p&gt;I should note it is bzr specific at this point as the reviews I do are primarily on bzr but it could be
-extended with git support as needed.&lt;/p&gt;
-</description>
+extended with git support as needed.&lt;/p&gt;</description>
     </item>
     
   </channel>
