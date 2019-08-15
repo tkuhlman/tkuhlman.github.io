@@ -1,40 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Scripts on Background Process </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/tags/scripts/index.xml</link>
+    <title>scripts on Background Process</title>
+    <link>http://backgroundprocess.com/tags/scripts/</link>
+    <description>Recent content in scripts on Background Process</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Tim Kuhlman</author>
+    <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
+    <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
+    <lastBuildDate>Fri, 07 Nov 2014 19:27:21 -0600</lastBuildDate>
     
-    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
+	<atom:link href="http://backgroundprocess.com/tags/scripts/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Ansible Utilities</title>
       <link>http://backgroundprocess.com/infrastructure/quick-ansible/</link>
       <pubDate>Fri, 07 Nov 2014 19:27:21 -0600</pubDate>
-      <author>Tim Kuhlman</author>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/infrastructure/quick-ansible/</guid>
-      <description>&lt;p&gt;In the last few weeks I have been immersed in &lt;a href=&#34;http://www.ansible.com&#34;&gt;Ansible&lt;/a&gt;. I have been using Ansible with &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;Vagrant&lt;/a&gt;,
-with &lt;a href=&#34;https://github.com/hpcloud-mon/monasca-docker&#34;&gt;Docker&lt;/a&gt; and in a test environment on bare metal. Those are all topics I may explore in more depth later but
-what really is conspicuous today is the way I can build simple utilities with Ansible.&lt;/p&gt;
-
-&lt;p&gt;My collection of Ansible &lt;a href=&#34;https://github.com/tkuhlman/ansible-utils&#34;&gt;scripts&lt;/a&gt; which aren&amp;rsquo;t part of a larger set of playbooks is still quite small but I feel it
-is but the tip of the iceberg. In the last few years I have built a fair collection of &lt;a href=&#34;http://www.fabfile.org/en/latest/&#34;&gt;Fabric&lt;/a&gt; scripts for
-various common tasks. These have been highly useful and I am will continue to use Fabric especially for tasks needing the more complicated logic and control structures
-possible using the full power of Python. Ansible also has a future in my tool set, in particular for tasks where modules exist.&lt;/p&gt;
-
-&lt;p&gt;With Ansible there are a couple of advantages which make it useful for the small orchestration tasks. It uses the same inventory already setup for configuration
-management, making it quite easy to target to the right boxes. The organization structures within Ansible make it is easy to mix and match tasks. Additionally it is a tool
-already being used so there is no new learning curve for my colleagues. The biggest advantage is the functionality encapsulated in pre-built modules,
-in particular the idempotency these bring.&lt;/p&gt;
-
-&lt;p&gt;Take as an example my first little &lt;a href=&#34;https://github.com/tkuhlman/ansible-utils/blob/master/setup_user.yml&#34;&gt;utility&lt;/a&gt;, I was already immersed in Ansible so no
-mental context switch was needed and I was able to write it quickly. It is simple and quickly written but immediately saved me some time. I could have fairly
-easily written this is Fabric also but it would have taken me much longer if I wanted to make an equivalent Fabric script idempotent. In my first run idempotency
-isn&amp;rsquo;t needed but it gives peace of mind because there is no danger if I accidentally run it twice. This will be especially helpful a month or two from now when
-I have forgotten where I ran it.&lt;/p&gt;
-</description>
+      <description>In the last few weeks I have been immersed in Ansible. I have been using Ansible with Vagrant, with Docker and in a test environment on bare metal. Those are all topics I may explore in more depth later but what really is conspicuous today is the way I can build simple utilities with Ansible.
+My collection of Ansible scripts which aren&amp;rsquo;t part of a larger set of playbooks is still quite small but I feel it is but the tip of the iceberg.</description>
     </item>
     
   </channel>

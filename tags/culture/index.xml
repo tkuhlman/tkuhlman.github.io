@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Culture on Background Process</title>
+    <link>http://backgroundprocess.com/tags/culture/</link>
+    <description>Recent content in Culture on Background Process</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
+    <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
+    <lastBuildDate>Thu, 27 Jun 2019 21:44:01 +0000</lastBuildDate>
+    
+	<atom:link href="http://backgroundprocess.com/tags/culture/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DevOps - You Build It, You Run It</title>
+      <link>http://backgroundprocess.com/usatodaynetwork/build_and_run/</link>
+      <pubDate>Thu, 27 Jun 2019 21:44:01 +0000</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
+      <guid>http://backgroundprocess.com/usatodaynetwork/build_and_run/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Originally written with help from my team and posted at &lt;a href=&#34;https://medium.com/usa-today-network/devops-you-build-it-you-run-it-8f972343eb8e&#34;&gt;https://medium.com/usa-today-network/devops-you-build-it-you-run-it-8f972343eb8e&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>A Culture of Architectural Design</title>
+      <link>http://backgroundprocess.com/usatodaynetwork/design_culture/</link>
+      <pubDate>Thu, 28 Mar 2019 21:44:01 +0000</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
+      <guid>http://backgroundprocess.com/usatodaynetwork/design_culture/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Originally written with help from my team and posted at &lt;a href=&#34;https://medium.com/usa-today-network/a-culture-of-architectural-design-77ad815dfc90&#34;&gt;https://medium.com/usa-today-network/a-culture-of-architectural-design-77ad815dfc90&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

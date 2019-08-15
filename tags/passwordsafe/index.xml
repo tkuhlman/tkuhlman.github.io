@@ -1,35 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Passwordsafe on Background Process </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/tags/passwordsafe/index.xml</link>
+    <title>passwordsafe on Background Process</title>
+    <link>http://backgroundprocess.com/tags/passwordsafe/</link>
+    <description>Recent content in passwordsafe on Background Process</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Tim Kuhlman</author>
+    <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
+    <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
+    <lastBuildDate>Fri, 27 May 2016 21:43:39 -0600</lastBuildDate>
     
-    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
+	<atom:link href="http://backgroundprocess.com/tags/passwordsafe/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>A Golang implementation of PasswordSafe V3, ready for Beta</title>
       <link>http://backgroundprocess.com/code/gopwsafe-beta/</link>
-      <pubDate>Fri, 27 May 2016 21:43:39 MDT</pubDate>
-      <author>Tim Kuhlman</author>
+      <pubDate>Fri, 27 May 2016 21:43:39 -0600</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/code/gopwsafe-beta/</guid>
       <description>&lt;p&gt;The password database I have been implementing in go is ready for Beta! The DB is implemented using the &lt;a href=&#34;http://pwsafe.org/&#34;&gt;password safe&lt;/a&gt; version 3
 database spec. Enough of the features for this are now working that
-&lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/releases/tag/0.3.0&#34;&gt;0.3.0 release&lt;/a&gt; is ready for others to test. &lt;/p&gt;
-
-&lt;p&gt;I have been using this code for months and would encourage anyone else needing a password DB to check it out now. I have particularly enjoyed the ability
-to search across multiple open password dbs at one time. This was the primary itch I was scratching in taking up this project. Though that feature has been
-implemented for months the gui it has been missing some basics such as a reminder to save after changes, the ability to change a DB password and to make a
-new DB. These features are now all working.&lt;/p&gt;
-
-&lt;p&gt;It is still a beta release because there are many missing features and some known bugs. The primary bug right now is that closing an open DB doesn&amp;rsquo;t work
-without closing the entire program. The &lt;a href=&#34;https://github.com/tkuhlman/gopwsafe&#34;&gt;project readme&lt;/a&gt; has a good running list of missing features in the Roadmap
-section. Primarily these are features that take advantage of have multiple DBs open at once, such as the ability to move records from one DB to another.
-Lastly the gtk gui could use countless tweaks to clean it up.&lt;/p&gt;
-
-&lt;p&gt;If you test it out have any feedback or find any bugs use the &lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/issues&#34;&gt;project issues&lt;/a&gt; section to notify me.&lt;/p&gt;</description>
+&lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/releases/tag/0.3.0&#34;&gt;0.3.0 release&lt;/a&gt; is ready for others to test.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,152 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Workstation on Background Process </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/tags/workstation/index.xml</link>
+    <title>workstation on Background Process</title>
+    <link>http://backgroundprocess.com/tags/workstation/</link>
+    <description>Recent content in workstation on Background Process</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Tim Kuhlman</author>
+    <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
+    <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
+    <lastBuildDate>Mon, 02 May 2016 21:07:28 -0600</lastBuildDate>
     
-    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
+	<atom:link href="http://backgroundprocess.com/tags/workstation/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Docker for Messy Pets - Updates</title>
       <link>http://backgroundprocess.com/systems/desktop_docker2/</link>
-      <pubDate>Mon, 02 May 2016 21:07:28 MDT</pubDate>
-      <author>Tim Kuhlman</author>
+      <pubDate>Mon, 02 May 2016 21:07:28 -0600</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/systems/desktop_docker2/</guid>
       <description>&lt;p&gt;About 8 months ago I posted about how I run some
 &lt;a href=&#34;http://backgroundprocess.com/systems/desktop_docker/&#34;&gt;applications in containers&lt;/a&gt;
 so that they stay nicely contained. I have refined and changed a few things about how I do this
-recently and so felt it was time for an update. I do maintain a
-&lt;a href=&#34;https://github.com/tkuhlman/containers&#34;&gt;git repo&lt;/a&gt; that will always have the latest I am using but
-here is the summary:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;At some point pulseaudio broke for me, possibly after an OS or Docker upgrade. I didn&amp;rsquo;t track
-down the cause but rather just decided to setup tcp based pulse audio. This is more initial
-setup but should be more stable and is simpler in the startup scripts. Audio works great this
-way and the container can play audio but not run configuration commands like pacmd.
-To setup:
-
-&lt;ul&gt;
-&lt;li&gt;Turn on tcp for pulseaudio, in &lt;code&gt;/etc/pulse/default.pa&lt;/code&gt; add a line like &lt;code&gt;load-module
-module-native-protocol-tcp&lt;/code&gt; and restart pulseaudio, &lt;code&gt;pulseaudio -k&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;If you are running ufw like me you need a rule like,
-&lt;code&gt;ufw allow in on docker0 to my-docker-ip proto tcp port 4713&lt;/code&gt; with the appropriate Docker ip.
-This allows Docker containers to reach pulse on port 4713 but should keep everything else out.&lt;/li&gt;
-&lt;li&gt;Then in the container startup scripts I have some lines like these used for Docker options:&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;-v ~/.config/pulse/cookie:/run/pulse/cookie
--e PULSE_SERVER=tcp:$(ifconfig docker0| awk &#39;/inet addr/{print substr($2,6)}&#39;):4713
--e PULSE_COOKIE=/run/pulse/cookie
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Turns out you don&amp;rsquo;t need &lt;code&gt;xhost local:&lt;/code&gt; in your scripts if I you are sharing &lt;code&gt;/tmp/.X11-unix&lt;/code&gt;
-and have $DISPLAY set. I&amp;rsquo;m not sure how I missed this 8 months ago but it is nice to avoid that.&lt;/li&gt;
-&lt;li&gt;There is a lot to love about Docker but like many CLI interfaces it could use some work.
-I mostly start containers with scripts but I also have a couple of aliases for some common other
-tasks:
-
-&lt;ul&gt;
-&lt;li&gt;To show current containers both running and not, &lt;code&gt;alias dps=&#39;docker ps -a --format &amp;quot;table
-{{.Names}}\t{{.Status}}\t{{.Image}}&amp;quot;&#39;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;To run a command in the container with a terminal, which I often use like &lt;code&gt;dexec container
-bash&lt;/code&gt;. The alias is &lt;code&gt;alias dexec=&#39;docker exec -t -i&#39;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Recently I posted about how I use
-&lt;a href=&#34;http://backgroundprocess.com/infrastructure/containers-over-vms/&#34;&gt;containers rather than VMs&lt;/a&gt; but
-those use cases are just the beginning. As I add applications
-to my workstation I can now be conservative on what I install and what install sources I trust on
-my workstation and instead use a container to keep unknown software confined.&lt;/p&gt;</description>
+recently and so felt it was time for an update.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Docker for Messy Pets</title>
       <link>http://backgroundprocess.com/systems/desktop_docker/</link>
-      <pubDate>Fri, 11 Sep 2015 21:12:37 MDT</pubDate>
-      <author>Tim Kuhlman</author>
+      <pubDate>Fri, 11 Sep 2015 21:12:37 -0600</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/systems/desktop_docker/</guid>
       <description>&lt;p&gt;The primary advantages of containers are realized when they are treated as the cattle of computing not pets. There are many
 articles using that analogy to extol the advantages of containers as cattle or
 &lt;a href=&#34;http://thenewstack.io/pets-and-cattle-symbolize-servers-so-what-does-that-make-containers-chickens/&#34;&gt;even as chickens&lt;/a&gt;.
-However I have been recently rebuilding my Ubuntu Desktop and found containers can at times be great for pets also, most particularly the messy ones.
-&lt;/p&gt;
-
-&lt;p&gt;I embarked down this route because of my sense of system cleanliness; too many apps I run excrete their dependencies all over my nice newly
-installed system. I run a variety of apps that are not available either in the primary repo nor as a PPA or at least not with the version I need. If
-I am not careful I can soon find myself juggling gems, eggs, wheels and jars all at the same time. Language specific package managers and tools like
-virtualenv and bundler all help some but none are complete enough to take away all management so I still end up following many tools and cleaning
-up the mess they leave behind.&lt;/p&gt;
-
-&lt;p&gt;This is where Docker containers step in to save me. I simply need to build an image with the app and all its associated dependencies and wrap a
-simple shell script around it. Now I can run my app while still maintaining a well organized system with no dependency hell, with no mess left behind
-on my system. Instead of using various tools I now have one management tool to aid in running multiple versions or modifications of apps. In addition
-I gain additional capabilities, most notably the ability to easily limit the resources an app can use.&lt;/p&gt;
-
-&lt;p&gt;On Ubuntu, apt handles both dependency installation and cleanup very well and coupled with the availability of many
-&lt;a href=&#34;https://help.launchpad.net/Packaging/PPA&#34;&gt;Personal Package Archives (ppa)&lt;/a&gt; the additional overhead of creating a container is not
-worth it for these well behaved apps. This is particularly true as using apt enables automatic notification of security updates.
-Nevertheless there are many apps or at least versions of the app I am using that aren&amp;rsquo;t available as a well behaved deb. These are the messy pets of
-my workstation and I am much happier to have them in a container than to have them leaving a mess all over my desktop.&lt;/p&gt;
-
-&lt;h3 id=&#34;implementation-details&#34;&gt;Implementation Details&lt;/h3&gt;
-
-&lt;p&gt;I have begun a &lt;a href=&#34;https://github.com/tkuhlman/containers&#34;&gt;github repo&lt;/a&gt; with Dockerfiles and shell scripts I use for containers on my desktop. I will keep
-expanding this as I add more apps which I use in this way. Here are some considerations as you put your messy pets in containers:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;In the wrapper scripts use Docker volumes to setup the appropriate directories, ie &lt;code&gt;-v /home/me/myfiles:/root/myfiles&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;GUI apps require some proper setup when running a container:
-
-&lt;ul&gt;
-&lt;li&gt;For X based apps first you must allow the app to connect to X then setup access to the display.&lt;/li&gt;
-&lt;li&gt;To allow access to X I generally run &amp;lsquo;xhost local:&amp;rsquo; in the wrapper script. This has security
-implications and shouldn&amp;rsquo;t be done on a shared system but for a system dedicated to a single user is reasonably safe.&lt;/li&gt;
-&lt;li&gt;To setup access to the display export the Display variable with &lt;code&gt;-e DISPLAY=$DISPLAY&lt;/code&gt; and setup the volume with the x socket
-&lt;code&gt;-v /tmp/.X11-unix:/tmp/.X11-unix&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;For advanced graphics with DRI things are a bit more complicated as you need the drivers you install in the image to match what the host uses.
-After that I found you need to use the device flag for the Docker command to share in the dri device, ie &lt;code&gt;--device /dev/dri/card0:/dev/dri/card0&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;For pulseaudio, these flags to the Docker command work though possible could be distilled down to simpler steps:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;-v /dev/shm:/dev/shm&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-v /etc/machine-id:/etc/machine-id&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-v /run/user/$uid/pulse:/run/user/$uid/pulse&lt;/code&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-v /var/lib/dbus:/var/lib/dbus&lt;/code&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-v ~/.pulse:/home/$dockerUsername/.pulse&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Most docker images run apps as root within the container. Though this is generally fine it can be annoying for files in volume mounts to end up owned
-as root. To work around this you can create a simplified user in the image matching your uid/gid and run apps as that user. All that is needed in
-the images is an /etc/passwd entry, /etc/group entry and an appropriately owned home directory.&lt;/li&gt;
-&lt;li&gt;Though this technique could work for any OS, it is most feasible where containers run natively. For those operating systems where containers are run in
-a vm it is considerably more painful to run any desktop apps in containers. This is a good reason to run Linux on the desktop.&lt;/li&gt;
-&lt;li&gt;The extra security of this approach was not my goal and I have not contemplated the implications much.
-The app is far more isolated, but not perfectly so. Also an existing image
-won&amp;rsquo;t update and break but is also more difficult to update for application security fixes. In short first glance you gain some security but there
-are more aspects that need consideration.&lt;/li&gt;
-&lt;li&gt;This technique is less annoying if your local user can run docker without sudo.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-
-&lt;p&gt;I am by no means the first to try this and in fact was able to find many tips on how to accomplish desktop apps in containers. Here are the primary pages
-I used as sources:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.jessfraz.com/post/docker-containers-on-the-desktop/&#34;&gt;https://blog.jessfraz.com/post/docker-containers-on-the-desktop/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/&#34;&gt;http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/28985714/run-apps-using-audio-in-a-docker-container&#34;&gt;http://stackoverflow.com/questions/28985714/run-apps-using-audio-in-a-docker-container&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/&#34;&gt;http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+However I have been recently rebuilding my Ubuntu Desktop and found containers can at times be great for pets also, most particularly the messy ones.&lt;/p&gt;</description>
     </item>
     
   </channel>

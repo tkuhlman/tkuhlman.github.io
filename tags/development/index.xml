@@ -1,147 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Development on Background Process </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/tags/development/index.xml</link>
+    <title>development on Background Process</title>
+    <link>http://backgroundprocess.com/tags/development/</link>
+    <description>Recent content in development on Background Process</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Tim Kuhlman</author>
+    <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
+    <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
+    <lastBuildDate>Fri, 12 Feb 2016 13:36:07 -0700</lastBuildDate>
     
-    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
+	<atom:link href="http://backgroundprocess.com/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Mojo Integration Tests with LXD</title>
       <link>http://backgroundprocess.com/code/mojo-integration-tests/</link>
-      <pubDate>Fri, 12 Feb 2016 13:36:07 MST</pubDate>
-      <author>Tim Kuhlman</author>
+      <pubDate>Fri, 12 Feb 2016 13:36:07 -0700</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/code/mojo-integration-tests/</guid>
       <description>&lt;p&gt;I have recently finished building an LXD image for doing integration tests of &lt;a href=&#34;https://mojo.canonical.com&#34;&gt;Mojo&lt;/a&gt;.
 I did this because I wanted to be able to reliably test the changes to Mojo that I was making. A repeatable,
-standard environment that can run set of integration tests fits the bill.
-&lt;/p&gt;
-
-&lt;h2 id=&#34;using-a-container&#34;&gt;Using a Container&lt;/h2&gt;
-
-&lt;p&gt;There are a few key advantages I see to doing the integration tests in a container image like this:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Having a repeatable environment enables automation, sharing of the environment among developers, using
-the environment as a base standard and incremental improvement.&lt;/li&gt;
-&lt;li&gt;The image can be built to a standard, in this case it runs Ubuntu LTS with the latest distributed versions
-of Juju/Mojo and other tooling.&lt;/li&gt;
-&lt;li&gt;Isolation from the primary dev environment allows for easy cleanup, easier testing of various branches and tests
-more easily run in parallel.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;integration-tests&#34;&gt;Integration Tests&lt;/h2&gt;
-
-&lt;p&gt;Integration tests themselves I want running because some tests are just not practical to do via
-unit tests. This is especially true for code that interacts with a lot of other programs such as Mojo.&lt;/p&gt;
-
-&lt;p&gt;In many cases integration tests bring an real world element unit tests don&amp;rsquo;t. For example the Mojo unit tests
-cover Juju interactions decently well using the expected Juju status output. However what if that
-expected output changes? For example Juju output could change in a way that is harmless and not
-noticed so everyone upgrades Juju, then later Mojo changes but the unit tests are all based on the
-older output, integration tests will catch this before sending broken code to production.&lt;/p&gt;
-
-&lt;p&gt;On the other hand some tests, ie proper parsing of a manifest file, work better as a unit test. In other
-situations it perhaps isn&amp;rsquo;t so clear. Have integration tests as a tool in addition to unit tests gives Mojo
-developers another way to validate code before merging.&lt;/p&gt;
-
-&lt;h2 id=&#34;more-information&#34;&gt;More Information&lt;/h2&gt;
-
-&lt;p&gt;The image can also be used for development of Mojo specs, there is some information on that and more information on using the image in the
-image &lt;a href=&#34;http://bazaar.launchpad.net/~mojo-maintainers/mojo/trunk/view/head:/contrib/LXD/README.md&#34;&gt;readme&lt;/a&gt;.
-I also made this &lt;a href=&#34;https://youtu.be/Q8ll7OsTtMk&#34;&gt;screen cast&lt;/a&gt; to introduce how I use the image today. I often watch
-these screen casts at double speed and recommend you do for this one also.&lt;/p&gt;
-
-&lt;p&gt;Now that the base image is done all the Mojo developers can all incrementally add more tests and I look forward to seeing it expand.&lt;/p&gt;</description>
+standard environment that can run set of integration tests fits the bill.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Development Best Practices for Systems Administrators</title>
       <link>http://backgroundprocess.com/code/sysadmins/</link>
-      <pubDate>Sat, 16 Jan 2016 20:44:55 MST</pubDate>
-      <author>Tim Kuhlman</author>
+      <pubDate>Sat, 16 Jan 2016 20:44:55 -0700</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/code/sysadmins/</guid>
       <description>&lt;p&gt;The days where systems administrators do no development are gone. Just as developers
 leverage cloud infrastructure and tooling to deploy services, sysadmins develop code to automate
-their infrastructure and to fill the feature gaps that they are uniquely positioned to see.
-
-Though best development practices are the same for both sysadmins and devs, some are more
-natural to one group or another. The heart of devops is operators and developers coming together and in many ways this
-post is really about what sysadmins can learn from developers. Here are some best practices I think come less naturally to operators.&lt;/p&gt;
-
-&lt;h2 id=&#34;best-practices&#34;&gt;Best Practices&lt;/h2&gt;
-
-&lt;h3 id=&#34;simplify&#34;&gt;Simplify&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Interface&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Make your project simple to use. Sysadmins are badasses at the CLI and forget not everyone is. Also make sure to keep the interface consistent.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Standardize&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Choose sane defaults, don&amp;rsquo;t be afraid to limit choice and flexibility so the code steers people toward good and/or standard practices.
-Choice can be good at times but more often than not is a bit stifling. One difference between a usable project and a great one is often in appropriate
-defaults and simplicity of configuration.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Code Structure&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Turns out the basics of code are easy, children can grasp the concepts of branches and loops. Most code is dealing with the complexity
-of having so many branches and loops. That is why the common code constructs (classes, inheritance, types/interfaces) exist.
-Layers of abstraction, separation of concern and encapsulation are amount the keys to good complexity management. The difference between
-good design and bad is how well the complexity management is done.&lt;/p&gt;
-
-&lt;p&gt;There are many code techniques to deal with complexity and this is a great example of where sysadmins can learn a lot from devs. I&amp;rsquo;ll not delve
-into actual techniques but rather here are some principles to keep in mind while coding:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://sysadvent.blogspot.com/2015/12/day-22-simplicity-in-complex-systems.html&#34;&gt;Reducing code complexity&lt;/a&gt; by thinking about where the code can shrink
-or hide the complexity. Shrink complexity by building code constructs that break the complexity up. Hide it by building complexity into
-methods or objects, hiding it from the rest of the system.&lt;/li&gt;
-&lt;li&gt;Keep your code organized. One principle to avoid sprawling code is, &lt;a href=&#34;http://martinfowler.com/bliki/Yagni.html&#34;&gt;YAGNI&lt;/a&gt;, only write to what you
-actually need now. Sysadmins run systems and so have great insight into what is needed making this best practice relatively easy. However there
-is one caution with YAGNI. To quote Martin Fowler &amp;ldquo;Yagni only applies to capabilities built into the software to support a presumptive feature, it does
-not apply to effort to make the software easier to modify.&amp;rdquo; In short YAGNI is not an excuse for unorganized code. Organize your code and revisit the
-organization to keep it organized as it grows and more features are added.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;document&#34;&gt;Document&lt;/h3&gt;
-
-&lt;p&gt;Document your code! Maybe this is one both devs and sysadmins could do better at.&lt;/p&gt;
-
-&lt;p&gt;Document as you are writing the code. After having just written the code you know what it does and there is no better time to clearly express that.
-The code&amp;rsquo;s lifecycle is just beginning, the project will be used and modified by yourself and others and good documentation helps immensely with
-these further steps.&lt;/p&gt;
-
-&lt;p&gt;The closer to the code the documentation is the better. It is most likely to stay up date if the documentation is close to the code as well as being the
-easiest to find. Also being close to the code gives you an automatic context allowing the documentation to be more succinct.
-Most languages have built-in tools for documenting well and publishing the docs in a standard way, use these tools.&lt;/p&gt;
-
-&lt;p&gt;In addition to helping with the further lifecycle of your project the act of documenting is a tool for discovering unnecessarily complexity.
-When documenting you have to force yourself to think like someone unfamiliar with the project which is an important mindset to adopt periodically.
-This is especially true when writing the overview section of your docs which links project components together into a whole that users will interact with.
-I often find documenting reveals big wins where just a bit more code results in a large improvements.&lt;/p&gt;
-
-&lt;h3 id=&#34;test&#34;&gt;Test&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Automated Testing&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I find sysadmins often test manually really well but don&amp;rsquo;t automate the testing as well. The manual testing is great that first
-time but the automated testing provides repeatability. The repeatability is key for proving functionality and for any future changes, which
-for most projects are bound to happen.&lt;/p&gt;
-
-&lt;p&gt;Automated testing does have its limits, in particular unit testing is limited in how useful it can be for code that interacts with other
-systems. This is the type of code sysadmins write most often. It is difficult and fragile to mock out code that does network I/O, a system call, db I/O and
-more network I/O. This doesn&amp;rsquo;t mean skip automated tests but rather ensure the use cases are covered with
-automated integration tests. A great use of containers is to create pre-built test environments for automate integration testing.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Real World Usage&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Use and run your own code in a real environment. It is through running code in a real environment that you discover the true
-problems that need fixing. Indeed the motivation for much of the code sysadmins write comes from running real environments. Even though this seems
-obvious to sysadmins it is a key best practices that is so important it needs to be mentioned.&lt;/p&gt;</description>
+their infrastructure and to fill the feature gaps that they are uniquely positioned to see.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,138 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Infrastructures on Background Process </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/infrastructure/index.xml</link>
+    <title>Infrastructures on Background Process</title>
+    <link>http://backgroundprocess.com/infrastructure/</link>
+    <description>Recent content in Infrastructures on Background Process</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Tim Kuhlman</author>
+    <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
+    <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
+    <lastBuildDate>Sat, 16 Apr 2016 21:06:14 -0600</lastBuildDate>
     
-    <updated>Sat, 16 Apr 2016 21:06:14 MDT</updated>
+	<atom:link href="http://backgroundprocess.com/infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Containers over VMs</title>
       <link>http://backgroundprocess.com/infrastructure/containers-over-vms/</link>
-      <pubDate>Sat, 16 Apr 2016 21:06:14 MDT</pubDate>
-      <author>Tim Kuhlman</author>
+      <pubDate>Sat, 16 Apr 2016 21:06:14 -0600</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/infrastructure/containers-over-vms/</guid>
       <description>&lt;p&gt;I recently realized it has been over 6 months since I have used a VM on my workstation. Previously I
 like many developers used VMs for various development tasks. The change hasn&amp;rsquo;t be in my usage of
-cloud based VMs, I continue to do that as needed and appropriate. The change is that I use containers. 
-I now use a mix of &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; and &lt;a href=&#34;https://linuxcontainers.org/lxd/&#34;&gt;LXD&lt;/a&gt; for dev and
-test environments and everything else I used to frequently use VMs for on my workstation. I even use containers in some
-&lt;a href=&#34;http://backgroundprocess.com/systems/desktop_docker/&#34;&gt;ways&lt;/a&gt; that I haven&amp;rsquo;t used VMs.&lt;/p&gt;
-
-&lt;p&gt;Realizing this change in my behavior is somewhat startling for me, after all VMs represented a paradigm
-shift in the industry which certainly affected my workflow years ago. I previously found tools like
-&lt;a href=&#34;http://backgroundprocess.com/infrastructure/vagrant/&#34;&gt;Vagrant&lt;/a&gt; a very useful part of my workflow. Nevertheless the advantages to
-using containers for tasks on my personal workstation have change my workflow.&lt;/p&gt;
-
-&lt;p&gt;Containers come with nearly all the workflow advantages that VMs do but also with additional advantages
-beyond VMs:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Speed of execution - I have various aliases and scripts that launch containerized applications
-and speed of startup and execution is indistinguishable from native apps.&lt;/li&gt;
-&lt;li&gt;Lightweight - Not only are containers much faster than VMs they are light on resource usage so
-much so that you can have many running and not notice it. I actually use signficantly less memory on my
-machine than I did a year ago.&lt;/li&gt;
-&lt;li&gt;Easier to share - Though possible with VMs it is just simply quicker and easier to share Docker containers.&lt;/li&gt;
-&lt;li&gt;Quicker and simpler to build - The speed of startup and ease of sharing contribute to it being
-really easy to startup a new container makes some changes and save it off for further use. This allows me
-to nest usages, repeat test cases on different versions, etc.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The net effect is that for many uses containers just have less overhead than VMs but retain the primary advantages
-that VMs brought to the industry. There are of course reasons to still use VMs on a personal workstation,
-such as not running Linux as a primary OS and so lacking container support natively, doing development on the kernel,
-or developing for an OS other than Linux. None of these are relevant for me so containers is the way forward on
-my machines.&lt;/p&gt;</description>
+cloud based VMs, I continue to do that as needed and appropriate. The change is that I use containers.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Initial impressions of lxd</title>
       <link>http://backgroundprocess.com/infrastructure/lxd/</link>
-      <pubDate>Wed, 14 Oct 2015 11:04:37 MDT</pubDate>
-      <author>Tim Kuhlman</author>
+      <pubDate>Wed, 14 Oct 2015 11:04:37 -0600</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/infrastructure/lxd/</guid>
       <description>&lt;p&gt;In the last couple of weeks I have been taking a bit of time here and there to explore &lt;a href=&#34;http://www.ubuntu.com/cloud/tools/lxd&#34;&gt;LXD&lt;/a&gt;.
 LXD is a tool for managing system containers. As both LXD and Docker deal with containers in many ways there is quite a
 bit of overlap but LXD is aiming for full isolated system containers where Docker is more focused on application containers. You can even run
-Docker within an LXD image. I find it helpful to think of LXD as a replacement for virtual machines.
-&lt;/p&gt;
-
-&lt;h3 id=&#34;lxd-features&#34;&gt;LXD Features&lt;/h3&gt;
-
-&lt;p&gt;LXD is built upon &lt;a href=&#34;https://linuxcontainers.org/&#34;&gt;LXC&lt;/a&gt; which is impressively mature when compared to most of the container ecosystem. There are some
-lacking features with LXC as pointed out at &lt;a href=&#34;https://www.stgraber.org/2015/04/21/lxd-getting-started/&#34;&gt;by the project lead&lt;/a&gt;.
-LXC could benefit with some things that Docker brought to the table and LXD fills these gaps:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Container images and an easy way to share them.&lt;/li&gt;
-&lt;li&gt;Simpler, easier to approach tools.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In addition to these features LXD is bringing to the table some new things, specifically:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Secure containers by default.&lt;/li&gt;
-&lt;li&gt;Checkpoint/restore support to enable live migration&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;what-about-docker&#34;&gt;What about Docker&lt;/h3&gt;
-
-&lt;p&gt;Thinking of LXD as a VM helps to clarify where it fits in a system workflow, it isn&amp;rsquo;t the entire picture. I have often thought of Docker containers
-as a new style of highly specialized VMs. In fact many of the use cases where I have used Docker I have treated my container in many ways like a VM.
-Though Docker is more focused on application containers and LXD on system containers there remains overlap between the two.&lt;/p&gt;
-
-&lt;p&gt;Simple tools and most importantly easy to share and build upon images are primary reasons Docker became so popular.
-This is what makes it easy to get started with Docker. Do you want to run Jenkins? With one command you can download the official image and have it running.
-The ease of sharing images and building upon others is also what enables the emerging container devops deployment model. This model brings enough
-advantages that has the potential to change how devops is done in the next few years.&lt;/p&gt;
-
-&lt;p&gt;LXD is making some good progress with image sharing but it doesn&amp;rsquo;t go far enough to compete with Docker in this regard. Most notably the lack of a
-public official repo with images you can build upon is missing from LXD.&lt;/p&gt;
-
-&lt;p&gt;Though LXC is quite mature Docker has the lead as an app that wraps (or formerly wraps) LXC. With LXD it is still cumbersome to do some tasks, for
-example a volume mount. Additionally there are little annoyances like the terminal columns/rows being set wrong when running bash in a container.
-I expect much of this to be fixed as things mature but it is a sign that this is a new project.&lt;/p&gt;
-
-&lt;p&gt;LXD does implement better default security in unprivileged containers, a nice feature to have. However Docker also continues to
-improve in this area. LXD is also implementing live migration which I believe Docker is further behind on. This mostly seems to fit with the general
-philosophy of a VM like system container versus application container.&lt;/p&gt;
-
-&lt;h3 id=&#34;app-container-or-system-container&#34;&gt;App container or System container&lt;/h3&gt;
-
-&lt;p&gt;In order to really think about when to use LXD and when to use Docker and how they overlap you have to explore the differences and use cases for
-app container versus system containers. System containers act more like a VM with multiple processes and an init daemon. Applications containers
-are leaner with no init and most often only a single service running though they aren&amp;rsquo;t limited to a single process.&lt;/p&gt;
-
-&lt;p&gt;Today most deployed applications aren&amp;rsquo;t in any container and many companies are working on fundamentals of devops not implementing a container
-based devops workflow. This migration is one area where system containers really shine, they are much easier to move an existing workflow and
-applications to. In an application container without init suddenly something as basic as how you start your application changes.&lt;/p&gt;
-
-&lt;p&gt;On the other hand a large porting of the advantages with containers are how they enable easier micro-services management and a new workflow. The
-ability to not care how an image is built and to easily test the exact image that is deployed then to manage as a flexible pod with a tool like Kubernetes
-are all advantages enabled by application containers.&lt;/p&gt;
-
-&lt;p&gt;There are some use cases that won&amp;rsquo;t move to the new workflow. For example I don&amp;rsquo;t think I will ever again use a vm for development,
-using a container brings the superiority of containers as well retaining the VM advantages of having a repeatable isolated dev environment. Given
-the variety of tools used in development this is much better to do in a system container rather than an app container.&lt;/p&gt;
-
-&lt;p&gt;Having all of the mature system tools at your disposal is one argument in favor of system containers. Many times saving devops time by having the
-standard tools available beats the efficiency gain of a smaller image. In some cases I can easily see the initial move to containers be to a system
-container with all the standard tools and later a move to a more tightly built application container.&lt;/p&gt;
-
-&lt;p&gt;Regarding tooling it seems to me that container management tools should support both. They may have
-their initial leanings simply as a way to focus development but ultimately I think system or app container is something to be decided by the use case
-not by the tooling.&lt;/p&gt;</description>
+Docker within an LXD image. I find it helpful to think of LXD as a replacement for virtual machines.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Vagrant Love</title>
       <link>http://backgroundprocess.com/infrastructure/vagrant/</link>
-      <pubDate>Tue, 19 May 2015 21:56:28 MDT</pubDate>
-      <author>Tim Kuhlman</author>
+      <pubDate>Tue, 19 May 2015 21:56:28 -0600</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/infrastructure/vagrant/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://www.vagrantup.com/&#34;&gt;Vagrant&lt;/a&gt; is awesome!&lt;/strong&gt;&lt;/p&gt;
 
@@ -145,218 +53,50 @@ cleanly without adding baggage to the process.&lt;/p&gt;
 
 &lt;p&gt;Another aspect that is important is that Vagrant chooses sane defaults but still allows configurability. The sane defaults combined with the clean design mean
 that more often than not Vagrant makes building vm based environments far easier than any other way. This is probably what I love most about Vagrant, I can turn
-around a clustered dev environment in under 5 minutes and even share it with my team with no extra work. This is orders of magnitude faster than other solutions.
-
-Building Vagrant based environments that fast takes good docs and familiarity with Vagrant. Vagrant has &lt;a href=&#34;https://docs.vagrantup.com/v2/&#34;&gt;great simple and clear docs&lt;/a&gt;
-and the familiarity largely comes because Vagrant is versatile. The configurability of Vagrant allows it to have quite a bit of depth for those less than standard use cases.
-This in turn means you come to know the tool and appreciate its simplicity and ease, which in turn makes it easier to use. All of this ultimately culminates in you
-writing a blog post about Vagrant love.&lt;/p&gt;</description>
+around a clustered dev environment in under 5 minutes and even share it with my team with no extra work. This is orders of magnitude faster than other solutions.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Docker, what use it?</title>
       <link>http://backgroundprocess.com/infrastructure/docker/</link>
-      <pubDate>Wed, 11 Mar 2015 21:36:35 MDT</pubDate>
-      <author>Tim Kuhlman</author>
+      <pubDate>Wed, 11 Mar 2015 21:36:35 -0600</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/infrastructure/docker/</guid>
       <description>&lt;p&gt;Anyone in the industry who hasn&amp;rsquo;t yet read multiple blog posts on &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; is living under a rock. There is a lot of hype about Docker
 and its potential. I also revel in the long term vision for containers and their potential impact on the industry. However until I have an awesome
 infrastructure where I can deploy images into production my practical mindset drives me to cut through the hype and ask what
 use is Docker for my work today?&lt;/p&gt;
 
-&lt;p&gt;As I have explored Docker here are the uses for it that I have encountered that bring practical value to my day to day work.
-&lt;/p&gt;
-
-&lt;h2 id=&#34;development-environments&#34;&gt;Development Environments&lt;/h2&gt;
-
-&lt;p&gt;When it comes to starting up a quick environment to test out something you may or may not keep around, VMs are an undisputed improvement over bare metal and
-containers are step above VMs. It is so quick and seamless to get a dedicated container for whatever the current need is I find myself doing more and more
-work this way.&lt;/p&gt;
-
-&lt;p&gt;I heavily use &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;Vagrant&lt;/a&gt; for my team&amp;rsquo;s primary development environment. Vagrant is an awesome tool that I could
-write many dedicated posts about. Why not Docker? There are a number of reasons we still Vagrant for development over Docker including that it is still
-better able to replicate a real deploy of our software as well as simple momentum.&lt;/p&gt;
-
-&lt;p&gt;Beyond the momentum of existing solutions, the biggest problem with Docker for complex dev environments today is that many tools are built assuming a
-different environment. Some tools want to setup a firewall or change sysctl settings and so end up having some difficulties with containers.
-Despite these annoyances, as tools for containers improve I expect more and more the balance tipping in favor of Docker.
-The quick startup, lighter resource utilization, easy versioning and other advantages of Docker containers are quite compelling especially for all new environments.&lt;/p&gt;
-
-&lt;h2 id=&#34;testing&#34;&gt;Testing&lt;/h2&gt;
-
-&lt;p&gt;The easy versioning and quick startup of containers make them ideal for testing. This is a key part of the primary vision of Docker, an image built
-by development can be easily tested. Even with no production environment ready for Docker, containers have been useful for testing in a few scenarios
-I have encountered.&lt;/p&gt;
-
-&lt;h3 id=&#34;integration-tests&#34;&gt;Integration Tests&lt;/h3&gt;
-
-&lt;p&gt;It seems you always have more scenarios to test then available resources to test them on. Containers allow you to easily switch between different
-configurations and software versions or to even have multiple running at one time. This is obtainable
-using VMs also but it is much quicker to build, run and switch scenarios with containers.&lt;/p&gt;
-
-&lt;p&gt;One of my team members went further and integrated some pre-built containers into the standard tests run during the build. Better than trying to mock out
-the entire database and various REST API services used by the code, he was able to run them in Docker containers with a known set of data. Not only is this easier
-to setup then mocking out these interfaces it results in much more realistic tests.&lt;/p&gt;
-
-&lt;h3 id=&#34;load-testing&#34;&gt;Load testing&lt;/h3&gt;
-
-&lt;p&gt;When you want to run many clients but only have a few machines to do so for many applications your options are quite limited.
-You can spin up bunches of machines with your favorite cloud provider, you can write a load test tool that simulates clients or attempt to mangle code, configuration
-and startup scripts such that many client instances run. Quicker and easier than all of those options is to just start up a few hundred clients each running in a
-new Docker container.&lt;/p&gt;
-
-&lt;h2 id=&#34;demos&#34;&gt;Demos&lt;/h2&gt;
-
-&lt;p&gt;The last practical use for Docker that comes to mind is one I am actively working on, a demo environment. A single command to start, a single download and you
-have a complex system up and running that anyone can explore. VMs can fulfill this need also but Docker images are smaller and quicker to run as well as simpler to build
-and update. This means the key quality of a demo, barrier to entry, is lower.&lt;/p&gt;</description>
+&lt;p&gt;As I have explored Docker here are the uses for it that I have encountered that bring practical value to my day to day work.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Advanced Ansible</title>
       <link>http://backgroundprocess.com/infrastructure/advanced-ansible/</link>
       <pubDate>Thu, 18 Dec 2014 22:01:37 -0600</pubDate>
-      <author>Tim Kuhlman</author>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/infrastructure/advanced-ansible/</guid>
-      <description>&lt;p&gt;It would be an mistake to call me an Ansible expert but I am now an experienced Ansible user and it is time to expand on my earlier &lt;a href=&#34;http://backgroundprocess.com/tags/#Ansible&#34;&gt;Ansible posts&lt;/a&gt;.
-I have now been using Ansible on a regular basis for awhile and have used it with vagrant based vms, docker containers, as well as across small clusters of machines.
-I have also written a couple of Ansible modules and will likely write another one or two soon. Writing modules is a topic that I will address in
-another post.&lt;/p&gt;
-
-&lt;p&gt;As I use Ansible in various environments I continue to enjoy the simplicity of its model. I find it easy to run against a wide variety of deployment
-models by taking existing playbooks and tweaking them slightly or combining them in new ways. This flexibility has been key for my use cases lately as I can
-work on making my roles and modules robust and then easily use them for small installs, clusters, one or os or another and anything else needed.&lt;/p&gt;
-
-&lt;p&gt;I have found that rolling deploys with deployment verification is much easier in Ansible then with many other configuration management tools I have previously used.
-Targeting a subset of hosts is as simple as setting the correct serial value in the playbook or even targeting groups of hosts over multiple subsequent runs. Next
-you just need to add in deployment verification. For most of the services I have setup that is as simple as a &lt;a href=&#34;http://docs.ansible.com/wait_for_module.html&#34;&gt;wait_for&lt;/a&gt;
-task, though for some the &lt;a href=&#34;http://docs.ansible.com/assert_module.html&#34;&gt;assert&lt;/a&gt; module is a better option. Either option is easy to implement.&lt;/p&gt;
-
-&lt;p&gt;One aspect of Ansible that needs some work is its ability to finishing running triggered handlers on failure. I have encountered many situations where we are running
-a play with multiple roles and earlier roles register handlers which never run because a later role fails and handlers have not yet been flushed. In the case of a
-restarted service this is quite annoying especially as the next run won&amp;rsquo;t trigger handlers and if I put both the handler and a service start task in some instances
-the service will restart twice. There is a work around, basically first flush handlers then define the service task with a state of started. This works well but
-it is a bit annoying that I have to remember to explicitly flush handlers for every role.&lt;/p&gt;
-
-&lt;p&gt;I have hope that the running of queued handlers is something that will be fixed because I am happy to see improvements in Ansible with 1.8 that directly affect my
-work. The most notable changes for me were actually in the Ansible Galaxy command. The ability to specify a role requirements file in yaml and point at git repos directly
-as well as optionally specify tags is essential. Though I like what is happening with the Ansible Galaxy public site it just isn&amp;rsquo;t always possible to push things up there and
-often while waiting for a pull request to be approved it is nice to point to my updated version without making a new entry in galaxy.
-I am also tired of seeing tkuhlman prepended to the beginning of my roles in the various playbooks. Though account based differentiation is a good feature for
-Galaxy that encourages sharing of tweaks to existing roles I really only want to be aware of it on download, the new format accomplishes exactly that.&lt;/p&gt;
-
-&lt;p&gt;Besides continued work with writing modules there are some other aspects of Ansible I still would like to explore. Wider use of assert and lookups as well as
-pipelining come to mind. Also, I have not yet had the opportunity to use Ansible across a large cluster of nodes. I have worked with large clusters before and likely
-will again fairly soon, I look forward to the learning that will come from running Ansible in such an environment.&lt;/p&gt;
-</description>
+      <description>It would be an mistake to call me an Ansible expert but I am now an experienced Ansible user and it is time to expand on my earlier Ansible posts. I have now been using Ansible on a regular basis for awhile and have used it with vagrant based vms, docker containers, as well as across small clusters of machines. I have also written a couple of Ansible modules and will likely write another one or two soon.</description>
     </item>
     
     <item>
       <title>Ansible Utilities</title>
       <link>http://backgroundprocess.com/infrastructure/quick-ansible/</link>
       <pubDate>Fri, 07 Nov 2014 19:27:21 -0600</pubDate>
-      <author>Tim Kuhlman</author>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/infrastructure/quick-ansible/</guid>
-      <description>&lt;p&gt;In the last few weeks I have been immersed in &lt;a href=&#34;http://www.ansible.com&#34;&gt;Ansible&lt;/a&gt;. I have been using Ansible with &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;Vagrant&lt;/a&gt;,
-with &lt;a href=&#34;https://github.com/hpcloud-mon/monasca-docker&#34;&gt;Docker&lt;/a&gt; and in a test environment on bare metal. Those are all topics I may explore in more depth later but
-what really is conspicuous today is the way I can build simple utilities with Ansible.&lt;/p&gt;
-
-&lt;p&gt;My collection of Ansible &lt;a href=&#34;https://github.com/tkuhlman/ansible-utils&#34;&gt;scripts&lt;/a&gt; which aren&amp;rsquo;t part of a larger set of playbooks is still quite small but I feel it
-is but the tip of the iceberg. In the last few years I have built a fair collection of &lt;a href=&#34;http://www.fabfile.org/en/latest/&#34;&gt;Fabric&lt;/a&gt; scripts for
-various common tasks. These have been highly useful and I am will continue to use Fabric especially for tasks needing the more complicated logic and control structures
-possible using the full power of Python. Ansible also has a future in my tool set, in particular for tasks where modules exist.&lt;/p&gt;
-
-&lt;p&gt;With Ansible there are a couple of advantages which make it useful for the small orchestration tasks. It uses the same inventory already setup for configuration
-management, making it quite easy to target to the right boxes. The organization structures within Ansible make it is easy to mix and match tasks. Additionally it is a tool
-already being used so there is no new learning curve for my colleagues. The biggest advantage is the functionality encapsulated in pre-built modules,
-in particular the idempotency these bring.&lt;/p&gt;
-
-&lt;p&gt;Take as an example my first little &lt;a href=&#34;https://github.com/tkuhlman/ansible-utils/blob/master/setup_user.yml&#34;&gt;utility&lt;/a&gt;, I was already immersed in Ansible so no
-mental context switch was needed and I was able to write it quickly. It is simple and quickly written but immediately saved me some time. I could have fairly
-easily written this is Fabric also but it would have taken me much longer if I wanted to make an equivalent Fabric script idempotent. In my first run idempotency
-isn&amp;rsquo;t needed but it gives peace of mind because there is no danger if I accidentally run it twice. This will be especially helpful a month or two from now when
-I have forgotten where I ran it.&lt;/p&gt;
-</description>
+      <description>In the last few weeks I have been immersed in Ansible. I have been using Ansible with Vagrant, with Docker and in a test environment on bare metal. Those are all topics I may explore in more depth later but what really is conspicuous today is the way I can build simple utilities with Ansible.
+My collection of Ansible scripts which aren&amp;rsquo;t part of a larger set of playbooks is still quite small but I feel it is but the tip of the iceberg.</description>
     </item>
     
     <item>
       <title>Ansible - Configuration Management Simplifed</title>
       <link>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</link>
       <pubDate>Sun, 02 Nov 2014 21:00:22 -0600</pubDate>
-      <author>Tim Kuhlman</author>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</guid>
-      <description>&lt;p&gt;In the last couple of weeks I have been converting &lt;a href=&#34;https://wiki.openstack.org/wiki/Monasca&#34;&gt;Monasca&lt;/a&gt; from &lt;a href=&#34;https://www.getchef.com/&#34;&gt;Chef&lt;/a&gt;
-to &lt;a href=&#34;http://www.ansible.com/&#34;&gt;Ansible&lt;/a&gt;.
-This has begun with the &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;monasca-vagrant&lt;/a&gt; development environment. Having worked with
-Chef for the last 3 years as I learn Ansible I inevitably evaluate it in comparision to Chef.&lt;/p&gt;
-
-&lt;p&gt;The core quality of Ansible compared to Chef is Simplicity. Ansible attempts to solve many of the same problems as Chef but with an
-approach that seems born of real world experience and eliminates many theoretically superior design paradigms for practical alternatives.&lt;/p&gt;
-
-&lt;p&gt;The most readily apparent simplification between Chef and Ansible is the lack of both an agent and a server in the Ansible model.
-Many simplifications flow from this fundamental design decision, including:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Extremely simple startup. There is no need to install a server or agents or even learn the depths of the tools paradigm before starting. In
-practice this is fairly important as few start with overhauling the entire configuration management of a service as I did but rather
-start with a single aspect and incrementally grow their coverage.&lt;/li&gt;
-&lt;li&gt;Encryption of data becomes much simpler as there is no need to take a shared secret and distribute to
-the agent on each box. Additionally unlike Chef there is no need to modify the recipes to use encrypted data, the decrypted data
-is just treated as normal variables during an Ansible run&lt;/li&gt;
-&lt;li&gt;With all runs potentially starting on a workstation Ansible is easily enabled for orchestration tasks as well as configuration management.
-Fundamentally there is little difference between the work done by Ansible to enable each use case. This allows tool simplification, no need for an additional
-orchestration layer.&lt;/li&gt;
-&lt;li&gt;Related to the enabling of orchestration tasks the simplicity of running plays via Ansible means it is easy to activate Ansible
-within larger scripts. I for example use a deployment script based on &lt;a href=&#34;http://www.fabfile.org/en/latest/&#34;&gt;Fabric&lt;/a&gt; which interacts with
-git as well as some in house tools as it deploys. The script already relies on an ssh key for the git aspects and so adding in the
-triggering of an Ansible run is extremely easy. When using chef with the script the proper triggering of a run is much more
-complicated as I not only have to upload to the server I also have to navigate an entirely separate authentication system. Ansible covers
-many of the same use case as fabric so I could probably rewrite much if not all of the script in Ansible but I don&amp;rsquo;t need to,
-and can choose to do so or not later. This ability to be a self contained layer that is easy to interact with a key feature of a truly
-useful model that should not be understated.&lt;/li&gt;
-&lt;li&gt;SSH authentication management is required for Ansible and a at first glance seems to be a disadvantage but in all environments
-I have worked with it was already happening. Given that the end result of avoiding the need for another authentication/authorization
-system is an advantage for this simplified model.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ansible&amp;rsquo;s lack of an agent or server is perhaps a factor in why regular unattended runs of Ansible are not built into the system.
-If you want these to happen you must add additional
-scripting around Ansible, via a cron job or a more sophisticated tool such as &lt;a href=&#34;http://www.ansible.com/tower&#34;&gt;Ansible Tower&lt;/a&gt;. This
-is in contrast to Chef where unattended runs are trivial to enable and take advantage of. It is also a
-great example of a theoretical deficiency on the side of Ansible which in practical terms isn&amp;rsquo;t. In all the infrastructures I have
-worked with the professionalism of administrators has been sufficient that I can&amp;rsquo;t recall an instance where the unattended chef runs were
-actually useful. Perhaps I am fortunate regarding the people I have worked with but regardless requiring unattended Ansible runs to use
-another layer of abstraction is not much of a negative. Layers of abstraction are fundamental to computing and when used well they simplify
-the solution rather than complicate it, I believe this is such a case.&lt;/p&gt;
-
-&lt;p&gt;As one who has used Chef for years to deploy various software one of the biggest areas where Ansible&amp;rsquo;s simplicity shines is the variables.
-In Ansible there are variables with a just
-&lt;a href=&#34;http://docs.ansible.com/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable&#34;&gt;5 layers of precedence&lt;/a&gt;
-there is no merging of dictionaries or lists across those layers. In contrast in Chef there are attributes as well as data bags, two distinct types.
-For each type the scope can vary with data bags being across the entire chef server and attributes either having an environment, node or run scope.
-Additionally there are multiple types of attributes and during a run there is a list of
-&lt;a href=&#34;https://docs.getchef.com/chef_overview_attributes.html#attribute-precedence&#34;&gt;15 levels of precedence&lt;/a&gt;. Lastly as the attributes for a run are built
-they merge in certain ways for the final product. The Ansible variables have in my experience been quite sufficient to get the job done and are
-a welcome relief from the headache of Chef attributes, data bags and encrypted data bags.&lt;/p&gt;
-
-&lt;p&gt;Ansible is simpler in that it uses a yaml configuration for plays rather than Chef&amp;rsquo;s extensions to ruby with a fully capable ruby interpreter
-running. Though this perhaps makes it easier to approach Ansible for a non-programmer this is one instance where perhaps simplicity isn&amp;rsquo;t an advantage.
-Chef has far more capability in its cookbooks, a large advantage in some situations, however there is no need to use the ruby aspects of Chef if they are not needed,
-so many situations are kept simpler. In Ansible loops and conditionals are a bit cumbersome and more complicated combinations are either downright atrocious
-or best done utilizing multiple runs. In short the lack of code like control structures makes the implementation more complicated. On
-the plus side multiple runs in Ansible are much easier to accomplish and even multiple plays can sometimes be sufficient. There is also a big catch in my argument,
-I have yet to investigate creating modules in Ansible, if they are sufficiently quick to implement and powerful then perhaps yaml plus modules will just be
-a way of enforcing clear code structure.&lt;/p&gt;
-
-&lt;p&gt;My conclusion after converting &lt;a href=&#34;https://github.com/stackforge/monasca-vagrant&#34;&gt;monasca-vagrant&lt;/a&gt; is that the simplicity of Ansible reflects the type of
-trade offs that favor practical usage rather than theoretically superior design. In general Ansible is easier to start a configuration management project
-with and quicker to finish, with the result being easier for others to understand. This will make it more accessible for others on my team with
-limited time to dedicate to configuration management tasks as well as allow my work to progress more quickly. Further we should be able to consolidate
-our orchestration scripts around Ansible, simplifying the knowledge needed to run our toolset.
-I have yet to use Ansible for more complicated fully HA deploys, orchestration, nor have I created a Ansible module to extend the capabilities. If in my exploration
-of these more advanced topics I am able to retain the simplicity for common installations and continue to find a practical usefulness in the design
-decisions, then Ansible will truly be a joy to use and the most useful tool in the field.&lt;/p&gt;
-</description>
+      <description>In the last couple of weeks I have been converting Monasca from Chef to Ansible. This has begun with the monasca-vagrant development environment. Having worked with Chef for the last 3 years as I learn Ansible I inevitably evaluate it in comparision to Chef.
+The core quality of Ansible compared to Chef is Simplicity. Ansible attempts to solve many of the same problems as Chef but with an approach that seems born of real world experience and eliminates many theoretically superior design paradigms for practical alternatives.</description>
     </item>
     
   </channel>

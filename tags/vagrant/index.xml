@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Vagrant on Background Process </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://backgroundprocess.com/tags/vagrant/index.xml</link>
+    <title>vagrant on Background Process</title>
+    <link>http://backgroundprocess.com/tags/vagrant/</link>
+    <description>Recent content in vagrant on Background Process</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Tim Kuhlman</author>
+    <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
+    <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
+    <lastBuildDate>Tue, 19 May 2015 21:56:28 -0600</lastBuildDate>
     
-    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
+	<atom:link href="http://backgroundprocess.com/tags/vagrant/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Vagrant Love</title>
       <link>http://backgroundprocess.com/infrastructure/vagrant/</link>
-      <pubDate>Tue, 19 May 2015 21:56:28 MDT</pubDate>
-      <author>Tim Kuhlman</author>
+      <pubDate>Tue, 19 May 2015 21:56:28 -0600</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
       <guid>http://backgroundprocess.com/infrastructure/vagrant/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://www.vagrantup.com/&#34;&gt;Vagrant&lt;/a&gt; is awesome!&lt;/strong&gt;&lt;/p&gt;
 
@@ -26,12 +30,7 @@ cleanly without adding baggage to the process.&lt;/p&gt;
 
 &lt;p&gt;Another aspect that is important is that Vagrant chooses sane defaults but still allows configurability. The sane defaults combined with the clean design mean
 that more often than not Vagrant makes building vm based environments far easier than any other way. This is probably what I love most about Vagrant, I can turn
-around a clustered dev environment in under 5 minutes and even share it with my team with no extra work. This is orders of magnitude faster than other solutions.
-
-Building Vagrant based environments that fast takes good docs and familiarity with Vagrant. Vagrant has &lt;a href=&#34;https://docs.vagrantup.com/v2/&#34;&gt;great simple and clear docs&lt;/a&gt;
-and the familiarity largely comes because Vagrant is versatile. The configurability of Vagrant allows it to have quite a bit of depth for those less than standard use cases.
-This in turn means you come to know the tool and appreciate its simplicity and ease, which in turn makes it easier to use. All of this ultimately culminates in you
-writing a blog post about Vagrant love.&lt;/p&gt;</description>
+around a clustered dev environment in under 5 minutes and even share it with my team with no extra work. This is orders of magnitude faster than other solutions.&lt;/p&gt;</description>
     </item>
     
   </channel>

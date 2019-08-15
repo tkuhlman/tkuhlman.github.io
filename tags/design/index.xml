@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on Background Process</title>
+    <link>http://backgroundprocess.com/tags/design/</link>
+    <description>Recent content in Design on Background Process</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
+    <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
+    <lastBuildDate>Thu, 28 Mar 2019 21:44:01 +0000</lastBuildDate>
+    
+	<atom:link href="http://backgroundprocess.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Culture of Architectural Design</title>
+      <link>http://backgroundprocess.com/usatodaynetwork/design_culture/</link>
+      <pubDate>Thu, 28 Mar 2019 21:44:01 +0000</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
+      <guid>http://backgroundprocess.com/usatodaynetwork/design_culture/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Originally written with help from my team and posted at &lt;a href=&#34;https://medium.com/usa-today-network/a-culture-of-architectural-design-77ad815dfc90&#34;&gt;https://medium.com/usa-today-network/a-culture-of-architectural-design-77ad815dfc90&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Design Docs Best Practices</title>
+      <link>http://backgroundprocess.com/design/design_doc/</link>
+      <pubDate>Thu, 03 May 2018 10:42:45 -0600</pubDate>
+      <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
+      <guid>http://backgroundprocess.com/design/design_doc/</guid>
+      <description>&lt;p&gt;Each project deserves careful thought on the design and architecture of the solution. This is something that should be done at the start of projects and for each major revision. One tool for design and architecting is to write a design doc for each major revision.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
