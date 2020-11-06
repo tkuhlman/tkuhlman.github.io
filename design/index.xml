@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Designs on Background Process</title>
-    <link>http://backgroundprocess.com/design/</link>
+    <link>https://backgroundprocess.com/design/</link>
     <description>Recent content in Designs on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Thu, 03 May 2018 10:42:45 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/design/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 03 May 2018 10:42:45 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Design Docs Best Practices</title>
-      <link>http://backgroundprocess.com/design/design_doc/</link>
+      <link>https://backgroundprocess.com/design/design_doc/</link>
       <pubDate>Thu, 03 May 2018 10:42:45 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/design/design_doc/</guid>
+      <guid>https://backgroundprocess.com/design/design_doc/</guid>
       <description>&lt;p&gt;Each project deserves careful thought on the design and architecture of the solution. This is something that should be done at the start of projects and for each major revision. One tool for design and architecting is to write a design doc for each major revision.&lt;/p&gt;</description>
     </item>
     

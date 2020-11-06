@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Codes on Background Process</title>
-    <link>http://backgroundprocess.com/code/</link>
+    <link>https://backgroundprocess.com/code/</link>
     <description>Recent content in Codes on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Mon, 17 Jul 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/code/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 17 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://backgroundprocess.com/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Done Criteria</title>
-      <link>http://backgroundprocess.com/code/done/</link>
+      <link>https://backgroundprocess.com/code/done/</link>
       <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/done/</guid>
+      <guid>https://backgroundprocess.com/code/done/</guid>
       <description>&lt;p&gt;A checklist list of done criteria is helpful to avoid skipping any steps in code creation, this is the list I use for my projects.
 Where possible automated tools should be used to help verify good practices are followed.
 These tools are typically language specific so I skipped adding any here.&lt;/p&gt;</description>
@@ -26,10 +22,10 @@ These tools are typically language specific so I skipped adding any here.&lt;/p&
     
     <item>
       <title>A Golang implementation of PasswordSafe V3, ready for Beta</title>
-      <link>http://backgroundprocess.com/code/gopwsafe-beta/</link>
+      <link>https://backgroundprocess.com/code/gopwsafe-beta/</link>
       <pubDate>Fri, 27 May 2016 21:43:39 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/gopwsafe-beta/</guid>
+      <guid>https://backgroundprocess.com/code/gopwsafe-beta/</guid>
       <description>&lt;p&gt;The password database I have been implementing in go is ready for Beta! The DB is implemented using the &lt;a href=&#34;http://pwsafe.org/&#34;&gt;password safe&lt;/a&gt; version 3
 database spec. Enough of the features for this are now working that
 &lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/releases/tag/0.3.0&#34;&gt;0.3.0 release&lt;/a&gt; is ready for others to test.&lt;/p&gt;</description>
@@ -37,10 +33,10 @@ database spec. Enough of the features for this are now working that
     
     <item>
       <title>Mojo Integration Tests with LXD</title>
-      <link>http://backgroundprocess.com/code/mojo-integration-tests/</link>
+      <link>https://backgroundprocess.com/code/mojo-integration-tests/</link>
       <pubDate>Fri, 12 Feb 2016 13:36:07 -0700</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/mojo-integration-tests/</guid>
+      <guid>https://backgroundprocess.com/code/mojo-integration-tests/</guid>
       <description>&lt;p&gt;I have recently finished building an LXD image for doing integration tests of &lt;a href=&#34;https://mojo.canonical.com&#34;&gt;Mojo&lt;/a&gt;.
 I did this because I wanted to be able to reliably test the changes to Mojo that I was making. A repeatable,
 standard environment that can run set of integration tests fits the bill.&lt;/p&gt;</description>
@@ -48,20 +44,20 @@ standard environment that can run set of integration tests fits the bill.&lt;/p&
     
     <item>
       <title>Weechat Command Queues</title>
-      <link>http://backgroundprocess.com/code/weechat-queue/</link>
+      <link>https://backgroundprocess.com/code/weechat-queue/</link>
       <pubDate>Mon, 01 Feb 2016 21:39:58 -0700</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/weechat-queue/</guid>
+      <guid>https://backgroundprocess.com/code/weechat-queue/</guid>
       <description>&lt;p&gt;I use &lt;a href=&#34;http://weechat.org&#34;&gt;weechat&lt;/a&gt; for much of the day and have issue regular repetitive commands periodically.
 If you are in the same situation you may find the &lt;a href=&#34;https://weechat.org/scripts/source/queue.py.html/&#34;&gt;queue plugin&lt;/a&gt; I recently modified to be useful.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Development Best Practices for Systems Administrators</title>
-      <link>http://backgroundprocess.com/code/sysadmins/</link>
+      <link>https://backgroundprocess.com/code/sysadmins/</link>
       <pubDate>Sat, 16 Jan 2016 20:44:55 -0700</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/sysadmins/</guid>
+      <guid>https://backgroundprocess.com/code/sysadmins/</guid>
       <description>&lt;p&gt;The days where systems administrators do no development are gone. Just as developers
 leverage cloud infrastructure and tooling to deploy services, sysadmins develop code to automate
 their infrastructure and to fill the feature gaps that they are uniquely positioned to see.&lt;/p&gt;</description>
@@ -69,24 +65,23 @@ their infrastructure and to fill the feature gaps that they are uniquely positio
     
     <item>
       <title>Launchpad Merge Proposal Helper Script</title>
-      <link>http://backgroundprocess.com/code/mp/</link>
+      <link>https://backgroundprocess.com/code/mp/</link>
       <pubDate>Fri, 01 Jan 2016 12:20:22 -0700</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/mp/</guid>
+      <guid>https://backgroundprocess.com/code/mp/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve written a script to aid in merge proposals done with &lt;a href=&#34;https://launchpad.net/&#34;&gt;Launchpad&lt;/a&gt;.
 Simply run the command with the url of the merge proposal as the argument and the script will&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Ansible Modules</title>
-      <link>http://backgroundprocess.com/code/ansible-modules/</link>
+      <link>https://backgroundprocess.com/code/ansible-modules/</link>
       <pubDate>Tue, 06 Jan 2015 21:43:31 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/ansible-modules/</guid>
+      <guid>https://backgroundprocess.com/code/ansible-modules/</guid>
       <description>&lt;p&gt;Ansible is relatively simple in relation to other configuration management frameworks. This makes it easier to approach and accomplish real work with, especially
 for those who don&amp;rsquo;t work in it full time, however there are times when more functionality is needed. Ansible&amp;rsquo;s answer for most of these situations is to
 write a module.&lt;/p&gt;
-
 &lt;p&gt;I have written a couple of &lt;a href=&#34;https://github.com/hpcloud-mon/ansible-module-monasca&#34;&gt;modules for Monasca&lt;/a&gt; and doing so was easy, particularly if you know Python.&lt;/p&gt;</description>
     </item>
     

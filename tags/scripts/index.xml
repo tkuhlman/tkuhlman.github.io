@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>scripts on Background Process</title>
-    <link>http://backgroundprocess.com/tags/scripts/</link>
+    <link>https://backgroundprocess.com/tags/scripts/</link>
     <description>Recent content in scripts on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Fri, 07 Nov 2014 19:27:21 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/tags/scripts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 07 Nov 2014 19:27:21 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/tags/scripts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ansible Utilities</title>
-      <link>http://backgroundprocess.com/infrastructure/quick-ansible/</link>
+      <link>https://backgroundprocess.com/infrastructure/quick-ansible/</link>
       <pubDate>Fri, 07 Nov 2014 19:27:21 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/quick-ansible/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/quick-ansible/</guid>
       <description>In the last few weeks I have been immersed in Ansible. I have been using Ansible with Vagrant, with Docker and in a test environment on bare metal. Those are all topics I may explore in more depth later but what really is conspicuous today is the way I can build simple utilities with Ansible.
 My collection of Ansible scripts which aren&amp;rsquo;t part of a larger set of playbooks is still quite small but I feel it is but the tip of the iceberg.</description>
     </item>

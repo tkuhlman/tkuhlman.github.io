@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>projects on Background Process</title>
-    <link>http://backgroundprocess.com/tags/projects/</link>
+    <link>https://backgroundprocess.com/tags/projects/</link>
     <description>Recent content in projects on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Fri, 27 May 2016 21:43:39 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/tags/projects/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 27 May 2016 21:43:39 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/tags/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Golang implementation of PasswordSafe V3, ready for Beta</title>
-      <link>http://backgroundprocess.com/code/gopwsafe-beta/</link>
+      <link>https://backgroundprocess.com/code/gopwsafe-beta/</link>
       <pubDate>Fri, 27 May 2016 21:43:39 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/gopwsafe-beta/</guid>
+      <guid>https://backgroundprocess.com/code/gopwsafe-beta/</guid>
       <description>&lt;p&gt;The password database I have been implementing in go is ready for Beta! The DB is implemented using the &lt;a href=&#34;http://pwsafe.org/&#34;&gt;password safe&lt;/a&gt; version 3
 database spec. Enough of the features for this are now working that
 &lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/releases/tag/0.3.0&#34;&gt;0.3.0 release&lt;/a&gt; is ready for others to test.&lt;/p&gt;</description>
@@ -26,20 +22,20 @@ database spec. Enough of the features for this are now working that
     
     <item>
       <title>Weechat Command Queues</title>
-      <link>http://backgroundprocess.com/code/weechat-queue/</link>
+      <link>https://backgroundprocess.com/code/weechat-queue/</link>
       <pubDate>Mon, 01 Feb 2016 21:39:58 -0700</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/weechat-queue/</guid>
+      <guid>https://backgroundprocess.com/code/weechat-queue/</guid>
       <description>&lt;p&gt;I use &lt;a href=&#34;http://weechat.org&#34;&gt;weechat&lt;/a&gt; for much of the day and have issue regular repetitive commands periodically.
 If you are in the same situation you may find the &lt;a href=&#34;https://weechat.org/scripts/source/queue.py.html/&#34;&gt;queue plugin&lt;/a&gt; I recently modified to be useful.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Launchpad Merge Proposal Helper Script</title>
-      <link>http://backgroundprocess.com/code/mp/</link>
+      <link>https://backgroundprocess.com/code/mp/</link>
       <pubDate>Fri, 01 Jan 2016 12:20:22 -0700</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/mp/</guid>
+      <guid>https://backgroundprocess.com/code/mp/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve written a script to aid in merge proposals done with &lt;a href=&#34;https://launchpad.net/&#34;&gt;Launchpad&lt;/a&gt;.
 Simply run the command with the url of the merge proposal as the argument and the script will&lt;/p&gt;</description>
     </item>

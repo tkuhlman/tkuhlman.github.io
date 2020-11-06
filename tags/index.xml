@@ -1,240 +1,236 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Background Process</title>
-    <link>http://backgroundprocess.com/tags/</link>
+    <link>https://backgroundprocess.com/tags/</link>
     <description>Recent content in Tags on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Thu, 27 Jun 2019 21:44:01 +0000</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 27 Jun 2019 21:44:01 +0000</lastBuildDate><atom:link href="https://backgroundprocess.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Culture</title>
-      <link>http://backgroundprocess.com/tags/culture/</link>
+      <link>https://backgroundprocess.com/tags/culture/</link>
       <pubDate>Thu, 27 Jun 2019 21:44:01 +0000</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/culture/</guid>
+      <guid>https://backgroundprocess.com/tags/culture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Devops</title>
-      <link>http://backgroundprocess.com/tags/devops/</link>
+      <link>https://backgroundprocess.com/tags/devops/</link>
       <pubDate>Thu, 27 Jun 2019 21:44:01 +0000</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/devops/</guid>
+      <guid>https://backgroundprocess.com/tags/devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>USATodayNetwork</title>
-      <link>http://backgroundprocess.com/tags/usatodaynetwork/</link>
+      <link>https://backgroundprocess.com/tags/usatodaynetwork/</link>
       <pubDate>Thu, 27 Jun 2019 21:44:01 +0000</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/usatodaynetwork/</guid>
+      <guid>https://backgroundprocess.com/tags/usatodaynetwork/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Design</title>
-      <link>http://backgroundprocess.com/tags/design/</link>
+      <link>https://backgroundprocess.com/tags/design/</link>
       <pubDate>Thu, 28 Mar 2019 21:44:01 +0000</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/design/</guid>
+      <guid>https://backgroundprocess.com/tags/design/</guid>
       <description></description>
     </item>
     
     <item>
       <title>checklist</title>
-      <link>http://backgroundprocess.com/tags/checklist/</link>
+      <link>https://backgroundprocess.com/tags/checklist/</link>
       <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/checklist/</guid>
+      <guid>https://backgroundprocess.com/tags/checklist/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>http://backgroundprocess.com/tags/golang/</link>
+      <link>https://backgroundprocess.com/tags/golang/</link>
       <pubDate>Fri, 27 May 2016 21:43:39 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/golang/</guid>
+      <guid>https://backgroundprocess.com/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>passwordsafe</title>
-      <link>http://backgroundprocess.com/tags/passwordsafe/</link>
+      <link>https://backgroundprocess.com/tags/passwordsafe/</link>
       <pubDate>Fri, 27 May 2016 21:43:39 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/passwordsafe/</guid>
+      <guid>https://backgroundprocess.com/tags/passwordsafe/</guid>
       <description></description>
     </item>
     
     <item>
       <title>projects</title>
-      <link>http://backgroundprocess.com/tags/projects/</link>
+      <link>https://backgroundprocess.com/tags/projects/</link>
       <pubDate>Fri, 27 May 2016 21:43:39 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/projects/</guid>
+      <guid>https://backgroundprocess.com/tags/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>http://backgroundprocess.com/tags/docker/</link>
+      <link>https://backgroundprocess.com/tags/docker/</link>
       <pubDate>Mon, 02 May 2016 21:07:28 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/docker/</guid>
+      <guid>https://backgroundprocess.com/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>workstation</title>
-      <link>http://backgroundprocess.com/tags/workstation/</link>
+      <link>https://backgroundprocess.com/tags/workstation/</link>
       <pubDate>Mon, 02 May 2016 21:07:28 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/workstation/</guid>
+      <guid>https://backgroundprocess.com/tags/workstation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>lxd</title>
-      <link>http://backgroundprocess.com/tags/lxd/</link>
+      <link>https://backgroundprocess.com/tags/lxd/</link>
       <pubDate>Sat, 16 Apr 2016 21:06:14 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/lxd/</guid>
+      <guid>https://backgroundprocess.com/tags/lxd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>development</title>
-      <link>http://backgroundprocess.com/tags/development/</link>
+      <link>https://backgroundprocess.com/tags/development/</link>
       <pubDate>Fri, 12 Feb 2016 13:36:07 -0700</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/development/</guid>
+      <guid>https://backgroundprocess.com/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mojo</title>
-      <link>http://backgroundprocess.com/tags/mojo/</link>
+      <link>https://backgroundprocess.com/tags/mojo/</link>
       <pubDate>Fri, 12 Feb 2016 13:36:07 -0700</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/mojo/</guid>
+      <guid>https://backgroundprocess.com/tags/mojo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>launchpad</title>
-      <link>http://backgroundprocess.com/tags/launchpad/</link>
+      <link>https://backgroundprocess.com/tags/launchpad/</link>
       <pubDate>Fri, 01 Jan 2016 12:20:22 -0700</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/launchpad/</guid>
+      <guid>https://backgroundprocess.com/tags/launchpad/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>http://backgroundprocess.com/tags/hugo/</link>
+      <link>https://backgroundprocess.com/tags/hugo/</link>
       <pubDate>Wed, 12 Aug 2015 21:54:04 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/hugo/</guid>
+      <guid>https://backgroundprocess.com/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vagrant</title>
-      <link>http://backgroundprocess.com/tags/vagrant/</link>
+      <link>https://backgroundprocess.com/tags/vagrant/</link>
       <pubDate>Tue, 19 May 2015 21:56:28 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/vagrant/</guid>
+      <guid>https://backgroundprocess.com/tags/vagrant/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Management</title>
-      <link>http://backgroundprocess.com/tags/management/</link>
+      <link>https://backgroundprocess.com/tags/management/</link>
       <pubDate>Mon, 23 Feb 2015 21:41:01 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/management/</guid>
+      <guid>https://backgroundprocess.com/tags/management/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ansible</title>
-      <link>http://backgroundprocess.com/tags/ansible/</link>
+      <link>https://backgroundprocess.com/tags/ansible/</link>
       <pubDate>Tue, 06 Jan 2015 21:43:31 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/ansible/</guid>
+      <guid>https://backgroundprocess.com/tags/ansible/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>http://backgroundprocess.com/tags/python/</link>
+      <link>https://backgroundprocess.com/tags/python/</link>
       <pubDate>Tue, 06 Jan 2015 21:43:31 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/python/</guid>
+      <guid>https://backgroundprocess.com/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>configuration management</title>
-      <link>http://backgroundprocess.com/tags/configuration-management/</link>
+      <link>https://backgroundprocess.com/tags/configuration-management/</link>
       <pubDate>Thu, 18 Dec 2014 22:01:37 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/configuration-management/</guid>
+      <guid>https://backgroundprocess.com/tags/configuration-management/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>http://backgroundprocess.com/tags/linux/</link>
+      <link>https://backgroundprocess.com/tags/linux/</link>
       <pubDate>Fri, 28 Nov 2014 10:46:35 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/linux/</guid>
+      <guid>https://backgroundprocess.com/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>systemd</title>
-      <link>http://backgroundprocess.com/tags/systemd/</link>
+      <link>https://backgroundprocess.com/tags/systemd/</link>
       <pubDate>Fri, 28 Nov 2014 10:46:35 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/systemd/</guid>
+      <guid>https://backgroundprocess.com/tags/systemd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>scripts</title>
-      <link>http://backgroundprocess.com/tags/scripts/</link>
+      <link>https://backgroundprocess.com/tags/scripts/</link>
       <pubDate>Fri, 07 Nov 2014 19:27:21 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/scripts/</guid>
+      <guid>https://backgroundprocess.com/tags/scripts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>blogging</title>
-      <link>http://backgroundprocess.com/tags/blogging/</link>
+      <link>https://backgroundprocess.com/tags/blogging/</link>
       <pubDate>Tue, 28 Oct 2014 22:17:36 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/blogging/</guid>
+      <guid>https://backgroundprocess.com/tags/blogging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>learning</title>
-      <link>http://backgroundprocess.com/tags/learning/</link>
+      <link>https://backgroundprocess.com/tags/learning/</link>
       <pubDate>Tue, 28 Oct 2014 22:17:36 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/tags/learning/</guid>
+      <guid>https://backgroundprocess.com/tags/learning/</guid>
       <description></description>
     </item>
     

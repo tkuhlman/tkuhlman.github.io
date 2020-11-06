@@ -19,10 +19,10 @@
     
 	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://backgroundprocess.com/code/sysadmins/">
-	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
-	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link rel="canonical" href="https://backgroundprocess.com/code/sysadmins/">
+	<link href="https://backgroundprocess.com//favicon.png" rel="shortcut icon">
+	<link href="https://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="https://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
 	
 	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -51,7 +51,7 @@
 			<header id="header" class="inner"><div class="profilepic">
 	
 	
-	<script src="http://backgroundprocess.com//js/md5.js"></script>
+	<script src="https://backgroundprocess.com//js/md5.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('tim@backgroundprocess.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
@@ -62,9 +62,9 @@
 </div>
 
 <nav id="main-nav"><ul class="main">
-    <li><a href="http://backgroundprocess.com//">Blog</a></li>
-    <li><a href="http://backgroundprocess.com//about/">About</a></li>
-    <li><a href="http://backgroundprocess.com//tags/">Tags</a></li>
+    <li><a href="https://backgroundprocess.com//">Blog</a></li>
+    <li><a href="https://backgroundprocess.com//about/">About</a></li>
+    <li><a href="https://backgroundprocess.com//tags/">Tags</a></li>
 </ul>
 </nav>
 <nav id="sub-nav">
@@ -107,35 +107,24 @@
 	<div class="entry-content" itemprop="articleBody"><p>The days where systems administrators do no development are gone. Just as developers
 leverage cloud infrastructure and tooling to deploy services, sysadmins develop code to automate
 their infrastructure and to fill the feature gaps that they are uniquely positioned to see.</p>
-
 <p>Though best development practices are the same for both sysadmins and devs, some are more
 natural to one group or another. The heart of devops is operators and developers coming together and in many ways this
 post is really about what sysadmins can learn from developers. Here are some best practices I think come less naturally to operators.</p>
-
 <h2 id="best-practices">Best Practices</h2>
-
 <h3 id="simplify">Simplify</h3>
-
 <p><strong>Interface</strong></p>
-
 <p>Make your project simple to use. Sysadmins are badasses at the CLI and forget not everyone is. Also make sure to keep the interface consistent.</p>
-
 <p><strong>Standardize</strong></p>
-
 <p>Choose sane defaults, don&rsquo;t be afraid to limit choice and flexibility so the code steers people toward good and/or standard practices.
 Choice can be good at times but more often than not is a bit stifling. One difference between a usable project and a great one is often in appropriate
 defaults and simplicity of configuration.</p>
-
 <p><strong>Code Structure</strong></p>
-
 <p>Turns out the basics of code are easy, children can grasp the concepts of branches and loops. Most code is dealing with the complexity
 of having so many branches and loops. That is why the common code constructs (classes, inheritance, types/interfaces) exist.
 Layers of abstraction, separation of concern and encapsulation are amount the keys to good complexity management. The difference between
 good design and bad is how well the complexity management is done.</p>
-
 <p>There are many code techniques to deal with complexity and this is a great example of where sysadmins can learn a lot from devs. I&rsquo;ll not delve
 into actual techniques but rather here are some principles to keep in mind while coding:</p>
-
 <ul>
 <li><a href="http://sysadvent.blogspot.com/2015/12/day-22-simplicity-in-complex-systems.html">Reducing code complexity</a> by thinking about where the code can shrink
 or hide the complexity. Shrink complexity by building code constructs that break the complexity up. Hide it by building complexity into
@@ -146,39 +135,28 @@ is one caution with YAGNI. To quote Martin Fowler &ldquo;Yagni only applies to c
 not apply to effort to make the software easier to modify.&rdquo; In short YAGNI is not an excuse for unorganized code. Organize your code and revisit the
 organization to keep it organized as it grows and more features are added.</li>
 </ul>
-
 <h3 id="document">Document</h3>
-
 <p>Document your code! Maybe this is one both devs and sysadmins could do better at.</p>
-
 <p>Document as you are writing the code. After having just written the code you know what it does and there is no better time to clearly express that.
 The code&rsquo;s lifecycle is just beginning, the project will be used and modified by yourself and others and good documentation helps immensely with
 these further steps.</p>
-
 <p>The closer to the code the documentation is the better. It is most likely to stay up date if the documentation is close to the code as well as being the
 easiest to find. Also being close to the code gives you an automatic context allowing the documentation to be more succinct.
 Most languages have built-in tools for documenting well and publishing the docs in a standard way, use these tools.</p>
-
 <p>In addition to helping with the further lifecycle of your project the act of documenting is a tool for discovering unnecessarily complexity.
 When documenting you have to force yourself to think like someone unfamiliar with the project which is an important mindset to adopt periodically.
 This is especially true when writing the overview section of your docs which links project components together into a whole that users will interact with.
 I often find documenting reveals big wins where just a bit more code results in a large improvements.</p>
-
 <h3 id="test">Test</h3>
-
 <p><strong>Automated Testing</strong></p>
-
 <p>I find sysadmins often test manually really well but don&rsquo;t automate the testing as well. The manual testing is great that first
 time but the automated testing provides repeatability. The repeatability is key for proving functionality and for any future changes, which
 for most projects are bound to happen.</p>
-
 <p>Automated testing does have its limits, in particular unit testing is limited in how useful it can be for code that interacts with other
 systems. This is the type of code sysadmins write most often. It is difficult and fragile to mock out code that does network I/O, a system call, db I/O and
 more network I/O. This doesn&rsquo;t mean skip automated tests but rather ensure the use cases are covered with
 automated integration tests. A great use of containers is to create pre-built test environments for automate integration testing.</p>
-
 <p><strong>Real World Usage</strong></p>
-
 <p>Use and run your own code in a real environment. It is through running code in a real environment that you discover the true
 problems that need fixing. Indeed the motivation for much of the code sysadmins write comes from running real environments. Even though this seems
 obvious to sysadmins it is a key best practices that is so important it needs to be mentioned.</p></div>
@@ -232,15 +210,15 @@ obvious to sysadmins it is a key best practices that is so important it needs to
 				    </div>
 				</div>
 			</div>
-			<footer id="footer" class="inner">Copyright &copy; 2019
+			<footer id="footer" class="inner">Copyright &copy; 2020
 
     Tim Kuhlman
 
 
 | Design based on <a href="https://github.com/cxfksword/greyshade">greyshade</a>
 | <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons License</a>
-<script src="http://backgroundprocess.com//js/slash.js"></script>
-<script src="http://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
+<script src="https://backgroundprocess.com//js/slash.js"></script>
+<script src="https://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
 (function($){
 	$('.fancybox').fancybox();

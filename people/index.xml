@@ -1,30 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Peoples on Background Process</title>
-    <link>http://backgroundprocess.com/people/</link>
+    <link>https://backgroundprocess.com/people/</link>
     <description>Recent content in Peoples on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Mon, 23 Feb 2015 21:41:01 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/people/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 23 Feb 2015 21:41:01 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/people/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>An Engineer&#39;s Perspective on the Value of Management</title>
-      <link>http://backgroundprocess.com/people/managements_role/</link>
+      <link>https://backgroundprocess.com/people/managements_role/</link>
       <pubDate>Mon, 23 Feb 2015 21:41:01 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/people/managements_role/</guid>
-      <description>&lt;h2 id=&#34;the-managers-goal-enable-team-productivity&#34;&gt;The Managers Goal - Enable Team Productivity&lt;/h2&gt;
-
+      <guid>https://backgroundprocess.com/people/managements_role/</guid>
+      <description>&lt;h2 id=&#34;the-managers-goal---enable-team-productivity&#34;&gt;The Managers Goal - Enable Team Productivity&lt;/h2&gt;
 &lt;p&gt;I am not management expert and it is beyond my expertise to layout the value of management for an organization. On the other hand I am engineer on
 a software engineering team and I do have some clear ideas on what I want from management and what I believe most of my peers also would like. It all boils
 down to this, an engineering manager should enable his team to get work done.&lt;/p&gt;
-
 &lt;p&gt;For most engineers a large part of their motivation is the desire to be productive. The more a manager enables this the better everything works. Not only
 does more work get done, engineers are more satisfied and they have a better perception of and relationship with their manager.&lt;/p&gt;</description>
     </item>

@@ -19,10 +19,10 @@
     
 	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://backgroundprocess.com/systems/desktop_docker2/">
-	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
-	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link rel="canonical" href="https://backgroundprocess.com/systems/desktop_docker2/">
+	<link href="https://backgroundprocess.com//favicon.png" rel="shortcut icon">
+	<link href="https://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="https://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
 	
 	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -51,7 +51,7 @@
 			<header id="header" class="inner"><div class="profilepic">
 	
 	
-	<script src="http://backgroundprocess.com//js/md5.js"></script>
+	<script src="https://backgroundprocess.com//js/md5.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('tim@backgroundprocess.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
@@ -62,9 +62,9 @@
 </div>
 
 <nav id="main-nav"><ul class="main">
-    <li><a href="http://backgroundprocess.com//">Blog</a></li>
-    <li><a href="http://backgroundprocess.com//about/">About</a></li>
-    <li><a href="http://backgroundprocess.com//tags/">Tags</a></li>
+    <li><a href="https://backgroundprocess.com//">Blog</a></li>
+    <li><a href="https://backgroundprocess.com//about/">About</a></li>
+    <li><a href="https://backgroundprocess.com//tags/">Tags</a></li>
 </ul>
 </nav>
 <nav id="sub-nav">
@@ -108,50 +108,42 @@
 <a href="http://backgroundprocess.com/systems/desktop_docker/">applications in containers</a>
 so that they stay nicely contained. I have refined and changed a few things about how I do this
 recently and so felt it was time for an update.</p>
-
 <p>I do maintain a
 <a href="https://github.com/tkuhlman/containers">git repo</a> that will always have the latest I am using but
 here is the summary:</p>
-
 <ul>
 <li>At some point pulseaudio broke for me, possibly after an OS or Docker upgrade. I didn&rsquo;t track
 down the cause but rather just decided to setup tcp based pulse audio. This is more initial
 setup but should be more stable and is simpler in the startup scripts. Audio works great this
 way and the container can play audio but not run configuration commands like pacmd.
 To setup:
-
 <ul>
-<li>Turn on tcp for pulseaudio, in <code>/etc/pulse/default.pa</code> add a line like <code>load-module
-module-native-protocol-tcp</code> and restart pulseaudio, <code>pulseaudio -k</code>.</li>
+<li>Turn on tcp for pulseaudio, in <code>/etc/pulse/default.pa</code> add a line like <code>load-module module-native-protocol-tcp</code> and restart pulseaudio, <code>pulseaudio -k</code>.</li>
 <li>If you are running ufw like me you need a rule like,
 <code>ufw allow in on docker0 to my-docker-ip proto tcp port 4713</code> with the appropriate Docker ip.
 This allows Docker containers to reach pulse on port 4713 but should keep everything else out.</li>
 <li>Then in the container startup scripts I have some lines like these used for Docker options:</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <blockquote>
 <pre><code>-v ~/.config/pulse/cookie:/run/pulse/cookie
 -e PULSE_SERVER=tcp:$(ifconfig docker0| awk '/inet addr/{print substr($2,6)}'):4713
 -e PULSE_COOKIE=/run/pulse/cookie
 </code></pre>
 </blockquote>
-
 <ul>
 <li>Turns out you don&rsquo;t need <code>xhost local:</code> in your scripts if I you are sharing <code>/tmp/.X11-unix</code>
 and have $DISPLAY set. I&rsquo;m not sure how I missed this 8 months ago but it is nice to avoid that.</li>
 <li>There is a lot to love about Docker but like many CLI interfaces it could use some work.
 I mostly start containers with scripts but I also have a couple of aliases for some common other
 tasks:
-
 <ul>
-<li>To show current containers both running and not, <code>alias dps='docker ps -a --format &quot;table
-{{.Names}}\t{{.Status}}\t{{.Image}}&quot;'</code></li>
-<li>To run a command in the container with a terminal, which I often use like <code>dexec container
-bash</code>. The alias is <code>alias dexec='docker exec -t -i'</code></li>
-</ul></li>
+<li>To show current containers both running and not, <code>alias dps='docker ps -a --format &quot;table {{.Names}}\t{{.Status}}\t{{.Image}}&quot;'</code></li>
+<li>To run a command in the container with a terminal, which I often use like <code>dexec container bash</code>. The alias is <code>alias dexec='docker exec -t -i'</code></li>
 </ul>
-
+</li>
+</ul>
 <p>Recently I posted about how I use
 <a href="http://backgroundprocess.com/infrastructure/containers-over-vms/">containers rather than VMs</a> but
 those use cases are just the beginning. As I add applications
@@ -207,15 +199,15 @@ my workstation and instead use a container to keep unknown software confined.</p
 				    </div>
 				</div>
 			</div>
-			<footer id="footer" class="inner">Copyright &copy; 2019
+			<footer id="footer" class="inner">Copyright &copy; 2020
 
     Tim Kuhlman
 
 
 | Design based on <a href="https://github.com/cxfksword/greyshade">greyshade</a>
 | <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons License</a>
-<script src="http://backgroundprocess.com//js/slash.js"></script>
-<script src="http://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
+<script src="https://backgroundprocess.com//js/slash.js"></script>
+<script src="https://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
 (function($){
 	$('.fancybox').fancybox();

@@ -19,10 +19,10 @@
     
 	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/">
-	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
-	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link rel="canonical" href="https://backgroundprocess.com/infrastructure/ansible-config-management-simplified/">
+	<link href="https://backgroundprocess.com//favicon.png" rel="shortcut icon">
+	<link href="https://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="https://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
 	
 	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -51,7 +51,7 @@
 			<header id="header" class="inner"><div class="profilepic">
 	
 	
-	<script src="http://backgroundprocess.com//js/md5.js"></script>
+	<script src="https://backgroundprocess.com//js/md5.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('tim@backgroundprocess.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
@@ -62,9 +62,9 @@
 </div>
 
 <nav id="main-nav"><ul class="main">
-    <li><a href="http://backgroundprocess.com//">Blog</a></li>
-    <li><a href="http://backgroundprocess.com//about/">About</a></li>
-    <li><a href="http://backgroundprocess.com//tags/">Tags</a></li>
+    <li><a href="https://backgroundprocess.com//">Blog</a></li>
+    <li><a href="https://backgroundprocess.com//about/">About</a></li>
+    <li><a href="https://backgroundprocess.com//tags/">Tags</a></li>
 </ul>
 </nav>
 <nav id="sub-nav">
@@ -108,13 +108,10 @@
 to <a href="http://www.ansible.com/">Ansible</a>.
 This has begun with the <a href="https://github.com/stackforge/monasca-vagrant">monasca-vagrant</a> development environment. Having worked with
 Chef for the last 3 years as I learn Ansible I inevitably evaluate it in comparision to Chef.</p>
-
 <p>The core quality of Ansible compared to Chef is Simplicity. Ansible attempts to solve many of the same problems as Chef but with an
 approach that seems born of real world experience and eliminates many theoretically superior design paradigms for practical alternatives.</p>
-
 <p>The most readily apparent simplification between Chef and Ansible is the lack of both an agent and a server in the Ansible model.
 Many simplifications flow from this fundamental design decision, including:</p>
-
 <ul>
 <li>Extremely simple startup. There is no need to install a server or agents or even learn the depths of the tools paradigm before starting. In
 practice this is fairly important as few start with overhauling the entire configuration management of a service as I did but rather
@@ -137,7 +134,6 @@ useful model that should not be understated.</li>
 I have worked with it was already happening. Given that the end result of avoiding the need for another authentication/authorization
 system is an advantage for this simplified model.</li>
 </ul>
-
 <p>Ansible&rsquo;s lack of an agent or server is perhaps a factor in why regular unattended runs of Ansible are not built into the system.
 If you want these to happen you must add additional
 scripting around Ansible, via a cron job or a more sophisticated tool such as <a href="http://www.ansible.com/tower">Ansible Tower</a>. This
@@ -147,7 +143,6 @@ worked with the professionalism of administrators has been sufficient that I can
 actually useful. Perhaps I am fortunate regarding the people I have worked with but regardless requiring unattended Ansible runs to use
 another layer of abstraction is not much of a negative. Layers of abstraction are fundamental to computing and when used well they simplify
 the solution rather than complicate it, I believe this is such a case.</p>
-
 <p>As one who has used Chef for years to deploy various software one of the biggest areas where Ansible&rsquo;s simplicity shines is the variables.
 In Ansible there are variables with a just
 <a href="http://docs.ansible.com/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable">5 layers of precedence</a>
@@ -157,7 +152,6 @@ Additionally there are multiple types of attributes and during a run there is a 
 <a href="https://docs.getchef.com/chef_overview_attributes.html#attribute-precedence">15 levels of precedence</a>. Lastly as the attributes for a run are built
 they merge in certain ways for the final product. The Ansible variables have in my experience been quite sufficient to get the job done and are
 a welcome relief from the headache of Chef attributes, data bags and encrypted data bags.</p>
-
 <p>Ansible is simpler in that it uses a yaml configuration for plays rather than Chef&rsquo;s extensions to ruby with a fully capable ruby interpreter
 running. Though this perhaps makes it easier to approach Ansible for a non-programmer this is one instance where perhaps simplicity isn&rsquo;t an advantage.
 Chef has far more capability in its cookbooks, a large advantage in some situations, however there is no need to use the ruby aspects of Chef if they are not needed,
@@ -166,7 +160,6 @@ or best done utilizing multiple runs. In short the lack of code like control str
 the plus side multiple runs in Ansible are much easier to accomplish and even multiple plays can sometimes be sufficient. There is also a big catch in my argument,
 I have yet to investigate creating modules in Ansible, if they are sufficiently quick to implement and powerful then perhaps yaml plus modules will just be
 a way of enforcing clear code structure.</p>
-
 <p>My conclusion after converting <a href="https://github.com/stackforge/monasca-vagrant">monasca-vagrant</a> is that the simplicity of Ansible reflects the type of
 trade offs that favor practical usage rather than theoretically superior design. In general Ansible is easier to start a configuration management project
 with and quicker to finish, with the result being easier for others to understand. This will make it more accessible for others on my team with
@@ -226,15 +219,15 @@ decisions, then Ansible will truly be a joy to use and the most useful tool in t
 				    </div>
 				</div>
 			</div>
-			<footer id="footer" class="inner">Copyright &copy; 2019
+			<footer id="footer" class="inner">Copyright &copy; 2020
 
     Tim Kuhlman
 
 
 | Design based on <a href="https://github.com/cxfksword/greyshade">greyshade</a>
 | <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons License</a>
-<script src="http://backgroundprocess.com//js/slash.js"></script>
-<script src="http://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
+<script src="https://backgroundprocess.com//js/slash.js"></script>
+<script src="https://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
 (function($){
 	$('.fancybox').fancybox();

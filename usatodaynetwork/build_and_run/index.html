@@ -19,10 +19,10 @@
     
 	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://backgroundprocess.com/usatodaynetwork/build_and_run/">
-	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
-	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link rel="canonical" href="https://backgroundprocess.com/usatodaynetwork/build_and_run/">
+	<link href="https://backgroundprocess.com//favicon.png" rel="shortcut icon">
+	<link href="https://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="https://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
 	
 	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -51,7 +51,7 @@
 			<header id="header" class="inner"><div class="profilepic">
 	
 	
-	<script src="http://backgroundprocess.com//js/md5.js"></script>
+	<script src="https://backgroundprocess.com//js/md5.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('tim@backgroundprocess.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
@@ -62,9 +62,9 @@
 </div>
 
 <nav id="main-nav"><ul class="main">
-    <li><a href="http://backgroundprocess.com//">Blog</a></li>
-    <li><a href="http://backgroundprocess.com//about/">About</a></li>
-    <li><a href="http://backgroundprocess.com//tags/">Tags</a></li>
+    <li><a href="https://backgroundprocess.com//">Blog</a></li>
+    <li><a href="https://backgroundprocess.com//about/">About</a></li>
+    <li><a href="https://backgroundprocess.com//tags/">Tags</a></li>
 </ul>
 </nav>
 <nav id="sub-nav">
@@ -105,47 +105,30 @@
 		<div class="date"><time datetime='Thu, Jun 27, 2019' data-updated="true" itemprop="datePublished">Thu, Jun 27, 2019</time>
 </div>
 	<div class="entry-content" itemprop="articleBody"><p><em>Originally written with help from my team and posted at <a href="https://medium.com/usa-today-network/devops-you-build-it-you-run-it-8f972343eb8e">https://medium.com/usa-today-network/devops-you-build-it-you-run-it-8f972343eb8e</a></em></p>
-
 <p>We know DevOps is a paradigm shift for software development. But the wide range of DevOps definitions and processes make it difficult, especially across organizations, to define what DevOps is in practice. Is it a development team working well with an operations team? Or is it a third team connecting the others? The API Services team at USA TODAY NETWORK doesn’t fit either of those scenarios. Our approach can be summed up by the slogan, “You Build It, You Run It.”</p>
-
 <h2 id="one-team">One Team</h2>
-
 <p>DevOps at its core is about aligning the responsibility for running services with the authority to improve them. The quality and velocity of improvements for a service are greatly improved when responsibility and authority are in alignment. A dev team and an operations team which don’t collaborate are functionally broken, because the day-to-day responsibility rests on the operations team while the authority to make changes belongs to the dev team. One way to solve this is to improve communication between teams while building shared responsibility for running the service, along with shared authority to modify it. The approach we take is similar. We don’t have two teams. A single team both builds the service and runs it. It works well for us!</p>
-
 <h2 id="benefits">Benefits</h2>
-
 <h3 id="organizational-benefits">Organizational Benefits</h3>
-
 <p>Maintaining a single team with aligned responsibility and authority means we don’t need cross-team communication. Instead, we can rely on much easier intra-team communication. Individual skillsets still vary, but the goals and responsibilities are shared by the team as a whole. Everyone becomes more aligned. Also, cross-team communication is no longer tied up with service level concerns and becomes freed up for discussions regarding composition of services and other higher-level concerns.</p>
-
 <p>Here are some other reasons we’ve found that “You Build It, You Run It” leads to better services:</p>
-
 <ul>
 <li>Improved issue visibility: A team responsible for running a service is careful to make it run well. (This is true for any DevOps organization, especially when you will be paged for incidents.)</li>
 <li>Reduced issue resolution time: You’re dealing with a single team, so delays caused by cross-team communication disappear and everyone involved understands both the operation and development of the service.</li>
 <li>Immediate feedback loop: The feedback loop for problems is automatic; no need to communicate out the cause of a problem, just immediately fix it. A faster feedback loop equals better service.</li>
 </ul>
-
 <h3 id="engineer-benefits">Engineer Benefits</h3>
-
 <p>Teams can be formed with engineers with various specialties. But whenever practical, we strive for every engineer to learn the skillsets needed for both operations and development. Building a whole team of highly-skilled and trusted engineers is a challenge, but it’s not insurmountable. Engineers like to be both highly-skilled and trusted, so setting this expectation — along with plenty of learning resources — drives growth.</p>
-
 <p>Engineers embrace this approach because of the resulting skillset growth and job satisfaction opportunities. Here’s why:</p>
-
 <ul>
 <li>Execution is the best teacher. For example, devs learn to better incorporate instrumentation and security into an application when they also run the service.</li>
 <li>You can better build a more effective and relevant product when you see and truly understand the whole picture. It also allows you to make wise tradeoffs on features, development speed, security, etc. In short, you become a better engineer. Understanding the whole is also more satisfying than working on a portion with only limited context.</li>
 <li>Building a service paired with seeing it used — as well as using it yourself — is satisfying.</li>
 </ul>
-
 <h2 id="beyond-one-team">Beyond One Team</h2>
-
 <p>The success we’ve described isn’t possible without a set of robust, well-maintained services to build on. Today’s cloud-native infrastructure allows a single team to run an application that requires a CI system, database, Kubernetes, etc. An engineer can confidently use these services and rarely have to worry about service-specific details, so her time is freed up for other concerns. When details for a dependent service require investigation, the service maintainer can be brought in for assistance. For these reasons, building on top of robust services prevents the amount of work in the system from growing beyond what a single team can handle.</p>
-
 <p>Even with cloud-native services, nearly every company has plenty of work for multiple teams. Embracing an “as a service” team organization model can help teams divide and conquer along lines that enable each to build and run their own services. If CI for your company is run internally, the team responsible can offer CI as a service. Other teams then consume it as a tool they use when building their own services. This enables both the CI team and teams that use that service to follow the “You Build It, You Run It” model of DevOps.</p>
-
 <h2 id="conclusion">Conclusion</h2>
-
 <p>We’ve found that “You Build It, You Run It” doesn’t just bridge the fence between development and operations teams, but rather pulls that fence down altogether and embodies the spirit of DevOps. Immediate feedback on changes leads to quick fixes and better services. Working this way enables engineers to become better, grow in their skillset and improve their job satisfaction.</p></div>
 </article>
 					
@@ -197,15 +180,15 @@
 				    </div>
 				</div>
 			</div>
-			<footer id="footer" class="inner">Copyright &copy; 2019
+			<footer id="footer" class="inner">Copyright &copy; 2020
 
     Tim Kuhlman
 
 
 | Design based on <a href="https://github.com/cxfksword/greyshade">greyshade</a>
 | <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons License</a>
-<script src="http://backgroundprocess.com//js/slash.js"></script>
-<script src="http://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
+<script src="https://backgroundprocess.com//js/slash.js"></script>
+<script src="https://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
 (function($){
 	$('.fancybox').fancybox();

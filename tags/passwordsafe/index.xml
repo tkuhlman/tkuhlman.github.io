@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>passwordsafe on Background Process</title>
-    <link>http://backgroundprocess.com/tags/passwordsafe/</link>
+    <link>https://backgroundprocess.com/tags/passwordsafe/</link>
     <description>Recent content in passwordsafe on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Fri, 27 May 2016 21:43:39 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/tags/passwordsafe/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 27 May 2016 21:43:39 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/tags/passwordsafe/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Golang implementation of PasswordSafe V3, ready for Beta</title>
-      <link>http://backgroundprocess.com/code/gopwsafe-beta/</link>
+      <link>https://backgroundprocess.com/code/gopwsafe-beta/</link>
       <pubDate>Fri, 27 May 2016 21:43:39 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/gopwsafe-beta/</guid>
+      <guid>https://backgroundprocess.com/code/gopwsafe-beta/</guid>
       <description>&lt;p&gt;The password database I have been implementing in go is ready for Beta! The DB is implemented using the &lt;a href=&#34;http://pwsafe.org/&#34;&gt;password safe&lt;/a&gt; version 3
 database spec. Enough of the features for this are now working that
 &lt;a href=&#34;https://github.com/tkuhlman/gopwsafe/releases/tag/0.3.0&#34;&gt;0.3.0 release&lt;/a&gt; is ready for others to test.&lt;/p&gt;</description>

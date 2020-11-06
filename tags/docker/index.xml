@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docker on Background Process</title>
-    <link>http://backgroundprocess.com/tags/docker/</link>
+    <link>https://backgroundprocess.com/tags/docker/</link>
     <description>Recent content in docker on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Mon, 02 May 2016 21:07:28 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 02 May 2016 21:07:28 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker for Messy Pets - Updates</title>
-      <link>http://backgroundprocess.com/systems/desktop_docker2/</link>
+      <link>https://backgroundprocess.com/systems/desktop_docker2/</link>
       <pubDate>Mon, 02 May 2016 21:07:28 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/systems/desktop_docker2/</guid>
+      <guid>https://backgroundprocess.com/systems/desktop_docker2/</guid>
       <description>&lt;p&gt;About 8 months ago I posted about how I run some
 &lt;a href=&#34;http://backgroundprocess.com/systems/desktop_docker/&#34;&gt;applications in containers&lt;/a&gt;
 so that they stay nicely contained. I have refined and changed a few things about how I do this
@@ -27,10 +23,10 @@ recently and so felt it was time for an update.&lt;/p&gt;</description>
     
     <item>
       <title>Containers over VMs</title>
-      <link>http://backgroundprocess.com/infrastructure/containers-over-vms/</link>
+      <link>https://backgroundprocess.com/infrastructure/containers-over-vms/</link>
       <pubDate>Sat, 16 Apr 2016 21:06:14 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/containers-over-vms/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/containers-over-vms/</guid>
       <description>&lt;p&gt;I recently realized it has been over 6 months since I have used a VM on my workstation. Previously I
 like many developers used VMs for various development tasks. The change hasn&amp;rsquo;t be in my usage of
 cloud based VMs, I continue to do that as needed and appropriate. The change is that I use containers.&lt;/p&gt;</description>
@@ -38,10 +34,10 @@ cloud based VMs, I continue to do that as needed and appropriate. The change is 
     
     <item>
       <title>Initial impressions of lxd</title>
-      <link>http://backgroundprocess.com/infrastructure/lxd/</link>
+      <link>https://backgroundprocess.com/infrastructure/lxd/</link>
       <pubDate>Wed, 14 Oct 2015 11:04:37 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/lxd/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/lxd/</guid>
       <description>&lt;p&gt;In the last couple of weeks I have been taking a bit of time here and there to explore &lt;a href=&#34;http://www.ubuntu.com/cloud/tools/lxd&#34;&gt;LXD&lt;/a&gt;.
 LXD is a tool for managing system containers. As both LXD and Docker deal with containers in many ways there is quite a
 bit of overlap but LXD is aiming for full isolated system containers where Docker is more focused on application containers. You can even run
@@ -50,10 +46,10 @@ Docker within an LXD image. I find it helpful to think of LXD as a replacement f
     
     <item>
       <title>Docker for Messy Pets</title>
-      <link>http://backgroundprocess.com/systems/desktop_docker/</link>
+      <link>https://backgroundprocess.com/systems/desktop_docker/</link>
       <pubDate>Fri, 11 Sep 2015 21:12:37 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/systems/desktop_docker/</guid>
+      <guid>https://backgroundprocess.com/systems/desktop_docker/</guid>
       <description>&lt;p&gt;The primary advantages of containers are realized when they are treated as the cattle of computing not pets. There are many
 articles using that analogy to extol the advantages of containers as cattle or
 &lt;a href=&#34;http://thenewstack.io/pets-and-cattle-symbolize-servers-so-what-does-that-make-containers-chickens/&#34;&gt;even as chickens&lt;/a&gt;.
@@ -62,15 +58,14 @@ However I have been recently rebuilding my Ubuntu Desktop and found containers c
     
     <item>
       <title>Docker, what use it?</title>
-      <link>http://backgroundprocess.com/infrastructure/docker/</link>
+      <link>https://backgroundprocess.com/infrastructure/docker/</link>
       <pubDate>Wed, 11 Mar 2015 21:36:35 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/docker/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/docker/</guid>
       <description>&lt;p&gt;Anyone in the industry who hasn&amp;rsquo;t yet read multiple blog posts on &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; is living under a rock. There is a lot of hype about Docker
 and its potential. I also revel in the long term vision for containers and their potential impact on the industry. However until I have an awesome
 infrastructure where I can deploy images into production my practical mindset drives me to cut through the hype and ask what
 use is Docker for my work today?&lt;/p&gt;
-
 &lt;p&gt;As I have explored Docker here are the uses for it that I have encountered that bring practical value to my day to day work.&lt;/p&gt;</description>
     </item>
     

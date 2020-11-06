@@ -19,10 +19,10 @@
     
 	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://backgroundprocess.com/infrastructure/quick-ansible/">
-	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
-	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link rel="canonical" href="https://backgroundprocess.com/infrastructure/quick-ansible/">
+	<link href="https://backgroundprocess.com//favicon.png" rel="shortcut icon">
+	<link href="https://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="https://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
 	
 	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -51,7 +51,7 @@
 			<header id="header" class="inner"><div class="profilepic">
 	
 	
-	<script src="http://backgroundprocess.com//js/md5.js"></script>
+	<script src="https://backgroundprocess.com//js/md5.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('tim@backgroundprocess.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
@@ -62,9 +62,9 @@
 </div>
 
 <nav id="main-nav"><ul class="main">
-    <li><a href="http://backgroundprocess.com//">Blog</a></li>
-    <li><a href="http://backgroundprocess.com//about/">About</a></li>
-    <li><a href="http://backgroundprocess.com//tags/">Tags</a></li>
+    <li><a href="https://backgroundprocess.com//">Blog</a></li>
+    <li><a href="https://backgroundprocess.com//about/">About</a></li>
+    <li><a href="https://backgroundprocess.com//tags/">Tags</a></li>
 </ul>
 </nav>
 <nav id="sub-nav">
@@ -107,17 +107,14 @@
 	<div class="entry-content" itemprop="articleBody"><p>In the last few weeks I have been immersed in <a href="http://www.ansible.com">Ansible</a>. I have been using Ansible with <a href="https://github.com/stackforge/monasca-vagrant">Vagrant</a>,
 with <a href="https://github.com/hpcloud-mon/monasca-docker">Docker</a> and in a test environment on bare metal. Those are all topics I may explore in more depth later but
 what really is conspicuous today is the way I can build simple utilities with Ansible.</p>
-
 <p>My collection of Ansible <a href="https://github.com/tkuhlman/ansible-utils">scripts</a> which aren&rsquo;t part of a larger set of playbooks is still quite small but I feel it
 is but the tip of the iceberg. In the last few years I have built a fair collection of <a href="http://www.fabfile.org/en/latest/">Fabric</a> scripts for
 various common tasks. These have been highly useful and I am will continue to use Fabric especially for tasks needing the more complicated logic and control structures
 possible using the full power of Python. Ansible also has a future in my tool set, in particular for tasks where modules exist.</p>
-
 <p>With Ansible there are a couple of advantages which make it useful for the small orchestration tasks. It uses the same inventory already setup for configuration
 management, making it quite easy to target to the right boxes. The organization structures within Ansible make it is easy to mix and match tasks. Additionally it is a tool
 already being used so there is no new learning curve for my colleagues. The biggest advantage is the functionality encapsulated in pre-built modules,
 in particular the idempotency these bring.</p>
-
 <p>Take as an example my first little <a href="https://github.com/tkuhlman/ansible-utils/blob/master/setup_user.yml">utility</a>, I was already immersed in Ansible so no
 mental context switch was needed and I was able to write it quickly. It is simple and quickly written but immediately saved me some time. I could have fairly
 easily written this is Fabric also but it would have taken me much longer if I wanted to make an equivalent Fabric script idempotent. In my first run idempotency
@@ -174,15 +171,15 @@ I have forgotten where I ran it.</p>
 				    </div>
 				</div>
 			</div>
-			<footer id="footer" class="inner">Copyright &copy; 2019
+			<footer id="footer" class="inner">Copyright &copy; 2020
 
     Tim Kuhlman
 
 
 | Design based on <a href="https://github.com/cxfksword/greyshade">greyshade</a>
 | <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons License</a>
-<script src="http://backgroundprocess.com//js/slash.js"></script>
-<script src="http://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
+<script src="https://backgroundprocess.com//js/slash.js"></script>
+<script src="https://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
 (function($){
 	$('.fancybox').fancybox();

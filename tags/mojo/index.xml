@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mojo on Background Process</title>
-    <link>http://backgroundprocess.com/tags/mojo/</link>
+    <link>https://backgroundprocess.com/tags/mojo/</link>
     <description>Recent content in mojo on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Fri, 12 Feb 2016 13:36:07 -0700</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/tags/mojo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 12 Feb 2016 13:36:07 -0700</lastBuildDate><atom:link href="https://backgroundprocess.com/tags/mojo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mojo Integration Tests with LXD</title>
-      <link>http://backgroundprocess.com/code/mojo-integration-tests/</link>
+      <link>https://backgroundprocess.com/code/mojo-integration-tests/</link>
       <pubDate>Fri, 12 Feb 2016 13:36:07 -0700</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/mojo-integration-tests/</guid>
+      <guid>https://backgroundprocess.com/code/mojo-integration-tests/</guid>
       <description>&lt;p&gt;I have recently finished building an LXD image for doing integration tests of &lt;a href=&#34;https://mojo.canonical.com&#34;&gt;Mojo&lt;/a&gt;.
 I did this because I wanted to be able to reliably test the changes to Mojo that I was making. A repeatable,
 standard environment that can run set of integration tests fits the bill.&lt;/p&gt;</description>

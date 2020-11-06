@@ -1,43 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>configuration management on Background Process</title>
-    <link>http://backgroundprocess.com/tags/configuration-management/</link>
+    <link>https://backgroundprocess.com/tags/configuration-management/</link>
     <description>Recent content in configuration management on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Thu, 18 Dec 2014 22:01:37 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/tags/configuration-management/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 18 Dec 2014 22:01:37 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/tags/configuration-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Advanced Ansible</title>
-      <link>http://backgroundprocess.com/infrastructure/advanced-ansible/</link>
+      <link>https://backgroundprocess.com/infrastructure/advanced-ansible/</link>
       <pubDate>Thu, 18 Dec 2014 22:01:37 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/advanced-ansible/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/advanced-ansible/</guid>
       <description>It would be an mistake to call me an Ansible expert but I am now an experienced Ansible user and it is time to expand on my earlier Ansible posts. I have now been using Ansible on a regular basis for awhile and have used it with vagrant based vms, docker containers, as well as across small clusters of machines. I have also written a couple of Ansible modules and will likely write another one or two soon.</description>
     </item>
     
     <item>
       <title>Ansible Utilities</title>
-      <link>http://backgroundprocess.com/infrastructure/quick-ansible/</link>
+      <link>https://backgroundprocess.com/infrastructure/quick-ansible/</link>
       <pubDate>Fri, 07 Nov 2014 19:27:21 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/quick-ansible/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/quick-ansible/</guid>
       <description>In the last few weeks I have been immersed in Ansible. I have been using Ansible with Vagrant, with Docker and in a test environment on bare metal. Those are all topics I may explore in more depth later but what really is conspicuous today is the way I can build simple utilities with Ansible.
 My collection of Ansible scripts which aren&amp;rsquo;t part of a larger set of playbooks is still quite small but I feel it is but the tip of the iceberg.</description>
     </item>
     
     <item>
       <title>Ansible - Configuration Management Simplifed</title>
-      <link>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</link>
+      <link>https://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</link>
       <pubDate>Sun, 02 Nov 2014 21:00:22 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</guid>
       <description>In the last couple of weeks I have been converting Monasca from Chef to Ansible. This has begun with the monasca-vagrant development environment. Having worked with Chef for the last 3 years as I learn Ansible I inevitably evaluate it in comparision to Chef.
 The core quality of Ansible compared to Chef is Simplicity. Ansible attempts to solve many of the same problems as Chef but with an approach that seems born of real world experience and eliminates many theoretically superior design paradigms for practical alternatives.</description>
     </item>

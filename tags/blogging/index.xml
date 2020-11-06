@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blogging on Background Process</title>
-    <link>http://backgroundprocess.com/tags/blogging/</link>
+    <link>https://backgroundprocess.com/tags/blogging/</link>
     <description>Recent content in blogging on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Tue, 28 Oct 2014 22:17:36 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 28 Oct 2014 22:17:36 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Time to Blog!</title>
-      <link>http://backgroundprocess.com/learning/time-to-blog/</link>
+      <link>https://backgroundprocess.com/learning/time-to-blog/</link>
       <pubDate>Tue, 28 Oct 2014 22:17:36 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/learning/time-to-blog/</guid>
+      <guid>https://backgroundprocess.com/learning/time-to-blog/</guid>
       <description>Recently in my normal reading I ran across this blog post by Nathan Marz expounding the merits of a blog. Not long after reading this and letting it percolate through my mental background process I begun a class on Coursera, titled Learning How to Learn. In this midst of this class I realized that the benefits of blogging Nathan promotes are essentially ways to enhance your day to day learning.</description>
     </item>
     

@@ -1,42 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Learnings on Background Process</title>
-    <link>http://backgroundprocess.com/learning/</link>
+    <link>https://backgroundprocess.com/learning/</link>
     <description>Recent content in Learnings on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Wed, 12 Aug 2015 21:54:04 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/learning/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 12 Aug 2015 21:54:04 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo</title>
-      <link>http://backgroundprocess.com/learning/hugo/</link>
+      <link>https://backgroundprocess.com/learning/hugo/</link>
       <pubDate>Wed, 12 Aug 2015 21:54:04 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/learning/hugo/</guid>
+      <guid>https://backgroundprocess.com/learning/hugo/</guid>
       <description>&lt;p&gt;I like static generated sites, simple, effective and secure. I love github pages as it gets the job done easily and well. Jekyll is a natural fit
 with github pages and was a great way to start building a blog. However recently &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; has caught my attention.&lt;/p&gt;
-
 &lt;p&gt;I decided to switch to Hugo for a few different reasons:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;I like the clean directory layout better with Hugo.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;I want disqus, rss, tags, some easy social sharing links and google analytics. All of that is possible with Jekyll but some of these are much easier to setup with Hugo.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I like the clean directory layout better with Hugo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I want disqus, rss, tags, some easy social sharing links and google analytics. All of that is possible with Jekyll but some of these are much easier to setup with Hugo.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
     <item>
       <title>Time to Blog!</title>
-      <link>http://backgroundprocess.com/learning/time-to-blog/</link>
+      <link>https://backgroundprocess.com/learning/time-to-blog/</link>
       <pubDate>Tue, 28 Oct 2014 22:17:36 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/learning/time-to-blog/</guid>
+      <guid>https://backgroundprocess.com/learning/time-to-blog/</guid>
       <description>Recently in my normal reading I ran across this blog post by Nathan Marz expounding the merits of a blog. Not long after reading this and letting it percolate through my mental background process I begun a class on Coursera, titled Learning How to Learn. In this midst of this class I realized that the benefits of blogging Nathan promotes are essentially ways to enhance your day to day learning.</description>
     </item>
     

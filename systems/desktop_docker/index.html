@@ -19,10 +19,10 @@
     
 	<link href='http://feeds.feedburner.com/BackgroundProcess' rel="alternate" title="Background Process" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://backgroundprocess.com/systems/desktop_docker/">
-	<link href="http://backgroundprocess.com//favicon.png" rel="shortcut icon">
-	<link href="http://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<link href="http://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link rel="canonical" href="https://backgroundprocess.com/systems/desktop_docker/">
+	<link href="https://backgroundprocess.com//favicon.png" rel="shortcut icon">
+	<link href="https://backgroundprocess.com//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="https://backgroundprocess.com//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
 	
 	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -51,7 +51,7 @@
 			<header id="header" class="inner"><div class="profilepic">
 	
 	
-	<script src="http://backgroundprocess.com//js/md5.js"></script>
+	<script src="https://backgroundprocess.com//js/md5.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('tim@backgroundprocess.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
@@ -62,9 +62,9 @@
 </div>
 
 <nav id="main-nav"><ul class="main">
-    <li><a href="http://backgroundprocess.com//">Blog</a></li>
-    <li><a href="http://backgroundprocess.com//about/">About</a></li>
-    <li><a href="http://backgroundprocess.com//tags/">Tags</a></li>
+    <li><a href="https://backgroundprocess.com//">Blog</a></li>
+    <li><a href="https://backgroundprocess.com//about/">About</a></li>
+    <li><a href="https://backgroundprocess.com//tags/">Tags</a></li>
 </ul>
 </nav>
 <nav id="sub-nav">
@@ -108,51 +108,48 @@
 articles using that analogy to extol the advantages of containers as cattle or
 <a href="http://thenewstack.io/pets-and-cattle-symbolize-servers-so-what-does-that-make-containers-chickens/">even as chickens</a>.
 However I have been recently rebuilding my Ubuntu Desktop and found containers can at times be great for pets also, most particularly the messy ones.</p>
-
 <p>I embarked down this route because of my sense of system cleanliness; too many apps I run excrete their dependencies all over my nice newly
 installed system. I run a variety of apps that are not available either in the primary repo nor as a PPA or at least not with the version I need. If
 I am not careful I can soon find myself juggling gems, eggs, wheels and jars all at the same time. Language specific package managers and tools like
 virtualenv and bundler all help some but none are complete enough to take away all management so I still end up following many tools and cleaning
 up the mess they leave behind.</p>
-
 <p>This is where Docker containers step in to save me. I simply need to build an image with the app and all its associated dependencies and wrap a
 simple shell script around it. Now I can run my app while still maintaining a well organized system with no dependency hell, with no mess left behind
 on my system. Instead of using various tools I now have one management tool to aid in running multiple versions or modifications of apps. In addition
 I gain additional capabilities, most notably the ability to easily limit the resources an app can use.</p>
-
 <p>On Ubuntu, apt handles both dependency installation and cleanup very well and coupled with the availability of many
 <a href="https://help.launchpad.net/Packaging/PPA">Personal Package Archives (ppa)</a> the additional overhead of creating a container is not
 worth it for these well behaved apps. This is particularly true as using apt enables automatic notification of security updates.
 Nevertheless there are many apps or at least versions of the app I am using that aren&rsquo;t available as a well behaved deb. These are the messy pets of
 my workstation and I am much happier to have them in a container than to have them leaving a mess all over my desktop.</p>
-
 <h3 id="implementation-details">Implementation Details</h3>
-
 <p>I have begun a <a href="https://github.com/tkuhlman/containers">github repo</a> with Dockerfiles and shell scripts I use for containers on my desktop. I will keep
 expanding this as I add more apps which I use in this way. Here are some considerations as you put your messy pets in containers:</p>
-
 <ul>
 <li>In the wrapper scripts use Docker volumes to setup the appropriate directories, ie <code>-v /home/me/myfiles:/root/myfiles</code>.</li>
 <li>GUI apps require some proper setup when running a container:
-
 <ul>
-<li>For X based apps first you must allow the app to connect to X then setup access to the display.</li>
+<li>For X based apps first you must allow the app to connect to X then setup access to the display.
+<ul>
 <li>To allow access to X I generally run &lsquo;xhost local:&rsquo; in the wrapper script. This has security
 implications and shouldn&rsquo;t be done on a shared system but for a system dedicated to a single user is reasonably safe.</li>
 <li>To setup access to the display export the Display variable with <code>-e DISPLAY=$DISPLAY</code> and setup the volume with the x socket
 <code>-v /tmp/.X11-unix:/tmp/.X11-unix</code>.</li>
+</ul>
+</li>
 <li>For advanced graphics with DRI things are a bit more complicated as you need the drivers you install in the image to match what the host uses.
 After that I found you need to use the device flag for the Docker command to share in the dri device, ie <code>--device /dev/dri/card0:/dev/dri/card0</code>.</li>
 <li>For pulseaudio, these flags to the Docker command work though possible could be distilled down to simpler steps:
-
 <ul>
 <li><code>-v /dev/shm:/dev/shm</code></li>
 <li><code>-v /etc/machine-id:/etc/machine-id</code></li>
 <li><code>-v /run/user/$uid/pulse:/run/user/$uid/pulse</code>,</li>
 <li><code>-v /var/lib/dbus:/var/lib/dbus</code>,</li>
 <li><code>-v ~/.pulse:/home/$dockerUsername/.pulse</code>.</li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Most docker images run apps as root within the container. Though this is generally fine it can be annoying for files in volume mounts to end up owned
 as root. To work around this you can create a simplified user in the image matching your uid/gid and run apps as that user. All that is needed in
 the images is an /etc/passwd entry, /etc/group entry and an appropriately owned home directory.</li>
@@ -164,12 +161,9 @@ won&rsquo;t update and break but is also more difficult to update for applicatio
 are more aspects that need consideration.</li>
 <li>This technique is less annoying if your local user can run docker without sudo.</li>
 </ul>
-
 <h3 id="references">References</h3>
-
 <p>I am by no means the first to try this and in fact was able to find many tips on how to accomplish desktop apps in containers. Here are the primary pages
 I used as sources:</p>
-
 <ul>
 <li><a href="https://blog.jessfraz.com/post/docker-containers-on-the-desktop/">https://blog.jessfraz.com/post/docker-containers-on-the-desktop/</a></li>
 <li><a href="http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/">http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/</a></li>
@@ -226,15 +220,15 @@ I used as sources:</p>
 				    </div>
 				</div>
 			</div>
-			<footer id="footer" class="inner">Copyright &copy; 2019
+			<footer id="footer" class="inner">Copyright &copy; 2020
 
     Tim Kuhlman
 
 
 | Design based on <a href="https://github.com/cxfksword/greyshade">greyshade</a>
 | <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons License</a>
-<script src="http://backgroundprocess.com//js/slash.js"></script>
-<script src="http://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
+<script src="https://backgroundprocess.com//js/slash.js"></script>
+<script src="https://backgroundprocess.com//js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
 (function($){
 	$('.fancybox').fancybox();

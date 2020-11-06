@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>workstation on Background Process</title>
-    <link>http://backgroundprocess.com/tags/workstation/</link>
+    <link>https://backgroundprocess.com/tags/workstation/</link>
     <description>Recent content in workstation on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Mon, 02 May 2016 21:07:28 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/tags/workstation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 02 May 2016 21:07:28 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/tags/workstation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker for Messy Pets - Updates</title>
-      <link>http://backgroundprocess.com/systems/desktop_docker2/</link>
+      <link>https://backgroundprocess.com/systems/desktop_docker2/</link>
       <pubDate>Mon, 02 May 2016 21:07:28 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/systems/desktop_docker2/</guid>
+      <guid>https://backgroundprocess.com/systems/desktop_docker2/</guid>
       <description>&lt;p&gt;About 8 months ago I posted about how I run some
 &lt;a href=&#34;http://backgroundprocess.com/systems/desktop_docker/&#34;&gt;applications in containers&lt;/a&gt;
 so that they stay nicely contained. I have refined and changed a few things about how I do this
@@ -27,10 +23,10 @@ recently and so felt it was time for an update.&lt;/p&gt;</description>
     
     <item>
       <title>Docker for Messy Pets</title>
-      <link>http://backgroundprocess.com/systems/desktop_docker/</link>
+      <link>https://backgroundprocess.com/systems/desktop_docker/</link>
       <pubDate>Fri, 11 Sep 2015 21:12:37 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/systems/desktop_docker/</guid>
+      <guid>https://backgroundprocess.com/systems/desktop_docker/</guid>
       <description>&lt;p&gt;The primary advantages of containers are realized when they are treated as the cattle of computing not pets. There are many
 articles using that analogy to extol the advantages of containers as cattle or
 &lt;a href=&#34;http://thenewstack.io/pets-and-cattle-symbolize-servers-so-what-does-that-make-containers-chickens/&#34;&gt;even as chickens&lt;/a&gt;.

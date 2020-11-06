@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Infrastructures on Background Process</title>
-    <link>http://backgroundprocess.com/infrastructure/</link>
+    <link>https://backgroundprocess.com/infrastructure/</link>
     <description>Recent content in Infrastructures on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Sat, 16 Apr 2016 21:06:14 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/infrastructure/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 16 Apr 2016 21:06:14 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/infrastructure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Containers over VMs</title>
-      <link>http://backgroundprocess.com/infrastructure/containers-over-vms/</link>
+      <link>https://backgroundprocess.com/infrastructure/containers-over-vms/</link>
       <pubDate>Sat, 16 Apr 2016 21:06:14 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/containers-over-vms/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/containers-over-vms/</guid>
       <description>&lt;p&gt;I recently realized it has been over 6 months since I have used a VM on my workstation. Previously I
 like many developers used VMs for various development tasks. The change hasn&amp;rsquo;t be in my usage of
 cloud based VMs, I continue to do that as needed and appropriate. The change is that I use containers.&lt;/p&gt;</description>
@@ -26,10 +22,10 @@ cloud based VMs, I continue to do that as needed and appropriate. The change is 
     
     <item>
       <title>Initial impressions of lxd</title>
-      <link>http://backgroundprocess.com/infrastructure/lxd/</link>
+      <link>https://backgroundprocess.com/infrastructure/lxd/</link>
       <pubDate>Wed, 14 Oct 2015 11:04:37 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/lxd/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/lxd/</guid>
       <description>&lt;p&gt;In the last couple of weeks I have been taking a bit of time here and there to explore &lt;a href=&#34;http://www.ubuntu.com/cloud/tools/lxd&#34;&gt;LXD&lt;/a&gt;.
 LXD is a tool for managing system containers. As both LXD and Docker deal with containers in many ways there is quite a
 bit of overlap but LXD is aiming for full isolated system containers where Docker is more focused on application containers. You can even run
@@ -38,19 +34,16 @@ Docker within an LXD image. I find it helpful to think of LXD as a replacement f
     
     <item>
       <title>Vagrant Love</title>
-      <link>http://backgroundprocess.com/infrastructure/vagrant/</link>
+      <link>https://backgroundprocess.com/infrastructure/vagrant/</link>
       <pubDate>Tue, 19 May 2015 21:56:28 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/vagrant/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/vagrant/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://www.vagrantup.com/&#34;&gt;Vagrant&lt;/a&gt; is awesome!&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Given its much deserved popularity this won&amp;rsquo;t surprise many. This isn&amp;rsquo;t even new, I&amp;rsquo;ve used it daily for quite awhile.
 Recently while discussing use cases where Vagrant was an awesome fit I found myself wondering just why is it such a great tool?&lt;/p&gt;
-
 &lt;p&gt;The best tools are those that reflect a deep understanding of the use cases and paradigms they are made for. Vagrant is actually
 quite simple, roughly it just ties together some pre-built vms with the appropriate providers and configuration management tool. The key is that it does so
 cleanly without adding baggage to the process.&lt;/p&gt;
-
 &lt;p&gt;Another aspect that is important is that Vagrant chooses sane defaults but still allows configurability. The sane defaults combined with the clean design mean
 that more often than not Vagrant makes building vm based environments far easier than any other way. This is probably what I love most about Vagrant, I can turn
 around a clustered dev environment in under 5 minutes and even share it with my team with no extra work. This is orders of magnitude faster than other solutions.&lt;/p&gt;</description>
@@ -58,43 +51,42 @@ around a clustered dev environment in under 5 minutes and even share it with my 
     
     <item>
       <title>Docker, what use it?</title>
-      <link>http://backgroundprocess.com/infrastructure/docker/</link>
+      <link>https://backgroundprocess.com/infrastructure/docker/</link>
       <pubDate>Wed, 11 Mar 2015 21:36:35 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/docker/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/docker/</guid>
       <description>&lt;p&gt;Anyone in the industry who hasn&amp;rsquo;t yet read multiple blog posts on &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; is living under a rock. There is a lot of hype about Docker
 and its potential. I also revel in the long term vision for containers and their potential impact on the industry. However until I have an awesome
 infrastructure where I can deploy images into production my practical mindset drives me to cut through the hype and ask what
 use is Docker for my work today?&lt;/p&gt;
-
 &lt;p&gt;As I have explored Docker here are the uses for it that I have encountered that bring practical value to my day to day work.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Advanced Ansible</title>
-      <link>http://backgroundprocess.com/infrastructure/advanced-ansible/</link>
+      <link>https://backgroundprocess.com/infrastructure/advanced-ansible/</link>
       <pubDate>Thu, 18 Dec 2014 22:01:37 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/advanced-ansible/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/advanced-ansible/</guid>
       <description>It would be an mistake to call me an Ansible expert but I am now an experienced Ansible user and it is time to expand on my earlier Ansible posts. I have now been using Ansible on a regular basis for awhile and have used it with vagrant based vms, docker containers, as well as across small clusters of machines. I have also written a couple of Ansible modules and will likely write another one or two soon.</description>
     </item>
     
     <item>
       <title>Ansible Utilities</title>
-      <link>http://backgroundprocess.com/infrastructure/quick-ansible/</link>
+      <link>https://backgroundprocess.com/infrastructure/quick-ansible/</link>
       <pubDate>Fri, 07 Nov 2014 19:27:21 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/quick-ansible/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/quick-ansible/</guid>
       <description>In the last few weeks I have been immersed in Ansible. I have been using Ansible with Vagrant, with Docker and in a test environment on bare metal. Those are all topics I may explore in more depth later but what really is conspicuous today is the way I can build simple utilities with Ansible.
 My collection of Ansible scripts which aren&amp;rsquo;t part of a larger set of playbooks is still quite small but I feel it is but the tip of the iceberg.</description>
     </item>
     
     <item>
       <title>Ansible - Configuration Management Simplifed</title>
-      <link>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</link>
+      <link>https://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</link>
       <pubDate>Sun, 02 Nov 2014 21:00:22 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</guid>
       <description>In the last couple of weeks I have been converting Monasca from Chef to Ansible. This has begun with the monasca-vagrant development environment. Having worked with Chef for the last 3 years as I learn Ansible I inevitably evaluate it in comparision to Chef.
 The core quality of Ansible compared to Chef is Simplicity. Ansible attempts to solve many of the same problems as Chef but with an approach that seems born of real world experience and eliminates many theoretically superior design paradigms for practical alternatives.</description>
     </item>

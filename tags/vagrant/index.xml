@@ -1,33 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vagrant on Background Process</title>
-    <link>http://backgroundprocess.com/tags/vagrant/</link>
+    <link>https://backgroundprocess.com/tags/vagrant/</link>
     <description>Recent content in vagrant on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Tue, 19 May 2015 21:56:28 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/tags/vagrant/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 19 May 2015 21:56:28 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/tags/vagrant/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vagrant Love</title>
-      <link>http://backgroundprocess.com/infrastructure/vagrant/</link>
+      <link>https://backgroundprocess.com/infrastructure/vagrant/</link>
       <pubDate>Tue, 19 May 2015 21:56:28 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/infrastructure/vagrant/</guid>
+      <guid>https://backgroundprocess.com/infrastructure/vagrant/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://www.vagrantup.com/&#34;&gt;Vagrant&lt;/a&gt; is awesome!&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Given its much deserved popularity this won&amp;rsquo;t surprise many. This isn&amp;rsquo;t even new, I&amp;rsquo;ve used it daily for quite awhile.
 Recently while discussing use cases where Vagrant was an awesome fit I found myself wondering just why is it such a great tool?&lt;/p&gt;
-
 &lt;p&gt;The best tools are those that reflect a deep understanding of the use cases and paradigms they are made for. Vagrant is actually
 quite simple, roughly it just ties together some pre-built vms with the appropriate providers and configuration management tool. The key is that it does so
 cleanly without adding baggage to the process.&lt;/p&gt;
-
 &lt;p&gt;Another aspect that is important is that Vagrant chooses sane defaults but still allows configurability. The sane defaults combined with the clean design mean
 that more often than not Vagrant makes building vm based environments far easier than any other way. This is probably what I love most about Vagrant, I can turn
 around a clustered dev environment in under 5 minutes and even share it with my team with no extra work. This is orders of magnitude faster than other solutions.&lt;/p&gt;</description>

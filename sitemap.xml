@@ -1,328 +1,294 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://backgroundprocess.com/</loc>
-    <lastmod>2019-06-27T21:44:01+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://backgroundprocess.com/tags/culture/</loc>
-    <lastmod>2019-06-27T21:44:01+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://backgroundprocess.com/usatodaynetwork/build_and_run/</loc>
+    <loc>https://backgroundprocess.com/</loc>
     <lastmod>2019-06-27T21:44:01+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/devops/</loc>
+    <loc>https://backgroundprocess.com/tags/culture/</loc>
     <lastmod>2019-06-27T21:44:01+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/</loc>
+    <loc>https://backgroundprocess.com/tags/devops/</loc>
     <lastmod>2019-06-27T21:44:01+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/usatodaynetwork/</loc>
+    <loc>https://backgroundprocess.com/usatodaynetwork/build_and_run/</loc>
     <lastmod>2019-06-27T21:44:01+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/usatodaynetwork/</loc>
+    <loc>https://backgroundprocess.com/tags/</loc>
     <lastmod>2019-06-27T21:44:01+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/usatodaynetwork/design_culture/</loc>
+    <loc>https://backgroundprocess.com/tags/usatodaynetwork/</loc>
+    <lastmod>2019-06-27T21:44:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://backgroundprocess.com/usatodaynetwork/</loc>
+    <lastmod>2019-06-27T21:44:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://backgroundprocess.com/usatodaynetwork/design_culture/</loc>
     <lastmod>2019-03-28T21:44:01+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/design/</loc>
+    <loc>https://backgroundprocess.com/tags/design/</loc>
     <lastmod>2019-03-28T21:44:01+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/design/design_doc/</loc>
+    <loc>https://backgroundprocess.com/design/design_doc/</loc>
     <lastmod>2018-05-03T10:42:45-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/design/</loc>
+    <loc>https://backgroundprocess.com/design/</loc>
     <lastmod>2018-05-03T10:42:45-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/code/</loc>
-    <lastmod>2017-07-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://backgroundprocess.com/code/done/</loc>
+    <loc>https://backgroundprocess.com/tags/checklist/</loc>
     <lastmod>2017-07-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/checklist/</loc>
+    <loc>https://backgroundprocess.com/code/</loc>
     <lastmod>2017-07-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/code/gopwsafe-beta/</loc>
+    <loc>https://backgroundprocess.com/code/done/</loc>
+    <lastmod>2017-07-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://backgroundprocess.com/code/gopwsafe-beta/</loc>
     <lastmod>2016-05-27T21:43:39-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/golang/</loc>
+    <loc>https://backgroundprocess.com/tags/golang/</loc>
     <lastmod>2016-05-27T21:43:39-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/passwordsafe/</loc>
+    <loc>https://backgroundprocess.com/tags/passwordsafe/</loc>
     <lastmod>2016-05-27T21:43:39-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/projects/</loc>
+    <loc>https://backgroundprocess.com/tags/projects/</loc>
     <lastmod>2016-05-27T21:43:39-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/systems/desktop_docker2/</loc>
+    <loc>https://backgroundprocess.com/tags/docker/</loc>
     <lastmod>2016-05-02T21:07:28-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/systems/</loc>
+    <loc>https://backgroundprocess.com/systems/desktop_docker2/</loc>
     <lastmod>2016-05-02T21:07:28-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/docker/</loc>
+    <loc>https://backgroundprocess.com/systems/</loc>
     <lastmod>2016-05-02T21:07:28-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/workstation/</loc>
+    <loc>https://backgroundprocess.com/tags/workstation/</loc>
     <lastmod>2016-05-02T21:07:28-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/infrastructure/containers-over-vms/</loc>
+    <loc>https://backgroundprocess.com/infrastructure/containers-over-vms/</loc>
     <lastmod>2016-04-16T21:06:14-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/infrastructure/</loc>
+    <loc>https://backgroundprocess.com/infrastructure/</loc>
     <lastmod>2016-04-16T21:06:14-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/lxd/</loc>
+    <loc>https://backgroundprocess.com/tags/lxd/</loc>
     <lastmod>2016-04-16T21:06:14-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/code/mojo-integration-tests/</loc>
+    <loc>https://backgroundprocess.com/tags/development/</loc>
     <lastmod>2016-02-12T13:36:07-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/development/</loc>
+    <loc>https://backgroundprocess.com/tags/mojo/</loc>
     <lastmod>2016-02-12T13:36:07-07:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/mojo/</loc>
+    <loc>https://backgroundprocess.com/code/mojo-integration-tests/</loc>
     <lastmod>2016-02-12T13:36:07-07:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/code/weechat-queue/</loc>
+    <loc>https://backgroundprocess.com/code/weechat-queue/</loc>
     <lastmod>2016-02-01T21:39:58-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/code/sysadmins/</loc>
+    <loc>https://backgroundprocess.com/code/sysadmins/</loc>
     <lastmod>2016-01-16T20:44:55-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/code/mp/</loc>
+    <loc>https://backgroundprocess.com/tags/launchpad/</loc>
     <lastmod>2016-01-01T12:20:22-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/launchpad/</loc>
+    <loc>https://backgroundprocess.com/code/mp/</loc>
     <lastmod>2016-01-01T12:20:22-07:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/infrastructure/lxd/</loc>
+    <loc>https://backgroundprocess.com/infrastructure/lxd/</loc>
     <lastmod>2015-10-14T11:04:37-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/systems/desktop_docker/</loc>
+    <loc>https://backgroundprocess.com/systems/desktop_docker/</loc>
     <lastmod>2015-09-11T21:12:37-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/learning/hugo/</loc>
+    <loc>https://backgroundprocess.com/learning/hugo/</loc>
     <lastmod>2015-08-12T21:54:04-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/learning/</loc>
+    <loc>https://backgroundprocess.com/tags/hugo/</loc>
     <lastmod>2015-08-12T21:54:04-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/hugo/</loc>
+    <loc>https://backgroundprocess.com/learning/</loc>
     <lastmod>2015-08-12T21:54:04-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/infrastructure/vagrant/</loc>
+    <loc>https://backgroundprocess.com/tags/vagrant/</loc>
     <lastmod>2015-05-19T21:56:28-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/vagrant/</loc>
+    <loc>https://backgroundprocess.com/infrastructure/vagrant/</loc>
     <lastmod>2015-05-19T21:56:28-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/infrastructure/docker/</loc>
+    <loc>https://backgroundprocess.com/infrastructure/docker/</loc>
     <lastmod>2015-03-11T21:36:35-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/people/managements_role/</loc>
+    <loc>https://backgroundprocess.com/people/managements_role/</loc>
     <lastmod>2015-02-23T21:41:01-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/management/</loc>
+    <loc>https://backgroundprocess.com/tags/management/</loc>
     <lastmod>2015-02-23T21:41:01-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/people/</loc>
+    <loc>https://backgroundprocess.com/people/</loc>
     <lastmod>2015-02-23T21:41:01-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/ansible/</loc>
-    <lastmod>2015-01-06T21:43:31-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://backgroundprocess.com/code/ansible-modules/</loc>
+    <loc>https://backgroundprocess.com/tags/ansible/</loc>
     <lastmod>2015-01-06T21:43:31-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/python/</loc>
+    <loc>https://backgroundprocess.com/code/ansible-modules/</loc>
     <lastmod>2015-01-06T21:43:31-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/infrastructure/advanced-ansible/</loc>
+    <loc>https://backgroundprocess.com/tags/python/</loc>
+    <lastmod>2015-01-06T21:43:31-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://backgroundprocess.com/infrastructure/advanced-ansible/</loc>
     <lastmod>2014-12-18T22:01:37-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/configuration-management/</loc>
+    <loc>https://backgroundprocess.com/tags/configuration-management/</loc>
     <lastmod>2014-12-18T22:01:37-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/systems/systemd/</loc>
+    <loc>https://backgroundprocess.com/systems/systemd/</loc>
     <lastmod>2014-11-28T10:46:35-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/linux/</loc>
+    <loc>https://backgroundprocess.com/tags/linux/</loc>
     <lastmod>2014-11-28T10:46:35-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/systemd/</loc>
+    <loc>https://backgroundprocess.com/tags/systemd/</loc>
     <lastmod>2014-11-28T10:46:35-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/infrastructure/quick-ansible/</loc>
+    <loc>https://backgroundprocess.com/infrastructure/quick-ansible/</loc>
     <lastmod>2014-11-07T19:27:21-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/scripts/</loc>
+    <loc>https://backgroundprocess.com/tags/scripts/</loc>
     <lastmod>2014-11-07T19:27:21-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</loc>
+    <loc>https://backgroundprocess.com/infrastructure/ansible-config-management-simplified/</loc>
     <lastmod>2014-11-02T21:00:22-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/learning/time-to-blog/</loc>
+    <loc>https://backgroundprocess.com/tags/blogging/</loc>
     <lastmod>2014-10-28T22:17:36-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/blogging/</loc>
+    <loc>https://backgroundprocess.com/tags/learning/</loc>
     <lastmod>2014-10-28T22:17:36-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/tags/learning/</loc>
+    <loc>https://backgroundprocess.com/learning/time-to-blog/</loc>
     <lastmod>2014-10-28T22:17:36-06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://backgroundprocess.com/about/</loc>
+    <loc>https://backgroundprocess.com/about/</loc>
   </url>
   
 </urlset>

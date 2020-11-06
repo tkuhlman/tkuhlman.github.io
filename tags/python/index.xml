@@ -1,28 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Background Process</title>
-    <link>http://backgroundprocess.com/tags/python/</link>
+    <link>https://backgroundprocess.com/tags/python/</link>
     <description>Recent content in Python on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Tue, 06 Jan 2015 21:43:31 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 06 Jan 2015 21:43:31 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ansible Modules</title>
-      <link>http://backgroundprocess.com/code/ansible-modules/</link>
+      <link>https://backgroundprocess.com/code/ansible-modules/</link>
       <pubDate>Tue, 06 Jan 2015 21:43:31 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/ansible-modules/</guid>
+      <guid>https://backgroundprocess.com/code/ansible-modules/</guid>
       <description>&lt;p&gt;Ansible is relatively simple in relation to other configuration management frameworks. This makes it easier to approach and accomplish real work with, especially
 for those who don&amp;rsquo;t work in it full time, however there are times when more functionality is needed. Ansible&amp;rsquo;s answer for most of these situations is to
 write a module.&lt;/p&gt;
-
 &lt;p&gt;I have written a couple of &lt;a href=&#34;https://github.com/hpcloud-mon/ansible-module-monasca&#34;&gt;modules for Monasca&lt;/a&gt; and doing so was easy, particularly if you know Python.&lt;/p&gt;</description>
     </item>
     

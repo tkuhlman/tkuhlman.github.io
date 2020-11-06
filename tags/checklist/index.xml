@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>checklist on Background Process</title>
-    <link>http://backgroundprocess.com/tags/checklist/</link>
+    <link>https://backgroundprocess.com/tags/checklist/</link>
     <description>Recent content in checklist on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Mon, 17 Jul 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/tags/checklist/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 17 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://backgroundprocess.com/tags/checklist/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Done Criteria</title>
-      <link>http://backgroundprocess.com/code/done/</link>
+      <link>https://backgroundprocess.com/code/done/</link>
       <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/code/done/</guid>
+      <guid>https://backgroundprocess.com/code/done/</guid>
       <description>&lt;p&gt;A checklist list of done criteria is helpful to avoid skipping any steps in code creation, this is the list I use for my projects.
 Where possible automated tools should be used to help verify good practices are followed.
 These tools are typically language specific so I skipped adding any here.&lt;/p&gt;</description>

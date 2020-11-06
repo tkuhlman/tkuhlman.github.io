@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>systemd on Background Process</title>
-    <link>http://backgroundprocess.com/tags/systemd/</link>
+    <link>https://backgroundprocess.com/tags/systemd/</link>
     <description>Recent content in systemd on Background Process</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tim@backgroundprocess.com (Tim Kuhlman)</managingEditor>
     <webMaster>tim@backgroundprocess.com (Tim Kuhlman)</webMaster>
-    <lastBuildDate>Fri, 28 Nov 2014 10:46:35 -0600</lastBuildDate>
-    
-	<atom:link href="http://backgroundprocess.com/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 28 Nov 2014 10:46:35 -0600</lastBuildDate><atom:link href="https://backgroundprocess.com/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Initial impressions of systemd</title>
-      <link>http://backgroundprocess.com/systems/systemd/</link>
+      <link>https://backgroundprocess.com/systems/systemd/</link>
       <pubDate>Fri, 28 Nov 2014 10:46:35 -0600</pubDate>
       <author>tim@backgroundprocess.com (Tim Kuhlman)</author>
-      <guid>http://backgroundprocess.com/systems/systemd/</guid>
+      <guid>https://backgroundprocess.com/systems/systemd/</guid>
       <description>A few years ago I was happy to see the movement away from the complicated and fragile system V style init scripts. This is something that both Upstart and systemd accomplish well. Additionally the ability to start up services in parallel with more advanced ordering is quite useful. Though in many ways I can work with either system I am glad that the Linux community is converging on just one option, I think this standardization is a large benefit for the community as a whole.</description>
     </item>
     
